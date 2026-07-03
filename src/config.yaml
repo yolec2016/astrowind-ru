@@ -70,7 +70,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: 'G-824EMW4MZF'
+      id: 'G-5ZK0W53B2V'
 
 ui:
   theme: 'light'
