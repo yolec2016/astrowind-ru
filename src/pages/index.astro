@@ -1,0 +1,354 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Китайский завод кухонной техники | OEM/ODM поставщик оптом чайников и бытовой техники',
+  description:
+    'Завод кухонной техники в Китае. OEM/ODM производство электрических чайников, рисоварок, мультиварок и ланч-боксов. Оптовые поставки для импортеров, дистрибьюторов и private label брендов.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Получить цену',
+        href: 'https://www.yolec-electronics.com/contact/',
+        target: '_blank',
+        icon: 'tabler:message',
+      },
+      {
+        text: 'Каталог',
+        href: 'https://www.yolec-electronics.com/products/',
+        target: '_blank',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/hero-image.png',
+      alt: 'Китайский завод кухонной техники OEM ODM оптом',
+    }}
+  >
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white">Китайский завод</span>
+      <br />
+      кухонной техники OEM/ODM
+      <br />
+      оптовые поставки (B2B)
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Завод в Китае по производству электрических чайников, чайников для кофе, рисоварок, мультиварок, скороварок и электрических ланч-боксов.  
+      OEM/ODM и private label производство для импортеров, дистрибьюторов и брендов, которые ищут поставщика кухонной техники оптом из Китая.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note
+    title="OEM/ODM завод кухонной техники в Китае"
+    description="Производство • Контроль качества • OEM/ODM разработка • Экспорт оптом"
+  />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Почему выбирают наш завод"
+    title="Преимущества OEM/ODM поставщика из Китая"
+    subtitle="Мы работаем с импортерами, оптовыми покупателями, дистрибьюторами и private label брендами, которым нужен стабильный завод в Китае."
+    items={[
+      {
+        title: 'OEM и ODM производство Китай',
+        description:
+          'Производство кухонной техники под вашим брендом: логотип, упаковка, цвет и технические изменения под рынок.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Фабрика в Китае',
+        description:
+          'Собственные цеха металлообработки, литья пластика и сборочные линии для стабильного массового производства.',
+        icon: 'tabler:building-factory',
+      },
+      {
+        title: 'Контроль качества (QC завод)',
+        description:
+          'Полный контроль качества: сырьё, производство, тестирование, финальная инспекция перед отгрузкой.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Экспорт кухонной техники оптом',
+        description: 'Поставки в Европу, Ближний Восток, Азию и Южную Америку для B2B клиентов.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Сертификация CE RoHS LFGB',
+        description: 'Продукция соответствует международным требованиям для импорта и продажи.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Быстрый ответ завода',
+        description:
+          'Коммерческое предложение и расчет цены от завода в течение 24 часов.',
+        icon: 'tabler:message-circle',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="О заводе"
+    title="Китайский производитель кухонной техники с OEM/ODM услугами"
+    items={[
+      {
+        title: 'Завод основан в 2015 году',
+        description: 'Более 10 лет опыта как OEM/ODM производитель кухонной техники в Китае.',
+      },
+      {
+        title: 'Полный производственный цикл',
+        description:
+          'Металлообработка, литье пластика, сборка и QC контроль — всё на одном заводе.',
+      },
+      {
+        title: 'OEM и private label проекты',
+        description:
+          'Поддержка брендов и оптовых клиентов для запуска продукции под собственной маркой.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'OEM ODM завод кухонной техники Китай',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        OEM/ODM завод кухонной техники в Китае для оптовых покупателей
+      </h3>
+
+      Мы производим электрические чайники, рисоварки, мультиварки, скороварки и ланч-боксы для импортеров, дистрибьюторов и private label брендов, которым нужен надежный поставщик кухонной техники из Китая.
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    tagline="Производственные возможности"
+    title="Массовое производство кухонной техники оптом"
+    items={[
+      {
+        title: '3 производственные линии завода',
+        description: 'Стабильное производство электрических чайников, рисоварок и другой техники.',
+      },
+      {
+        title: 'Внутренний QC контроль',
+        description: 'Контроль качества на каждом этапе производства на фабрике.',
+      },
+      {
+        title: 'OEM ODM гибкость',
+        description: 'Поддержка индивидуального дизайна, упаковки и технических требований.',
+      },
+      {
+        title: 'Быстрые образцы',
+        description: 'Разработка и отправка образцов для проверки перед массовым заказом.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Производство кухонной техники Китай завод',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    tagline="Ассортимент завода"
+    title="Кухонная техника оптом от производителя в Китае"
+    items={[
+      {
+        title: 'Электрические чайники оптом',
+        description: 'Заводское производство стеклянных и нержавеющих моделей.',
+      },
+      {
+        title: 'Рисоварки и мультиварки OEM',
+        description: 'Модели для домашнего и коммерческого использования.',
+      },
+      {
+        title: 'Скороварки',
+        description: 'Энергоэффективные и безопасные решения от китайского завода.',
+      },
+      {
+        title: 'Ланч-боксы электрические',
+        description: 'Популярная продукция для розничных и онлайн рынков.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?auto=format&fit=crop&w=2070&q=80',
+      alt: 'Ассортимент кухонной техники Китай завод',
+    }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Как работает OEM/ODM завод в Китае"
+    items={[
+      {
+        title: 'Запрос от клиента',
+        description: 'Вы отправляете требования: продукт, объем, рынок, упаковка.',
+        icon: 'tabler:message',
+      },
+      {
+        title: 'Коммерческое предложение',
+        description: 'Цена от завода, MOQ, сроки и условия поставки.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'OEM образцы',
+        description: 'Производство образцов для подтверждения качества.',
+        icon: 'tabler:flask',
+      },
+      {
+        title: 'Массовое производство',
+        description: 'Запуск фабрики и контроль качества.',
+        icon: 'tabler:settings-cog',
+      },
+      {
+        title: 'Отгрузка',
+        description: 'Финальная проверка и экспорт кухонной техники.',
+        icon: 'tabler:truck',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Почему B2B покупатели выбирают наш завод"
+    subtitle="Китайский OEM/ODM производитель кухонной техники для оптовых клиентов"
+    tagline="Фабрика Китая"
+    items={[
+      {
+        title: 'OEM/ODM завод',
+        description: 'Производство под брендом клиента для мировых рынков.',
+        icon: 'flat-color-icons:factory',
+      },
+      {
+        title: 'Стабильное качество',
+        description: 'Контроль качества на каждом этапе производства.',
+        icon: 'flat-color-icons:search',
+      },
+      {
+        title: 'Экспортная фабрика',
+        description: 'Опыт поставок в Европу, Ближний Восток и Азию.',
+        icon: 'flat-color-icons:globe',
+      },
+      {
+        title: 'Производственная мощность',
+        description: '200 сотрудников и 3 линии производства.',
+        icon: 'flat-color-icons:factory',
+      },
+      {
+        title: 'Быстрая коммуникация',
+        description: 'Ответ от завода в течение 24 часов.',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Private label поддержка',
+        description: 'Брендирование, упаковка и OEM разработка.',
+        icon: 'flat-color-icons:approval',
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="FAQ для B2B покупателей"
+    subtitle="Часто задаваемые вопросы о OEM/ODM заводе кухонной техники в Китае"
+    items={[
+      {
+        title: 'Вы завод или торговая компания?',
+        description:
+          'Мы прямой OEM/ODM завод в Китае по производству кухонной техники, не торговая компания.',
+      },
+      {
+        title: 'Какой MOQ у вашего завода?',
+        description:
+          'Стандартный MOQ начинается от 1000 единиц, в зависимости от модели и уровня кастомизации.',
+      },
+      {
+        title: 'Вы работаете с OEM и private label?',
+        description:
+          'Да, мы поддерживаем OEM/ODM и private label проекты для международных брендов.',
+      },
+      {
+        title: 'Вы поставляете оптом?',
+        description:
+          'Да, мы экспортируем кухонную технику оптом в Европу, Ближний Восток и другие рынки.',
+      },
+      {
+        title: 'Какие сертификаты есть у завода?',
+        description:
+          'CE, RoHS, LFGB в зависимости от модели и рынка назначения.',
+      },
+      {
+        title: 'Сколько времени занимает производство?',
+        description:
+          'Обычно 30–45 дней после подтверждения образца и заказа.',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Год основания', amount: '2015' },
+      { title: 'Сотрудники', amount: '200+' },
+      { title: 'Производственные линии', amount: '3' },
+      { title: 'OEM проекты', amount: '1000+' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Получить цену от завода в Китае',
+        href: 'https://wa.me/8613922332584',
+        target: '_blank',
+        icon: 'tabler:message',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Китайский OEM/ODM завод<br />
+      кухонной техники оптом
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Получите коммерческое предложение напрямую от производителя в Китае за 24 часа.
+    </Fragment>
+  </CallToAction>
+</Layout>

@@ -1,0 +1,207 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Контроль качества (QC) на заводе кухонной техники в Китае | OEM/ODM производитель',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Система контроля качества OEM/ODM (QC)"
+    title="Контроль качества на заводе кухонной техники в Китае"
+    subtitle="Мы — OEM/ODM производитель кухонной техники в Китае с многоуровневой системой контроля качества (QC), обеспечивающей стабильное производство, низкий процент брака и соответствие международным стандартам CE / RoHS / LFGB для B2B клиентов."
+    actions={[
+      { variant: 'primary', target: '_blank', text: 'Запросить QC отчет и коммерческое предложение', href: 'https://www.yolec-electronics.com/contact/', target: '_blank', }
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c',
+      alt: 'Quality control OEM ODM kitchen appliances factory China inspection',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Многоуровневая система контроля качества (QC)"
+    subtitle="Полный контроль качества для OEM / ODM производства кухонной техники"
+    columns={3}
+    items={[
+      {
+        title: 'Входной контроль (IQC)',
+        description:
+          'Проверка сырья, компонентов и материалов перед запуском производства.',
+        icon: 'tabler:building-factory',
+      },
+      {
+        title: 'Контроль процесса (IPQC)',
+        description:
+          'Непрерывный контроль качества на всех этапах производства и сборки.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Финальный контроль (FQC)',
+        description:
+          'Полная проверка готовой продукции перед упаковкой и отгрузкой.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Функциональное тестирование',
+        description:
+          'Тестирование мощности, нагрева, безопасности и стабильности работы.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Контроль упаковки (Packing QC)',
+        description:
+          'Проверка упаковки, маркировки и защиты продукции для экспорта.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Предотгрузочная инспекция (PSI)',
+        description:
+          'Финальная инспекция партии перед международной отправкой.',
+        icon: 'tabler:clock',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Встроенная QC система на производстве',
+        description:
+          'Контроль качества интегрирован непосредственно в каждую производственную линию завода.',
+        icon: 'tabler:building-factory',
+      },
+      {
+        title: 'Стабильное качество партий',
+        description:
+          'Каждая партия продукции проходит одинаковые стандарты контроля качества.',
+        icon: 'tabler:stack',
+      },
+      {
+        title: 'OEM / ODM контроль под требования бренда',
+        description:
+          'QC процесс адаптируется под требования private label и рынков импорта.',
+        icon: 'tabler:arrows-exchange',
+      },
+      {
+        title: 'Инженерная проверка продукции',
+        description:
+          'Техническая проверка конструкции и безопасности перед массовым производством.',
+        icon: 'tabler:cpu',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8',
+      alt: 'Quality control inspection kitchen appliances factory China OEM ODM',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Почему контроль качества критически важен для импорта из Китая
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Снижение процента брака (defect rate control)',
+        description:
+          'Система QC минимизирует дефекты при массовом OEM/ODM производстве.',
+        icon: 'tabler:coin',
+      },
+      {
+        title: 'Стабильность поставок для импортеров',
+        description:
+          'Контроль качества снижает риски при международных отгрузках.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Поддержка private label брендов',
+        description:
+          'QC адаптируется под требования маркетплейсов и брендов.',
+        icon: 'tabler:brush',
+      },
+      {
+        title: 'Соответствие международным стандартам',
+        description:
+          'Производство соответствует CE, RoHS, LFGB и другим требованиям для Европы и глобальных рынков.',
+        icon: 'tabler:checklist',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2',
+      alt: 'OEM ODM factory quality control advantages China kitchen appliances',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Преимущества системы контроля качества (QC)
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Отзывы B2B клиентов о контроле качества"
+    testimonials={[
+      {
+        testimonial:
+          'QC система очень прозрачная, мы уверены в стабильности качества каждой партии.',
+        name: 'Импортер из Германии',
+        job: 'B2B закупки',
+      },
+      {
+        testimonial:
+          'Контроль качества на заводе помог снизить процент брака и улучшить продажи.',
+        name: 'Дистрибьютор из ОАЭ',
+        job: 'Wholesale',
+      },
+      {
+        testimonial:
+          'Очень хороший QC процесс для OEM проектов и private label бренда.',
+        name: 'Бренд из Польши',
+        job: 'Private Label',
+      },
+    ]}
+    callToAction={{
+      target: '_blank',
+      text: 'Запросить QC кейсы',
+      href: 'https://www.yolec-electronics.com/about/',
+      target: '_blank',
+      icon: 'tabler:chevron-right',
+    }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Запросить QC отчет и цену',
+        href: 'https://www.yolec-electronics.com/contact/',
+        target: '_blank',
+      },
+    ]}
+    title="Контроль качества для OEM/ODM кухонной техники"
+    subtitle="Получите заводское предложение с полной системой QC для стабильного производства и экспорта."
+  />
+</Layout>

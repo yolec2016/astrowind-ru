@@ -1,0 +1,77 @@
+site:
+  name: YOLEC Electric
+  site: 'https://yoleckitchen.xyz'
+  base: '/'
+  trailingSlash: false
+
+  googleSiteVerificationId: '你的Google验证码'
+
+# Default SEO metadata
+metadata:
+  title:
+    default: 'Китайский производитель мелкой кухонной техники | OEM и ODM'
+    template: '%s | YOLEC Electric'
+
+  description: 'YOLEC Electric — производитель мелкой кухонной техники в Китае. OEM и ODM производство электрических чайников, чайников для кофе, рисоварок, мультиварок, скороварок и электрических ланч-боксов для импортеров, дистрибьюторов, оптовиков и владельцев собственных брендов.'
+
+  robots:
+    index: true
+    follow: true
+
+  openGraph:
+    site_name: YOLEC Electric
+    images:
+      - url: '~/assets/images/default.png'
+        width: 1200
+        height: 630
+    type: website
+
+  twitter:
+    handle: ''
+    site: ''
+    cardType: summary_large_image
+
+i18n:
+  language: ru
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 9
+
+    post:
+      isEnabled: true
+      permalink: '/blog/%slug%'
+      robots:
+        index: true
+
+    list:
+      isEnabled: true
+      pathname: 'blog'
+      robots:
+        index: true
+
+    category:
+      isEnabled: true
+      pathname: 'category'
+      robots:
+        index: true
+
+    tag:
+      isEnabled: true
+      pathname: 'tag'
+      robots:
+        index: false
+
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 6
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: 'G-824EMW4MZF'
+
+ui:
+  theme: 'light'
+  announcement: false

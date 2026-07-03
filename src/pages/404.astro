@@ -1,0 +1,39 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import { getHomePermalink } from '~/utils/permalinks';
+
+const title = `404 | OEM/ODM производитель кухонной техники в Китае`;
+---
+
+<Layout metadata={{ title }}>
+  <section class="flex items-center h-full p-16">
+    <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+      <div class="max-w-md text-center">
+
+        <h2 class="mb-8 font-bold text-9xl">
+          <span class="sr-only">Ошибка</span>
+          <span class="text-primary">404</span>
+        </h2>
+
+        <p class="text-3xl font-semibold md:text-3xl">
+          Страница не найдена
+        </p>
+
+        <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
+          Возможно, страница была удалена или перемещена.  
+          Если вы ищете OEM/ODM производителя кухонной техники в Китае,  
+          надежного поставщика оптовой продукции (wholesale kitchen appliances supplier)  
+          или фабрику для private label проектов — вы можете перейти на главную страницу и отправить запрос напрямую заводу.
+          <br /><br />
+          Мы работаем с импортерами, дистрибьюторами и брендами по всему миру и предоставляем OEM/ODM производство:  
+          электрические чайники, рисоварки, мультиварки, скороварки и другую мелкую кухонную технику.
+        </p>
+
+        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">
+          Вернуться на главную
+        </a>
+
+      </div>
+    </div>
+  </section>
+</Layout>

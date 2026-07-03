@@ -1,0 +1,194 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'OEM/ODM производитель кухонной техники в Китае | поставщик и завод оптом без посредников',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <!-- HERO ===================== -->
+
+  <Hero
+    tagline="Китайский OEM/ODM завод кухонной бытовой техники"
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=2070&q=80',
+      alt: 'OEM ODM kitchen appliance factory China supplier',
+    }}
+  >
+    <Fragment slot="title">
+      OEM/ODM производитель кухонной техники в Китае <br />
+      <span class="text-accent dark:text-white">
+        оптовые поставки напрямую с завода • без посредников
+      </span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Мы — реальный OEM/ODM завод в Китае (не торговая компания / не посредник).  
+      Производим и поставляем кухонную бытовую технику для B2B клиентов по всему миру.
+
+      Специализация: электрические чайники, стеклянные чайники, gooseneck кофейные чайники, рисоварки, мультиварки,
+      IH cooker, скороварки, ланч-боксы и другая мелкая кухонная техника.
+
+      📌 OEM/ODM manufacturer China  
+      📌 поставщик кухонной техники оптом  
+      📌 private label производство под бренд  
+      📌 20000㎡ производственная база  
+      📌 200+ сотрудников / 3 производственные линии  
+      📌 экспорт в Европу / Ближний Восток / Южную Америку  
+
+      Работаем только с оптовыми B2B заказами и OEM/ODM проектами.
+    </Fragment>
+  </Hero>
+
+  <!-- STRONG PROOF STATS ===================== -->
+
+  <Stats
+    title="Факты о заводе (OEM/ODM производитель из Китая)"
+    stats={[
+      { title: 'Производственная база', amount: '20000㎡' },
+      { title: 'Сотрудники', amount: '200+' },
+      { title: 'Производственные линии', amount: '3' },
+      { title: 'Повторные B2B заказы', amount: '80%' },
+    ]}
+  />
+
+  <!-- CORE PRODUCTS ===================== -->
+
+  <Features3
+    title="OEM/ODM кухонная техника из Китая — поставщик оптом от завода"
+    subtitle="Категории продукции для импортеров, дистрибьюторов и private label брендов"
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Электрические чайники OEM производитель',
+        description:
+          'Стеклянные / нержавеющие / gooseneck модели. OEM и private label под ваш бренд.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Рисоварки и мультиварки завод Китай',
+        description:
+          'OEM/ODM производство для оптовых покупателей и дистрибьюторов.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Кухонная техника оптом поставщик Китай',
+        description:
+          'Ланч-боксы, breakfast machine, бытовая техника для private label брендов.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <!-- WHY THIS FACTORY ===================== -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Прямой завод (не посредник)',
+        description:
+          'OEM/ODM производитель кухонной техники в Китае без торговых компаний.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'OEM/ODM производство под бренд',
+        description:
+          'Разработка продукта, логотип, упаковка, private label решения.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Оптовые поставки стабильно',
+        description:
+          'Производственные линии обеспечивают массовые и повторные заказы.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Контроль качества QC',
+        description:
+          '100% проверка продукции перед экспортом.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Экспорт CE / RoHS / LFGB',
+        description:
+          'Соответствие международным стандартам для Европы и глобальных рынков.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Быстрый ответ OEM запросов',
+        description:
+          'Коммерческое предложение для B2B покупателей в короткие сроки.',
+        icon: 'tabler:template',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1740&q=80',
+      alt: 'Kitchen appliance OEM ODM factory China production line',
+    }}
+  />
+
+  <!-- TRUST BLOCK ===================== -->
+
+  <Steps2
+    title="Почему импортеры выбирают OEM/ODM завод из Китая"
+    subtitle="Мы работаем как прямой производитель кухонной техники для B2B рынка"
+    items={[
+      {
+        title: 'OEM/ODM производитель Китай',
+        description:
+          'Прямой завод без посредников и торговых компаний.',
+      },
+      {
+        title: 'Оптовые B2B поставки',
+        description:
+          'Стабильные объемы производства для импортеров и брендов.',
+      },
+      {
+        title: 'Экспортный опыт',
+        description:
+          '8+ лет поставок в Европу и Ближний Восток.',
+      },
+    ]}
+  />
+
+  <!-- FINAL CTA ===================== -->
+
+  <Steps2
+    title="Запросить OEM/ODM предложение от завода"
+    subtitle="Получите цену производителя и начните производство кухонной техники под вашим брендом"
+    isReversed={true}
+    callToAction={{
+      text: 'Получить коммерческое предложение',
+      href: 'https://www.yolec-electronics.com/contact/',
+      target: '_blank',
+    }}
+    items={[
+      {
+        title: 'Быстрый расчет',
+        description: 'Ответ в течение 24 часов для B2B клиентов.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'OEM/ODM разработка',
+        description: 'Поддержка private label проектов.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Оптовое производство',
+        description: 'Поддержка крупных и повторных заказов.',
+        icon: 'tabler:award',
+      },
+    ]}
+  />
+
+</Layout>

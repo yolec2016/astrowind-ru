@@ -1,0 +1,202 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'OEM/ODM производство кухонной техники в Китае | фабрика private label оптом',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="OEM / ODM производство кухонной техники в Китае"
+    title="Фабрика OEM/ODM кухонной техники под private label"
+    subtitle="Китайский производитель мелкой бытовой и кухонной техники для B2B покупателей: импортеров, дистрибьюторов и брендов. Электрические чайники, мультиварки, рисоварки, скороварки и другая техника оптом под OEM и ODM проекты."
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    title="OEM / ODM структура ценообразования от фабрики в Китае"
+    subtitle="Стоимость зависит от уровня кастомизации, объема заказа и требований private label бренда"
+    prices={[
+      {
+        title: 'OEM базовый (опт)',
+        subtitle: 'Готовая модель + ваш бренд',
+        price: 3,
+        period: 'за единицу (FOB Китай, ориентировочно)',
+        items: [
+          { description: 'Выбор готовой модели с фабрики производителя' },
+          { description: 'Нанесение логотипа (печать / лазер)' },
+          { description: 'Стандартная экспортная упаковка' },
+          { description: 'MOQ от 1000 шт. для оптовых заказов' },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Получить цену от фабрики',
+          href: 'https://www.yolec-electronics.com/contact/',
+          target: '_blank',
+        },
+      },
+      {
+        title: 'ODM кастомизация',
+        subtitle: 'Изменение продукта под рынок и бренд',
+        price: 6,
+        period: 'за единицу (FOB Китай, ориентировочно)',
+        items: [
+          { description: 'Изменение дизайна и конструкции продукта' },
+          { description: 'Выбор цвета, материалов и функций' },
+          { description: 'Индивидуальная брендированная упаковка' },
+          { description: 'Разработка и тестирование образцов' },
+          { description: 'MOQ 1000–3000 шт. для OEM/ODM проектов' },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Запросить OEM/ODM предложение',
+          href: 'https://www.yolec-electronics.com/contact/',
+          target: '_blank',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'рекомендуется для брендов',
+      },
+      {
+        title: 'Private Label Full (СТМ)',
+        subtitle: 'Полная разработка продукта под ваш бренд',
+        price: 10,
+        period: 'за единицу (FOB Китай, ориентировочно)',
+        items: [
+          { description: 'Разработка новой модели (mold / форма)' },
+          { description: 'Инженерная разработка продукта под рынок' },
+          { description: 'Эксклюзивный дизайн под private label бренд' },
+          { description: 'Полная упаковка и брендирование' },
+          { description: 'Долгосрочное серийное производство' },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Связаться с OEM фабрикой',
+          href: 'https://www.yolec-electronics.com/contact/',
+          target: '_blank',
+        },
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Почему B2B покупатели выбирают нашу OEM/ODM фабрику"
+    subtitle="Преимущества китайского производителя кухонной техники для импортеров и private label брендов"
+    columns={2}
+    items={[
+      {
+        title: 'Производство под private label',
+        description: 'Полный цикл OEM/ODM производства кухонной техники под ваш бренд.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Заводские цены без посредников',
+        description: 'Прямые поставки от фабрики в Китае для оптовых покупателей и дистрибьюторов.',
+        icon: 'tabler:tags',
+      },
+      {
+        title: 'Стабильное массовое производство',
+        description: '3 производственные линии и около 200 сотрудников обеспечивают стабильные поставки.',
+        icon: 'tabler:building-factory',
+      },
+      {
+        title: 'Контроль качества (QC)',
+        description: 'Многоступенчатый контроль качества на всех этапах производства.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Быстрая разработка образцов',
+        description: 'Оперативная разработка OEM/ODM образцов для новых проектов.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Экспортный опыт',
+        description: 'Поставки в Европу, Ближний Восток, Южную Америку и другие B2B рынки.',
+        icon: 'tabler:world',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Процесс OEM / ODM производства на фабрике в Китае"
+    tagline="от запроса до поставки"
+    isReversed={true}
+    items={[
+      { title: 'Запрос и технические требования', icon: 'tabler:number-1' },
+      { title: 'Коммерческое предложение (FOB/CIF цена)', icon: 'tabler:number-2' },
+      { title: 'Разработка и отправка образца', icon: 'tabler:number-3' },
+      { title: 'Подтверждение дизайна и спецификации', icon: 'tabler:number-4' },
+      { title: 'Массовое производство на фабрике', icon: 'tabler:number-5' },
+      { title: 'Контроль качества (QC инспекция)', icon: 'tabler:number-6' },
+      { title: 'Отгрузка и международная доставка', icon: 'tabler:number-7' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3',
+      alt: 'OEM ODM factory China kitchen appliances production',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Часто задаваемые вопросы о OEM/ODM производстве в Китае"
+    subtitle="Ответы для импортеров, оптовых покупателей и владельцев брендов private label"
+    columns={1}
+    items={[
+      {
+        title: 'Какой MOQ для OEM заказов?',
+        description:
+          'Минимальный заказ обычно начинается от 1000 единиц в зависимости от модели и уровня кастомизации.',
+      },
+      {
+        title: 'Можно ли нанести логотип на продукцию?',
+        description:
+          'Да, мы предлагаем печать логотипа, лазерную гравировку и полное брендирование упаковки.',
+      },
+      {
+        title: 'Вы предоставляете ODM разработку?',
+        description:
+          'Да, мы выполняем полный цикл ODM — от разработки продукта до тестирования и массового производства.',
+      },
+      {
+        title: 'В какие страны вы экспортируете?',
+        description:
+          'Мы поставляем продукцию в Европу, Ближний Восток, Южную Америку и другие международные рынки B2B.',
+      },
+      {
+        title: 'Можно ли заказать образцы перед оптом?',
+        description:
+          'Да, мы предоставляем образцы для проверки качества перед массовым производством.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Запустите private label производство кухонной техники в Китае"
+    subtitle="Получите заводскую цену напрямую от OEM/ODM производителя и создайте свой бренд кухонной техники для оптового рынка."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Запросить коммерческое предложение',
+        href: 'https://www.yolec-electronics.com/contact/',
+        target: '_blank',
+      },
+    ]}
+  />
+</Layout>

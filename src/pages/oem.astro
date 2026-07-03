@@ -1,0 +1,201 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'OEM/ODM завод кухонной техники в Китае | Производитель чайников и бытовой техники оптом',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="OEM / ODM производитель Китай"
+    title="Китайский OEM завод кухонной техники"
+    subtitle="Мы — производитель в Китае, специализирующийся на OEM, ODM и private label кухонной технике: электрические чайники, рисоварки, мультиварки и ланч-боксы для оптовых покупателей и брендов по всему миру."
+    actions={[
+      { variant: 'primary', target: '_blank', text: 'Получить цену OEM от завода', href: 'https://www.yolec-electronics.com/contact/', target: '_blank', }
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c',
+      alt: 'OEM ODM завод кухонной техники Китай',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="OEM / ODM услуги китайского завода"
+    subtitle="Полный цикл производства кухонной техники под ваш бренд (private label OEM ODM)"
+    columns={3}
+    items={[
+      {
+        title: 'OEM производство Китай',
+        description:
+          'Производство кухонной техники под вашим брендом: логотип, упаковка, цвет и спецификации.',
+        icon: 'tabler:building-factory',
+      },
+      {
+        title: 'ODM разработка продукта',
+        description:
+          'Разработка новых моделей кухонной техники под ваш рынок и требования.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Private Label производство',
+        description:
+          'Запуск собственного бренда с полной поддержкой завода в Китае.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Контроль качества (QC)',
+        description:
+          'Проверка сырья, контроль производства, тестирование и финальная инспекция.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Экспорт в 30+ стран',
+        description:
+          'Поставки в Европу, Ближний Восток, Южную Америку и другие B2B рынки.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Быстрые образцы',
+        description:
+          'Разработка и производство образцов для проверки перед массовым заказом.',
+        icon: 'tabler:clock',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Собственный завод в Китае',
+        description:
+          'Полный производственный цикл: металлообработка, литьё пластика, сборка и тестирование.',
+        icon: 'tabler:building-factory',
+      },
+      {
+        title: 'Стабильное массовое производство',
+        description:
+          '200 сотрудников и 3 производственные линии для стабильных оптовых поставок.',
+        icon: 'tabler:stack',
+      },
+      {
+        title: 'Гибкость OEM / ODM',
+        description:
+          'Поддержка малых и крупных заказов для разных рынков и брендов.',
+        icon: 'tabler:arrows-exchange',
+      },
+      {
+        title: 'Инженерная поддержка',
+        description:
+          'Поддержка разработки продукта, улучшений и технических решений.',
+        icon: 'tabler:cpu',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8',
+      alt: 'Производственная линия кухонной техники Китай',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        OEM/ODM завод кухонной техники в Китае для оптовых покупателей
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Снижение себестоимости',
+        description:
+          'Прямые заводские цены без посредников для импортеров и дистрибьюторов.',
+        icon: 'tabler:coin',
+      },
+      {
+        title: 'Быстрый запуск продукта',
+        description:
+          'Быстрая разработка и запуск OEM/ODM проектов.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Private Label бренд',
+        description:
+          'Поддержка упаковки, логотипа и брендирования.',
+        icon: 'tabler:brush',
+      },
+      {
+        title: 'Готовность к экспорту',
+        description:
+          'Соответствие CE / RoHS / LFGB для международных рынков.',
+        icon: 'tabler:checklist',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2',
+      alt: 'OEM ODM преимущества завод Китай',
+    }}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Отзывы B2B клиентов"
+    testimonials={[
+      {
+        testimonial:
+          'Мы заказали OEM электрические чайники под private label. Качество стабильное и поставки вовремя.',
+        name: 'Импортер из Германии',
+        job: 'B2B закупки',
+      },
+      {
+        testimonial:
+          'ODM разработка прошла быстро, продукт успешно вышел на рынок ОАЭ.',
+        name: 'Дистрибьютор из Дубая',
+        job: 'Wholesale',
+      },
+      {
+        testimonial:
+          'Надежный OEM завод с крупными объемами производства.',
+        name: 'Бренд из Польши',
+        job: 'Private Label',
+      },
+    ]}
+    callToAction={{
+      target: '_blank',
+      text: 'Запросить больше кейсов',
+      href: 'https://www.yolec-electronics.com/about/',
+      target: '_blank',
+      icon: 'tabler:chevron-right',
+    }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Получить OEM/ODM прайс от завода',
+        href: 'https://www.yolec-electronics.com/contact/',
+        target: '_blank',
+      },
+    ]}
+    title="Запустите производство под собственным брендом"
+    subtitle="Получите коммерческое предложение напрямую от китайского OEM/ODM завода за 24 часа."
+  />
+</Layout>
