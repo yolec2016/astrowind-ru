@@ -49,35 +49,29 @@ export const headerData = {
           href: getPermalink('/private-label'),
         },
         {
-          text: 'OEM/ODM услуги',
-          href: getPermalink('/services'),
+          text: 'Контроль качества',
+          href: getPermalink('/quality-control'),
         },
       ],
     },
 
     {
       text: 'О фабрике',
-      links: [
+      links: [ 
         {
           text: 'О компании',
           href: getPermalink('https://www.yolec-electronics.com/about/'),
         },
         {
-          text: 'Контроль качества',
-          href: getPermalink('/quality-control'),
-        },
-        {
+          text: 'Блог',
+          href: getBlogPermalink(),
+        },        
+       {
           text: 'Часто задаваемые вопросы',
-          href: getPermalink('/faq'),
+          href: getPermalink('/faq'), 
         },
       ],
     },
-
-    {
-      text: 'Блог',
-      href: getBlogPermalink(),
-    },
-
     {
       text: 'Контакты',
       href: getPermalink('https://www.yolec-electronics.com/contact/'),

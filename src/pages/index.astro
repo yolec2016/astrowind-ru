@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -132,7 +131,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      src: '~/assets/images/Small-Home-Appliance-Manufacturer.png',
       alt: 'OEM ODM завод кухонной техники Китай',
     }}
   >
@@ -170,7 +169,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2194&q=80',
+      src: '~/assets/images/factory.png',
       alt: 'Производство кухонной техники Китай завод',
     }}
   />
@@ -201,7 +200,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?auto=format&fit=crop&w=2070&q=80',
+      src: '~/assets/images/gooseneck-coffee-kettle-new.png',
       alt: 'Ассортимент кухонной техники Китай завод',
     }}
   />
@@ -237,6 +236,10 @@ const metadata = {
         icon: 'tabler:truck',
       },
     ]}
+        image={{
+      src: '~/assets/images/oem.png',
+      alt: 'Ассортимент кухонной техники Китай завод',
+    }}
   />
 
   <!-- Features2 Widget ************** -->
@@ -329,26 +332,54 @@ const metadata = {
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
+    <!-- WhatsApp Proof Section -->
+<div class="mt-16 flex justify-center">
+  <div class="w-full max-w-4xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-lg p-6 md:p-10">
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Получить цену от завода в Китае',
-        href: 'https://wa.me/8613922332584',
-        target: '_blank',
-        icon: 'tabler:message',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Китайский OEM/ODM завод<br />
-      кухонной техники оптом
-    </Fragment>
+    <!-- Title -->
+    <h3 class="text-center text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
+      Real WhatsApp Buyer Conversations
+    </h3>
 
-    <Fragment slot="subtitle">
-      Получите коммерческое предложение напрямую от производителя в Китае за 24 часа.
-    </Fragment>
-  </CallToAction>
+    <p class="text-center text-slate-500 dark:text-slate-400 mt-2">
+      OEM/ODM inquiries from importers, distributors & private label brands
+    </p>
+
+    <!-- Trust badges -->
+    <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm">
+      <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300">
+        ✔ Reply within 24h
+      </span>
+      <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+        ✔ Factory Direct OEM/ODM
+      </span>
+      <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300">
+        ✔ CE / RoHS / LFGB Support
+      </span>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-6 flex justify-center">
+      <a
+        href="https://wa.me/8613922332584"
+        target="_blank"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold transition"
+      >
+        Contact Factory on WhatsApp
+      </a>
+    </div>
+
+  </div>
+</div>
+
+  <div class="flex justify-center items-center mt-10">
+    <img
+      src="/images/whatsapp.png"
+      alt="WhatsApp chat proof for OEM kitchen appliance inquiries"
+      class="mx-auto max-w-full h-auto w-[320px] md:w-[420px] rounded-lg shadow-lg"
+      loading="lazy"
+    />
+  </div>
+
+
 </Layout>
