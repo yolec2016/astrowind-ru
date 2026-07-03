@@ -2,7 +2,7 @@
 pubDate: 2026-06-18T00:00:00Z
 title: "Чек-лист аудита фабрики в Китае: как проверить производителя перед заказом OEM и ODM"
 description: "Практический чек-лист аудита китайского производителя для B2B-покупателей, закупающих электрочайники, рисоварки, мультиварки-скороварки и электрические ланч-боксы."
-image: https://images.unsplash.com/photo-1546984575-757f4f7c13cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://yoleckitchen.xyz/images/yolec-electric.png
 category: "Закупки"
 tags:
   - аудит фабрики

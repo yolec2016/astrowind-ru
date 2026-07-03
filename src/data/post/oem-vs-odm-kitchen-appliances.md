@@ -2,7 +2,7 @@
 title: "OEM или ODM: что выбрать при закупке кухонной бытовой техники в Китае?"
 description: "Практическое руководство для B2B-покупателей по выбору между OEM и ODM при заказе электрических чайников, рисоварок, электрических скороварок и ланч-боксов в Китае. Помогает снизить риски и выбрать правильную модель производства."
 pubDate: 2026-06-25T00:00:00Z
-image: https://images.unsplash.com/photo-1546984575-757f4f7c13cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://yoleckitchen.xyz/images/yolec-electric.png
 category: "Производство"
 
 tags:

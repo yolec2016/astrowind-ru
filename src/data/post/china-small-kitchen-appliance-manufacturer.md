@@ -2,7 +2,7 @@
 title: "Как выбрать надежного производителя мелкой кухонной техники в Китае для OEM и ODM"
 description: "Практическое руководство для B2B-покупателей по выбору китайского производителя мелкой кухонной техники для OEM и ODM проектов. Как снизить риски и выбрать надежную фабрику."
 pubDate: 2027-07-02T00:00:00Z
-image: https://images.unsplash.com/photo-1546984575-757f4f7c13cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80
+image: https://yoleckitchen.xyz/images/electric-kettle-manufacturer.jpg
 category: "Руководство по выбору производителя"
 tags:
   - китайский производитель
