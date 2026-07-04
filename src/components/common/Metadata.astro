@@ -12,6 +12,7 @@ import { adaptOpenGraphImages } from '~/utils/images';
 
 export interface Props extends MetaData {
   dontUseTitleTemplate?: boolean;
+  keywords?: string;
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   canonical = String(getCanonical(String(Astro.url.pathname))),
   robots = {},
   description,
+  keywords = '',  
   openGraph = {},
   twitter = {},
 } = Astro.props;
@@ -96,13 +98,13 @@ const seoProps: SEOProps = {
       ? !robots.index
       : typeof METADATA?.robots?.index !== 'undefined'
         ? !METADATA.robots.index
-        : true,
+        : false,
   nofollow:
     typeof robots?.follow !== 'undefined'
       ? !robots.follow
       : typeof METADATA?.robots?.follow !== 'undefined'
         ? !METADATA.robots.follow
-        : true,
+        : false,
   description: description || METADATA?.description,
   openGraph: buildOpenGraph(adaptedOg),
   twitter: mergedTwitter,
@@ -111,3 +113,31 @@ const seoProps: SEOProps = {
 ---
 
 <SEO {...seoProps} />
+{keywords && (
+  <meta
+    name="keywords"
+    content={keywords}
+  />
+)}
+
+<meta name="author" content="YOLEC Electric" />
+
+<meta name="publisher" content="YOLEC Electric" />
+
+<meta name="theme-color" content="#ffffff" />
+
+<meta name="language" content="ru" />
+
+<meta name="format-detection" content="telephone=no" />
+
+<meta name="generator" content="Astro" />
+
+<meta name="distribution" content="global" />
+
+<meta name="rating" content="general" />
+
+<meta name="geo.region" content="RU" />
+
+<meta name="geo.placename" content="Russia" />
+
+<meta name="revisit-after" content="7 days" />
