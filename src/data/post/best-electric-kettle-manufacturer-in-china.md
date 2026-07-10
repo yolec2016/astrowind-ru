@@ -1,8 +1,8 @@
 ---
-publishDate: 2027-07-02T00:00:00Z
+publishDate: 2027-07-01T00:00:00Z
 title: "Лучшие производители электрических чайников в Китае"
 excerpt: "Практическое руководство по выбору надежного производителя электрических чайников в Китае для OEM и ODM проектов."
-image: https://yoleckitchen.xyz/images/gooseneck-coffee-kettle.jpg
+image: /images/blog/7.jpg 
 tags:
   - производитель электрических чайников
   - OEM
