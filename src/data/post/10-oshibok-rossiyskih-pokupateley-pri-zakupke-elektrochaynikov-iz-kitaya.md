@@ -13,7 +13,7 @@ tags:
   - китайский производитель
   - B2B закупки
 metadata:
-  canonical: https://yoleckitchen.xyz/blog/10-oshibok-rossiyskih-pokupateley-pri-zakupke-elektrochaynikov-iz-kitaya/
+  canonical: https://yoleckitchen.xyz/blog/
 ---
 
 Закупка электрочайников из Китая может стать хорошим решением для российских импортеров, дистрибьюторов и владельцев собственных брендов.
