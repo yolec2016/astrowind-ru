@@ -27,8 +27,20 @@ export default defineConfig({
   output: 'static',
 
   integrations: [
-    sitemap(),
+    sitemap({
+      filter: (page) => {
+        return (
+          !page.includes('/tag/') &&
+          !page.includes('/category/') &&
+          !page.includes('/privacy') &&
+          !page.includes('/terms') &&
+          !page.match(/\/blog\/\d+$/)
+        );
+      },
+    }),
+
     mdx(),
+
     icon({
       include: {
         tabler: ['*'],
@@ -74,16 +86,6 @@ export default defineConfig({
   ],
 
   image: {
-    // Astro's default Sharp service handles local images.
-    //
-    // Most remote CDN images (Unsplash, Cloudinary, Imgix…) are routed by
-    // src/components/common/Image.astro through `unpic`, which rewrites the
-    // URL with CDN-side query parameters and serves it straight from the
-    // provider — Astro never downloads it, so they don't need to be listed.
-    //
-    // `domains` only matters for remote URLs that fall through to Astro's
-    // native <Image /> (i.e. providers Unpic can't detect, like Pixabay).
-    // Listed entries are authorized to be processed by Sharp.
     domains: ['cdn.pixabay.com'],
   },
 
