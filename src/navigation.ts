@@ -174,6 +174,10 @@ export const footerData = {
           href: 'https://wa.me/8613922332584',
         },
         {
+          text: 'VK',
+          href: 'https://vk.ru/kitchen_appliance_factory',
+        },        
+        {
           text: 'YouTube',
           href: 'https://www.youtube.com/@yolec-electric-adrian', 
         },
