@@ -1,5 +1,5 @@
 site:
-  name: Zhongshan YOLEC Electric Appliance Factory
+  name: YOLEC Electric
   site: 'https://yoleckitchen.xyz'
   base: '/'
   trailingSlash: false
@@ -18,7 +18,7 @@ metadata:
     follow: true
 
   openGraph:
-    site_name: Zhongshan YOLEC Electric OEM/ODM Factory
+    site_name: YOLEC Electric — OEM/ODM завод кухонной техники
     images:
       - url: '~/assets/images/factory.png'
         width: 1200
