@@ -1,246 +1,477 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
-import Prices from '~/components/widgets/Pricing.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Цены и условия OEM/ODM производства',
+  title: 'Цены и условия OEM/ODM производства — Китайский завод кухонной техники',
   description:
-    'Из чего складывается цена OEM/ODM заказа: модель, объем, упаковка, сертификация. Запросите коммерческое предложение от завода YOLEC за 24 часа.',
+    'Из чего складывается цена OEM/ODM заказа: модель, объём, упаковка, сертификация. Диапазоны цен на электрочайники, рисоварки, скороварки и ланч-боксы. Запросите КП от завода YOLEC за 24 часа.',
+  ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+  <!-- =========================================================
+       HERO
+  ========================================================== -->
 
-  <HeroText
-    tagline="Pricing"
-    title="Stellar Pricing for Every Journey"
-    subtitle="Choose the perfect plan that aligns with your cosmic goals."
-  />
+  <section class="relative overflow-hidden bg-slate-50 dark:bg-slate-900">
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-3xl text-center">
+        <div
+          class="mb-6 inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
+        >
+          OEM / ODM · Ценообразование
+        </div>
 
-  <!-- Pricing Widget ******************* -->
+        <h1 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl">
+          Цены и условия
+          <span class="block text-accent">OEM/ODM производства</span>
+        </h1>
 
-  <Prices
-    title="Our prices"
-    subtitle="Only pay for what you need"
-    prices={[
-      {
-        title: 'basic',
-        subtitle: 'Optimal choice for personal use',
-        price: 29,
-        period: 'per month',
-        items: [
-          {
-            description: 'Etiam in libero, et volutpat',
-          },
-          {
-            description: 'Aenean ac nunc dolor tristique',
-          },
-          {
-            description: 'Cras scelerisque accumsan lib',
-          },
-          {
-            description: 'In hac habitasse',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
-        },
-      },
-      {
-        title: 'standard',
-        subtitle: 'Optimal choice for small teams',
-        price: 69,
-        period: 'Per Month',
-        items: [
-          {
-            description: 'Proin vel laoreet',
-          },
-          {
-            description: 'Ut efficitur habitasse egestas',
-          },
-          {
-            description: 'Volutpat hac curabitur',
-          },
-          {
-            description: 'Pellentesque blandit ut nibh',
-          },
-          {
-            description: 'Donec fringilla sem',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
-        },
-        hasRibbon: true,
-        ribbonTitle: 'popular',
-      },
-      {
-        title: 'premium',
-        subtitle: 'Optimal choice for companies',
-        price: 199,
-        period: 'Per Month',
-        items: [
-          {
-            description: 'Curabitur suscipit risus',
-          },
-          {
-            description: 'Aliquam habitasse malesuada',
-          },
-          {
-            description: 'Suspendisse sit amet blandit',
-          },
-          {
-            description: 'Suspendisse auctor blandit dui',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
-        },
-      },
-    ]}
-  />
+        <p class="mt-6 max-w-2xl mx-auto text-lg leading-8 text-slate-600 dark:text-slate-300">
+          Цена OEM заказа зависит от модели, объёма партии, уровня кастомизации, упаковки и
+          сертификации. Мы работаем без посредников — вы получаете заводскую цену напрямую с
+          производства в Чжуншане.
+        </p>
 
-  <!-- Features3 Widget ************** -->
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center rounded-lg bg-accent px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
+          >
+            Запросить коммерческое предложение
+          </a>
 
-  <Features3
-    title="Price-related features"
-    subtitle="Discover the advantages of choosing our plans"
-    columns={2}
-    items={[
-      {
-        title: 'Tiered Pricing Plans',
-        description: 'Choose from a range of pricing plans designed to accommodate different budgets and requirements.',
-        icon: 'tabler:stairs',
-      },
-      {
-        title: 'Transparent Pricing',
-        description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
-        icon: 'tabler:flip-vertical',
-      },
-      {
-        title: 'Secure Payment Methods',
-        description: 'Secure payment gateways to protect your financial information during transactions.',
-        icon: 'tabler:shield-lock',
-      },
-      {
-        title: 'Instant Access',
-        description: `Immediate access to your chosen plan's features and templates upon subscription.`,
-        icon: 'tabler:accessible',
-      },
-      {
-        title: 'Upgrade Value',
-        description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
-        icon: 'tabler:chevrons-up',
-      },
-      {
-        title: '24H support',
-        description: 'Questions answered via live chat, email or phone, every calendar day.',
-        icon: 'tabler:headset',
-      },
-    ]}
-    classes={{ container: 'max-w-5xl' }}
-  />
+          <a
+            href="https://wa.me/8613922332584"
+            class="inline-flex items-center rounded-lg border border-slate-300 bg-white px-6 py-3.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700"
+          >
+            Связаться в WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Steps Widget ****************** -->
+  <!-- =========================================================
+       WHAT AFFECTS PRICE
+  ========================================================== -->
 
-  <Steps
-    title="A guided journey from plans to creativity"
-    tagline="simplified process"
-    isReversed={true}
-    items={[
-      {
-        title: 'Explore plans',
-        icon: 'tabler:number-1',
-      },
-      {
-        title: 'Select a plan',
-        icon: 'tabler:number-2',
-      },
-      {
-        title: 'Sign Up / Log In',
-        icon: 'tabler:number-3',
-      },
-      {
-        title: 'Review order',
-        icon: 'tabler:number-4',
-      },
-      {
-        title: 'Enter payment details',
-        icon: 'tabler:number-5',
-      },
-      {
-        title: 'Confirmation',
-        icon: 'tabler:number-6',
-      },
-      {
-        title: 'Download and start using the template(s)',
-        icon: 'tabler:number-7',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
+  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-widest text-accent">Факторы цены</p>
 
-  <!-- FAQs Widget ******************* -->
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+          Из чего складывается цена OEM заказа
+        </h2>
 
-  <FAQs
-    title="Pricing FAQs"
-    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
-    columns={1}
-    items={[
-      {
-        title: 'Do the plans come with customer support?',
-        description:
-          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
-      },
-      {
-        title: 'Is there a trial period for the different plans?',
-        description:
-          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo section to preview the quality of our templates.",
-      },
-      {
-        title: 'Can I switch between plans?',
-        description:
-          'Certainly! You can easily upgrade or downgrade your plan, at any time, to find the one that best suits your evolving requirements.',
-      },
-      {
-        title: 'What payment methods do you accept?',
-        description:
-          'We accept major credit cards and online payment methods to ensure a convenient and secure transaction process.',
-      },
-      {
-        title: 'Are there any hidden fees beyond the displayed cost?',
-        description:
-          'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
-      },
-    ]}
-  />
+        <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+          B2B ценообразование отличается от розницы. Итоговая цена зависит от нескольких ключевых
+          параметров, которые вы определяете вместе с нашим отделом продаж.
+        </p>
+      </div>
 
-  <!-- CallToAction Widget *********** -->
+      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900">
+          <div class="text-2xl font-bold text-accent">01</div>
+          <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">Выбор модели</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+            Серийная модель из каталога или разработка новой (ODM). Серийные модели дешевле — не
+            требуется разработка пресс-формы.
+          </p>
+        </div>
 
-  <CallToAction
-    title="Ready to boost your projects?"
-    subtitle="Join our community of satisfied customers who have transformed their work with our templates."
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get started now',
-        href: '/',
-      },
-    ]}
-  />
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900">
+          <div class="text-2xl font-bold text-accent">02</div>
+          <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">Объём партии (MOQ)</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+            Чем больше партия, тем ниже цена за единицу. Базовый MOQ — от 500 шт, масштабирование до
+            контейнерных партий.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900">
+          <div class="text-2xl font-bold text-accent">03</div>
+          <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">Уровень кастомизации</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+            Логотип, цвет по Pantone, индивидуальная упаковка, доработка функций. Минимальная
+            кастомизация — только логотип.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900">
+          <div class="text-2xl font-bold text-accent">04</div>
+          <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">Сертификация</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+            CE, CB, RoHS, EAC, LFGB — в зависимости от рынка назначения. Стоимость сертификации
+            распределяется на партию.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900">
+          <div class="text-2xl font-bold text-accent">05</div>
+          <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">Упаковка</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+            Стандартная коробка завода или индивидуальный дизайн коробки, инструкции, этикетки и
+            упаковочных материалов.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900">
+          <div class="text-2xl font-bold text-accent">06</div>
+          <h3 class="mt-5 text-lg font-bold text-slate-900 dark:text-white">Логистика</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+            Условия FOB Шэньчжэнь / Гуанчжоу. Полный пакет документов для таможни ЕАЭС (РФ, РБ, КЗ,
+            Армения, Киргизия).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       PRICE RANGES BY CATEGORY
+  ========================================================= -->
+
+  <section class="bg-slate-50 py-20 dark:bg-slate-900 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-widest text-accent">Ориентировочные цены</p>
+
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+          Диапазоны цен по категориям продукции
+        </h2>
+
+        <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+          Указаны ориентировочные диапазоны EXW цен за единицу при стандартной комплектации (без
+          кастомной упаковки и сертификации). Точную цену рассчитываем под ваш проект.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        <!-- Kettle -->
+        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-800">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Электрочайники</h3>
+            <span class="text-sm font-medium text-slate-400">от 500 шт</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">1,0–1,8 л · нержавейка / стекло / gooseneck</p>
+          <div class="mt-5 flex items-end gap-2">
+            <span class="text-3xl font-bold text-slate-900 dark:text-white">$2,80–$6,50</span>
+            <span class="mb-1 text-sm text-slate-500">/ шт EXW</span>
+          </div>
+          <ul class="mt-5 space-y-2 text-sm text-slate-600 dark:text-slate-400">
+            <li class="flex gap-2"><span class="text-accent">✓</span> Базовые модели 1,5 л — от $2,80</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> Gooseneck с термоконтролем — от $5,20</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> Стеклянные с подсветкой — от $4,10</li>
+          </ul>
+          <a href="/electric-kettle-manufacturer" class="mt-6 inline-block text-sm font-semibold text-accent">Каталог моделей →</a>
+        </div>
+
+        <!-- Rice Cooker -->
+        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-800">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Рисоварки и мультиварки</h3>
+            <span class="text-sm font-medium text-slate-400">от 500 шт</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">1,2–6,0 л · механика / цифровое управление</p>
+          <div class="mt-5 flex items-end gap-2">
+            <span class="text-3xl font-bold text-slate-900 dark:text-white">$4,50–$12,00</span>
+            <span class="mb-1 text-sm text-slate-500">/ шт EXW</span>
+          </div>
+          <ul class="mt-5 space-y-2 text-sm text-slate-600 dark:text-slate-400">
+            <li class="flex gap-2"><span class="text-accent">✓</span> Мини 1,2 л — от $4,50</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> 3–5 л, 12 программ — от $6,80</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> Low-sugar (снижение сахара) — от $9,50</li>
+          </ul>
+          <a href="/electric-rice-cooker-manufacturer" class="mt-6 inline-block text-sm font-semibold text-accent">Каталог моделей →</a>
+        </div>
+
+        <!-- Pressure Cooker -->
+        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-800">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Электрические скороварки</h3>
+            <span class="text-sm font-medium text-slate-400">от 500 шт</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">4–12 л · цифровые / многофункциональные</p>
+          <div class="mt-5 flex items-end gap-2">
+            <span class="text-3xl font-bold text-slate-900 dark:text-white">$8,50–$22,00</span>
+            <span class="mb-1 text-sm text-slate-500">/ шт EXW</span>
+          </div>
+          <ul class="mt-5 space-y-2 text-sm text-slate-600 dark:text-slate-400">
+            <li class="flex gap-2"><span class="text-accent">✓</span> 5 л, базовые — от $8,50</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> 6 л, 16 программ — от $12,00</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> HoReCa 10–12 л — от $18,00</li>
+          </ul>
+          <a href="/electric-pressure-cooker-manufacturer" class="mt-6 inline-block text-sm font-semibold text-accent">Каталог моделей →</a>
+        </div>
+
+        <!-- Lunch Box -->
+        <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-800">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Электрические ланч-боксы</h3>
+            <span class="text-sm font-medium text-slate-400">от 500 шт</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">12В / 220В · 304 сталь · 1–2 яруса</p>
+          <div class="mt-5 flex items-end gap-2">
+            <span class="text-3xl font-bold text-slate-900 dark:text-white">$3,20–$7,80</span>
+            <span class="mb-1 text-sm text-slate-500">/ шт EXW</span>
+          </div>
+          <ul class="mt-5 space-y-2 text-sm text-slate-600 dark:text-slate-400">
+            <li class="flex gap-2"><span class="text-accent">✓</span> Базовые 304 сталь — от $3,20</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> Двойные 12В/220В — от $5,00</li>
+            <li class="flex gap-2"><span class="text-accent">✓</span> С термосумкой и аксессуарами — от $6,50</li>
+          </ul>
+          <a href="/electric-lunch-box-manufacturer" class="mt-6 inline-block text-sm font-semibold text-accent">Каталог моделей →</a>
+        </div>
+      </div>
+
+      <p class="mt-8 text-center text-sm text-slate-500 dark:text-slate-400">
+        Указаны ориентировочные цены для планирования бюджета. Точная цена предоставляется в
+        коммерческом предложении после уточнения модели, объёма и требований к кастомизации.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SAMPLE & TOOLING COSTS
+  ========================================================== -->
+
+  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-widest text-accent">Дополнительные расходы</p>
+
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+          Образцы и пресс-формы
+        </h2>
+
+        <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+          Две статьи расходов, которые могут возникнуть при запуске нового OEM/ODM проекта.
+          Прозрачно объясняем, за что вы платите.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-8 dark:border-slate-800 dark:bg-slate-900">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Образцы</h3>
+          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
+            Перед запуском массового производства мы предоставляем образец выбранной модели с вашим
+            логотипом для теста рынка и сертификации.
+          </p>
+          <ul class="mt-5 space-y-3 text-sm text-slate-600 dark:text-slate-400">
+            <li class="flex gap-2"><span class="text-accent font-bold">✓</span> <span><strong>Срок:</strong> 7–10 рабочих дней</span></li>
+            <li class="flex gap-2"><span class="text-accent font-bold">✓</span> <span><strong>Стоимость:</strong> 1–3× от серийной цены (зависит от кастомизации)</span></li>
+            <li class="flex gap-2"><span class="text-accent font-bold">✓</span> <span><strong>Возврат:</strong> стоимость образца вычитается из первого заказа при подтверждении партии</span></li>
+            <li class="flex gap-2"><span class="text-accent font-bold">✓</span> <span><strong>Доставка:</strong> DHL / FedEx / UPS, оплачивается отдельно</span></li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-8 dark:border-slate-800 dark:bg-slate-900">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Пресс-форма (ODM)</h3>
+          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
+            При разработке полностью новой модели (ODM) требуется изготовление пресс-формы для
+            пластиковых и металлических деталей корпуса.
+          </p>
+          <ul class="mt-5 space-y-3 text-sm text-slate-600 dark:text-slate-400">
+            <li class="flex gap-2"><span class="text-accent font-bold">✓</span> <span><strong>Стоимость:</strong> $2 000–$15 000 в зависимости от сложности</span></li>
+            <li class="flex gap-2"><span class="text-accent font-bold">✓</span> <span><strong>Срок:</strong> 25–45 дней</span></li>
+            <li class="flex gap-2"><span class="text-accent font-bold">✓</span> <span><strong>Срок службы:</strong> 100 000–300 000 циклов</span></li>
+            <li class="flex gap-2"><span class="text-accent font-bold">✓</span> <span><strong>Собственность:</strong> пресс-форма принадлежит заказчику</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PAYMENT TERMS
+  ========================================================= -->
+
+  <section class="bg-slate-50 py-20 dark:bg-slate-900 lg:py-28">
+    <div class="mx-auto max-w-5xl px-6 lg:px-8">
+      <div class="text-center">
+        <p class="text-sm font-semibold uppercase tracking-widest text-accent">Условия оплаты</p>
+
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+          Порядок оплаты OEM заказа
+        </h2>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl bg-white p-7 text-center shadow-sm dark:bg-slate-800">
+          <div class="text-4xl font-bold text-accent">30%</div>
+          <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">Депозит</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+            Предоплата после подтверждения заказа и спецификации. Запуск закупки материалов и
+            производства.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-white p-7 text-center shadow-sm dark:bg-slate-800">
+          <div class="text-4xl font-bold text-accent">70%</div>
+          <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">Перед отгрузкой</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+            Оплата остатка после прохождения финального контроля качества и до отгрузки с фабрики.
+            Фото- и видеоотчёт перед оплатой.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-white p-7 text-center shadow-sm dark:bg-slate-800">
+          <div class="text-4xl font-bold text-accent">100%</div>
+          <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">Способы оплаты</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+            Банковский перевод (T/T), аккредитив (L/C) при крупных партиях. Trade Assurance через
+            Alibaba — для дополнительной защиты сделки.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FAQ
+  ========================================================== -->
+
+  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
+    <div class="mx-auto max-w-4xl px-6 lg:px-8">
+      <div class="text-center">
+        <p class="text-sm font-semibold uppercase tracking-widest text-accent">FAQ</p>
+
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+          Частые вопросы о ценах и условиях OEM
+        </h2>
+      </div>
+
+      <div class="mt-12 divide-y divide-slate-200 dark:divide-slate-700">
+        <details class="group py-6">
+          <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
+            Можно ли получить точную цену без обращения к менеджеру?
+          </summary>
+          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+            Нет. Точная цена зависит от модели, объёма партии, уровня кастомизации, сертификации и
+            упаковки. На странице указаны ориентировочные диапазоны для планирования бюджета.
+            Точную цену вы получаете в коммерческом предложении в течение 24 часов после запроса.
+          </p>
+        </details>
+
+        <details class="group py-6">
+          <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
+            Что входит в стоимость единицы продукции?
+          </summary>
+          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+            В стоимость входит: готовое изделие, стандартная коробка завода, базовая инструкция на
+            английском. Не входит: индивидуальная упаковка, сертификация, доставка, таможенное
+            оформление. Эти позиции рассчитываются отдельно и указываются в КП.
+          </p>
+        </details>
+
+        <details class="group py-6">
+          <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
+            Делаете ли вы скидки при больших объёмах?
+          </summary>
+          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+            Да. Цена за единицу снижается при увеличении объёма партии. Также возможны
+            дополнительные условия для постоянных клиентов — отсрочка платежа, приоритетное
+            производство, бесплатные образцы для новых моделей.
+          </p>
+        </details>
+
+        <details class="group py-6">
+          <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
+            Какой минимальный заказ (MOQ)?
+          </summary>
+          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+            Базовый MOQ — от 500 штук. Для моделей с индивидуальной пресс-формой (ODM) MOQ может быть
+            выше — от 1000–2000 шт. Точный MOQ зависит от модели и уровня кастомизации.
+          </p>
+        </details>
+
+        <details class="group py-6">
+          <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
+            Можно ли использовать Trade Assurance Alibaba?
+          </summary>
+          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+            Да. Мы работаем через Alibaba Trade Assurance — ваш платёж защищён до подтверждения
+            получения товара. Также доступны банковский перевод (T/T) и аккредитив (L/C).
+          </p>
+        </details>
+
+        <details class="group py-6">
+          <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
+            Сколько стоит доставка до моей страны?
+          </summary>
+          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+            Мы работаем на условиях FOB Шэньчжэнь / Гуанчжоу. Стоимость фрахта до порта назначения
+            рассчитывает ваш экспедитор. При необходимости можем порекомендовать логистических
+            партнёров, работающих с ЕАЭС.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FINAL CTA
+  ========================================================== -->
+
+  <section class="relative overflow-hidden bg-slate-900 py-20 text-white lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-widest text-slate-400">Запрос КП</p>
+
+          <h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+            Получите точную цену за 24 часа
+          </h2>
+
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+            Отправьте нам модель, объём партии и требования к кастомизации. Мы подготовим
+            коммерческое предложение с точной ценой, сроками производства и условиями отгрузки.
+          </p>
+
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a
+              href="/contact"
+              class="inline-flex items-center rounded-lg bg-white px-7 py-3.5 text-sm font-bold text-slate-900 transition hover:bg-slate-100"
+            >
+              Запросить КП
+            </a>
+
+            <a
+              href="https://wa.me/8613922332584"
+              class="inline-flex items-center rounded-lg border border-slate-600 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-slate-800"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="overflow-hidden rounded-2xl">
+          <img
+            src="/images/factory/taller-inyeccion.jpg"
+            alt="Производство кухонной техники на фабрике YOLEC — условия OEM/ODM"
+            class="h-auto w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       WHATSAPP QR
+  ========================================================== -->
+
+  <section class="flex flex-col items-center justify-center gap-3 bg-white py-10 dark:bg-slate-950">
+    <p class="text-center text-sm text-slate-500 dark:text-slate-400">Прямая связь по вопросам цен и условий OEM / ODM</p>
+
+    <img
+      src="/images/whatsapp.png"
+      alt="WhatsApp YOLEC Electric для запроса коммерческого предложения"
+      class="h-auto w-[180px] rounded-lg shadow-md md:w-[220px]"
+      loading="lazy"
+    />
+  </section>
 </Layout>

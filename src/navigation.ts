@@ -16,7 +16,7 @@ export const headerData = {
         },
         {
           text: 'Чайники для кофе',
-          href: getPermalink('/electric-kettle-manufacturer'),
+          href: getPermalink('/coffee-kettle-manufacturer'),
         },
         {
           text: 'Рисоварки',
@@ -59,12 +59,8 @@ export const headerData = {
       text: 'О фабрике',
       links: [
         {
-          text: 'О компании',
+          text: 'О заводе',
           href: getPermalink('/about'),
-        },
-        {
-          text: 'Наша фабрика',
-          href: getPermalink('/fabrika'),
         },
         {
           text: 'Блог',
@@ -101,7 +97,7 @@ export const footerData = {
         },
         {
           text: 'Чайники для кофе',
-          href: getPermalink('/electric-kettle-manufacturer'),
+          href: getPermalink('/coffee-kettle-manufacturer'),
         },
         {
           text: 'Рисоварки',
@@ -148,12 +144,8 @@ export const footerData = {
           href: getBlogPermalink(),
         },
         {
-          text: 'О компании',
+          text: 'О заводе',
           href: getPermalink('/about'),
-        },
-        {
-          text: 'Наша фабрика',
-          href: getPermalink('/fabrika'),
         },
         {
           text: 'Связаться с нами',

@@ -1,0 +1,480 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ProductsGrid from '~/components/widgets/ProductsGrid.astro';
+
+const metadata = {
+  title: 'Производитель кофейных чайников gooseneck в Китае — OEM/ODM завод',
+  description:
+    'OEM/ODM производство кофейных чайников с гусиной шеей (gooseneck): контроль температуры, LED-дисплей, точный поток воды. Прямые поставки с фабрики в Чжуншане для импортёров и private label брендов.',
+  ignoreTitleTemplate: true,
+};
+
+const products = [
+  {
+    model: 'HS-10DK22',
+    tag: 'Gooseneck · Контроль температуры',
+    title: 'Кофейный чайник gooseneck 1,0 л из нержавеющей стали с регулировкой температуры и поддержанием нагрева.',
+    image: '/images/products/kettle/HS-10DK22-1.jpg',
+    url: 'https://www.yolec-electronics.com/products/electric-coffee-kettle/oem-1-0l-stainless-steel-gooseneck-kettle-temp-control-hs-10dk22/',
+  },
+  {
+    model: 'HS-10DK10',
+    tag: 'Gooseneck · Быстрый нагрев',
+    title: 'Чайник-«гусиная шея» 1,0 л с быстрым нагревом — базовая модель для кофейного сегмента с анти-сухим ходом.',
+    image: '/images/products/kettle/HS-10DK10-1.jpg',
+    image2: '/images/products/kettle/HS-10DK10-2.jpg',
+    url: 'https://www.yolec-electronics.com/products/electric-coffee-kettle/oem-1-0l-basic-gooseneck-coffee-kettle-fast-boil-hs-10dk10/',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- =========================================================
+       HERO
+  ========================================================== -->
+
+  <section class="relative overflow-hidden bg-slate-50 dark:bg-slate-900">
+    <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+      <div class="grid items-center gap-14 lg:grid-cols-2">
+        <!-- LEFT -->
+
+        <div>
+          <div
+            class="mb-6 inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
+          >
+            Coffee Kettle Manufacturer · Gooseneck & Pour-Over
+          </div>
+
+          <h1 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl">
+            Производитель кофейных чайников gooseneck
+            <span class="block text-accent">в Китае — OEM/ODM завод</span>
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+            Производим электрические кофейные чайники с узким носиком (gooseneck) для pour-over и
+            спешиалти кофе. Контроль температуры, точный поток воды, LED-дисплей — для импортёров,
+            дистрибьюторов и private label брендов кофейного сегмента.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              href="/contact"
+              class="inline-flex items-center rounded-lg bg-accent px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
+            >
+              Получить предложение
+            </a>
+
+            <a
+              href="https://wa.me/8613922332584"
+              class="inline-flex items-center rounded-lg border border-slate-300 bg-white px-6 py-3.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:border-slate-600 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700"
+            >
+              Связаться в WhatsApp
+            </a>
+          </div>
+
+          <div class="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-sm text-slate-600 dark:text-slate-400">
+            <div>
+              <strong class="text-slate-900 dark:text-white">10+</strong>
+              лет производства
+            </div>
+
+            <div>
+              <strong class="text-slate-900 dark:text-white">14+</strong>
+              моделей gooseneck
+            </div>
+
+            <div>
+              <strong class="text-slate-900 dark:text-white">CE / CB / RoHS</strong>
+              сертификация
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="relative">
+          <div
+            class="overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-200 dark:bg-slate-800 dark:ring-slate-700"
+          >
+            <img
+              src="/images/products/kettle/HS-10DK22-1.jpg"
+              alt="Gooseneck coffee kettle manufacturer in China — производство кофейных чайников"
+              class="h-auto w-full object-cover"
+              loading="eager"
+            />
+          </div>
+
+          <div
+            class="absolute -bottom-6 -left-6 hidden rounded-xl bg-white p-5 shadow-xl ring-1 ring-slate-200 dark:bg-slate-800 dark:ring-slate-700 sm:block"
+          >
+            <p class="text-xs font-medium uppercase tracking-wide text-slate-500">Pour-over сегмент</p>
+
+            <p class="mt-1 text-lg font-bold text-slate-900 dark:text-white">OEM / ODM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TRUST / STATS
+  ========================================================== -->
+
+  <section class="border-y border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
+    <div class="mx-auto grid max-w-6xl grid-cols-2 divide-x divide-slate-200 dark:divide-slate-800 lg:grid-cols-4">
+      <div class="px-6 py-8 text-center">
+        <div class="text-3xl font-bold text-slate-900 dark:text-white">14+</div>
+        <div class="mt-1 text-sm text-slate-500">Моделей gooseneck</div>
+      </div>
+
+      <div class="px-6 py-8 text-center">
+        <div class="text-3xl font-bold text-slate-900 dark:text-white">1,0 л</div>
+        <div class="mt-1 text-sm text-slate-500">Стандартный объём</div>
+      </div>
+
+      <div class="border-t px-6 py-8 text-center dark:border-slate-800 lg:border-t-0">
+        <div class="text-3xl font-bold text-slate-900 dark:text-white">±1°C</div>
+        <div class="mt-1 text-sm text-slate-500">Точность температуры</div>
+      </div>
+
+      <div class="border-t px-6 py-8 text-center dark:border-slate-800 lg:border-t-0">
+        <div class="text-3xl font-bold text-slate-900 dark:text-white">60+</div>
+        <div class="mt-1 text-sm text-slate-500">Стран экспорта</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       WHY GOOSENECK
+  ========================================================== -->
+
+  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-widest text-accent">Gooseneck</p>
+
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+          Почему кофейные чайники gooseneck — отдельная категория
+        </h2>
+
+        <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+          Для рынка спешиалти кофе и pour-over приготовления важны точность температуры и контроль
+          потока воды. Кофейные чайники с узким носиком (gooseneck) выделяются в отдельную продуктовую
+          линейку — с собственными требованиями к дизайну, материалам и функциональности.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900">
+          <div class="text-2xl font-bold text-slate-900 dark:text-white">01</div>
+
+          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">Точный поток воды</h3>
+
+          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
+            Узкий изогнутый носик обеспечивает контролируемую тонкую струю — ключевой параметр для
+            pour-over, V60, Chemex и других альтернативных способов заваривания.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900">
+          <div class="text-2xl font-bold text-slate-900 dark:text-white">02</div>
+
+          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">Контроль температуры</h3>
+
+          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
+            Электронное управление с точностью ±1°C и функцией поддержания нагрева — для стабильного
+            результата при заваривании разных сортов кофе.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900">
+          <div class="text-2xl font-bold text-slate-900 dark:text-white">03</div>
+
+          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">Дизайн для кофейного сегмента</h3>
+
+          <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
+            Матовый чёрный, нержавеющая сталь, LED-дисплей — визуальное исполнение под стандарты
+            спешиалти кофе рынка, с возможностью кастомизации под бренд.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PRODUCT CATALOG
+  ========================================================== -->
+
+  <ProductsGrid
+    tagline="Кофейные чайники gooseneck"
+    title="Серийные модели кофейных чайников нашего завода"
+    subtitle="14+ моделей gooseneck-чайников: с контролем температуры, LED-дисплеем, анти-сухим ходом — в матовом чёрном и нержавеющей стали. Каждая модель доступна под OEM/ODM с вашим логотипом и упаковкой."
+    products={products}
+  />
+
+  <!-- =========================================================
+       OEM / ODM
+  ========================================================== -->
+
+  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid gap-14 lg:grid-cols-2 lg:items-center">
+        <div class="overflow-hidden rounded-2xl">
+          <img
+            src="/images/products/kettle/HS-10DK10-1.jpg"
+            alt="OEM/ODM производство кофейных чайников gooseneck на заказ"
+            class="h-auto w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-widest text-accent">OEM / ODM</p>
+
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+            Кофейный чайник под требования вашего бренда
+          </h2>
+
+          <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+            OEM проект не обязательно начинать с нуля. Можно выбрать существующую модель gooseneck и
+            изменить только те элементы, которые нужны вашему рынку и бренду.
+          </p>
+
+          <div class="mt-8 space-y-5">
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white">Логотип и фирменный стиль</h3>
+              <p class="mt-1 text-slate-600 dark:text-slate-400">
+                Нанесение логотипа на корпус, базу и упаковку.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white">Цвет и отделка</h3>
+              <p class="mt-1 text-slate-600 dark:text-slate-400">
+                Матовый чёрный, нержавеющая сталь, индивидуальные цвета по Pantone.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white">Функции и характеристики</h3>
+              <p class="mt-1 text-slate-600 dark:text-slate-400">
+                Диапазон температур, мощность, LED-дисплей, таймер удержания — в зависимости от модели.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white">Упаковка</h3>
+              <p class="mt-1 text-slate-600 dark:text-slate-400">
+                Коробки, инструкции, этикетки под требования бренда и рынка.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SUPPLIER & FACTORY
+  ========================================================== -->
+
+  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+            Прямой производитель кофейных чайников — фабрика в Чжуншане
+          </h2>
+
+          <p class="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
+            Мы не торговая компания-посредник: вы работаете напрямую с фабрикой в Чжуншане (провинция
+            Гуандун). Как производитель кофейных чайников gooseneck мы обеспечиваем стабильное качество
+            партий, короткие сроки пополнения и полный пакет документов для импорта.
+          </p>
+
+          <ul class="mt-8 space-y-4 text-slate-600 dark:text-slate-300">
+            <li class="flex gap-3">
+              <span class="text-accent font-bold">✓</span>
+              <span><strong>Гибкий MOQ</strong> для первой закупки и масштабирование до контейнерных партий</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent font-bold">✓</span>
+              <span><strong>Образцы за 7–10 дней</strong> с вашим логотипом для теста рынка и сертификации</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent font-bold">✓</span>
+              <span><strong>Отгрузка FOB Шэньчжэнь/Гуанчжоу</strong>, полный пакет документов для таможни ЕАЭС</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent font-bold">✓</span>
+              <span><strong>Сертификаты CE, CB, RoHS, LFGB</strong> и протоколы испытаний из собственной лаборатории</span>
+            </li>
+          </ul>
+
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a
+              href="/about"
+              class="inline-flex items-center rounded-lg bg-accent px-7 py-3.5 text-sm font-bold text-white transition hover:opacity-90"
+            >
+              Смотреть фото и видео фабрики
+            </a>
+            <a
+              href="/contact"
+              class="inline-flex items-center rounded-lg border border-slate-300 px-7 py-3.5 text-sm font-bold text-slate-700 transition hover:bg-slate-100 dark:border-slate-600 dark:text-white dark:hover:bg-slate-800"
+            >
+              Запросить КП
+            </a>
+          </div>
+        </div>
+
+        <div class="overflow-hidden rounded-2xl shadow-lg">
+          <img
+            src="/images/factory/taller-inyeccion.jpg"
+            alt="Производство кофейных чайников на фабрике YOLEC в Чжуншане"
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FAQ
+  ========================================================== -->
+
+  <section class="bg-slate-50 py-20 dark:bg-slate-900 lg:py-28">
+    <div class="mx-auto max-w-4xl px-6 lg:px-8">
+      <div class="text-center">
+        <p class="text-sm font-semibold uppercase tracking-widest text-accent">FAQ</p>
+
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+          Частые вопросы о производстве кофейных чайников
+        </h2>
+      </div>
+
+      <div class="mt-12 divide-y divide-slate-200 dark:divide-slate-700">
+        <details class="group py-6">
+          <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
+            Чем кофейный чайник gooseneck отличается от обычного электрического чайника?
+          </summary>
+
+          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+            Кофейный чайник gooseneck имеет узкий изогнутый носик для точного контроля потока воды —
+            это критически важно для pour-over заваривания. Также модели gooseneck часто оснащены
+            регулировкой температуры и функцией поддержания нагрева, которых нет в стандартных
+            чайниках.
+          </p>
+        </details>
+
+        <details class="group py-6">
+          <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
+            Можно ли заказать кофейный чайник под private label?
+          </summary>
+
+          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+            Да. Мы предлагаем OEM и ODM производство с нанесением логотипа, индивидуальным цветом
+            корпуса, упаковкой и другими параметрами под требования вашего бренда.
+          </p>
+        </details>
+
+        <details class="group py-6">
+          <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
+            Какие сертификаты доступны для кофейных чайников?
+          </summary>
+
+          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+            В зависимости от модели и рынка: CE, CB, RoHS, LFGB. Также предоставляем протоколы
+            испытаний из собственной лаборатории и отчёт SGS.
+          </p>
+        </details>
+
+        <details class="group py-6">
+          <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
+            Какой MOQ для кофейных чайников gooseneck?
+          </summary>
+
+          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+            MOQ зависит от модели и уровня кастомизации. Сообщите предполагаемый объём заказа, и мы
+            предложим подходящие условия.
+          </p>
+        </details>
+
+        <details class="group py-6">
+          <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
+            Можно ли заказать образец?
+          </summary>
+
+          <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+            Да. Мы можем предоставить образец выбранной модели с вашим логотипом для теста рынка и
+            сертификации. Срок изготовления образца — 7–10 дней.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FINAL CTA
+  ========================================================== -->
+
+  <section class="relative overflow-hidden bg-slate-900 py-20 text-white lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-widest text-slate-400">Coffee Kettle Manufacturer</p>
+
+          <h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+            Ищете производителя кофейных чайников gooseneck?
+          </h2>
+
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+            Отправьте нам модель, фотографию понравившегося изделия, предполагаемый объём заказа или
+            требования к персонализации. Мы оценим ваш OEM или ODM проект и предложим подходящий
+            вариант.
+          </p>
+
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a
+              href="/contact"
+              class="inline-flex items-center rounded-lg bg-white px-7 py-3.5 text-sm font-bold text-slate-900 transition hover:bg-slate-100"
+            >
+              Получить предложение
+            </a>
+
+            <a
+              href="https://wa.me/8613922332584"
+              class="inline-flex items-center rounded-lg border border-slate-600 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-slate-800"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="overflow-hidden rounded-2xl">
+          <img
+            src="/images/products/kettle/HS-10DK10-2.jpg"
+            alt="Кофейный чайник gooseneck для OEM и ODM проектов"
+            class="h-auto w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       WHATSAPP QR
+  ========================================================== -->
+
+  <section class="flex flex-col items-center justify-center gap-3 bg-white py-10 dark:bg-slate-950">
+    <p class="text-center text-sm text-slate-500 dark:text-slate-400">Прямая связь по вопросам OEM / ODM</p>
+
+    <img
+      src="/images/whatsapp.png"
+      alt="WhatsApp YOLEC Electric для запросов по производству кофейных чайников"
+      class="h-auto w-[180px] rounded-lg shadow-md md:w-[220px]"
+      loading="lazy"
+    />
+  </section>
+</Layout>

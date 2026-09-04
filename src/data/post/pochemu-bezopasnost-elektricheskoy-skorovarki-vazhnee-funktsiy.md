@@ -480,7 +480,7 @@ Yolec Electric работает в сфере малой кухонной тех
 
 Компания также имеет опыт работы с европейскими рынками и соответствующими требованиями к продукции.
 
-Подробнее о производстве и продукции можно посмотреть на [странице нашей фабрики](/fabrika).
+Подробнее о производстве и продукции можно посмотреть на [странице нашей фабрики](/about).
 
 Если вы хотите посмотреть реальные видео продукции и производства, полезно также посмотреть [YouTube Yolec Electric](https://www.youtube.com/@yolec-electric-adrian), [VK Yolec Electric](https://vk.ru/kitchen_appliance_factory) и [VK Video Yolec Electric](https://vkvideo.ru/@kitchen_appliance_factory).
 

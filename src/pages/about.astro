@@ -1,367 +1,301 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
-  title: 'О производственной базе в Китае — OEM/ODM завод кухонной техники',
-
+  title: 'О нашем заводе в Китае — OEM/ODM производитель кухонной техники',
   description:
-    'Производственная база в Чжуншане (Гуандун): 20 000 м², 200+ сотрудников, полный цикл OEM/ODM производства кухонной техники и экспорт в 60+ стран.',
+    'Zhongshan Yangle Electric (YOLEC): 20 000 м², 200+ сотрудников, 13 инженеров R&D, цеха литья и штамповки, лаборатория испытаний. Сертификаты CE, CB, CCC, TÜV, SGS. Экспорт в 60+ стран с 2015 года.',
+  ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HERO ===================== -->
+  <!-- HERO -->
 
   <Hero
     tagline="Китайский OEM/ODM завод кухонной бытовой техники"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=2070&q=80',
-      alt: 'OEM/ODM производитель мелкой кухонной техники в Китае',
+      src: '~/assets/images/factory.png',
+      alt: 'Завод YOLEC Electric — производитель кухонной техники OEM/ODM в Китае',
     }}
   >
     <Fragment slot="title">
-      О компании YOLEC <br />
-      <span class="text-accent dark:text-white"> OEM/ODM производитель мелкой кухонной техники в Китае </span>
+      Наш завод в Чжуншане <br />
+      <span class="text-accent dark:text-white">OEM/ODM производитель кухонной техники</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      YOLEC — китайский производитель мелкой кухонной техники, специализирующийся на OEM и ODM производстве для
-      международных импортеров, дистрибьюторов, владельцев брендов и розничных сетей. Производим и поставляем кухонную
-      бытовую технику для B2B клиентов по всему миру. Специализация: электрические чайники, стеклянные чайники,
-      gooseneck кофейные чайники, рисоварки, мультиварки, IH cooker, скороварки, ланч-боксы и другая мелкая кухонная
-      техника. Работаем только с оптовыми B2B заказами и OEM/ODM проектами.
+      <strong>Zhongshan Yangle Electric (торговая марка YOLEC)</strong> — производственное предприятие в городе Дунфэн, Чжуншань
+      (провинция Гуандун), <strong>основано в 2015 году</strong>. Производим мелкую кухонную технику под маркой
+      заказчика: электрочайники, рисоварки, мультиварки-скороварки и электрические ланч-боксы. Верифицированы SGS (отчёт
+      483515034-P+T), процент повторных заказов клиентов — более 80 %. Работаем напрямую с импортерами, дистрибьюторами
+      и брендами — без посредников.
     </Fragment>
   </Hero>
 
-  <!-- STRONG PROOF STATS ===================== -->
+  <!-- STATS -->
 
   <Stats
-    title="Факты о заводе (OEM/ODM производитель из Китая)"
+    title="Завод в цифрах — с 2015 года на рынке OEM/ODM"
     stats={[
-      { title: 'Производственная база', amount: '20000㎡' },
+      { title: 'Площадь производства', amount: '20 000 м²' },
       { title: 'Сотрудники', amount: '200+' },
-      { title: 'Производственные линии', amount: '3' },
-      { title: 'OEM/ODM проектов', amount: '1000+' },
+      { title: 'Инженеры R&D', amount: '13' },
+      { title: 'Производство в месяц', amount: '≈ 200K' },
     ]}
   />
 
-  <Content
-    tagline="Наша миссия"
-    title="Помогаем мировым брендам создавать качественную кухонную технику"
-    image={{
-      src: '~/assets/images/factory-mission.png',
-      alt: 'OEM ODM производитель мелкой кухонной техники в Китае',
-    }}
-    items={[
-      {
-        title: 'Ориентация на B2B',
-        description: 'Работаем исключительно с импортерами, дистрибьюторами, владельцами брендов и розничными сетями.',
-      },
-      {
-        title: 'Долгосрочное сотрудничество',
-        description:
-          'Стремимся выстраивать стабильные партнерские отношения и помогать клиентам развивать собственные бренды.',
-      },
-      {
-        title: 'Комплексные OEM/ODM решения',
-        description: 'От разработки продукции до массового производства, контроля качества и экспортной поддержки.',
-      },
-    ]}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Наша миссия</h3>
+  <!-- О КОМПАНИИ -->
 
-      <p class="mt-4">
-        Миссия YOLEC — помогать импортерам, дистрибьюторам и владельцам брендов создавать конкурентоспособную мелкую
-        кухонную технику с помощью профессионального OEM и ODM производства в Китае. Мы стремимся обеспечить стабильное
-        качество продукции, эффективное производство и долгосрочное сотрудничество с международными партнерами.
-      </p>
-    </Fragment>
-  </Content>
+  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid gap-14 lg:grid-cols-2 lg:items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-widest text-accent">О компании</p>
 
-  <!-- CORE PRODUCTS ===================== -->
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+            Китайский производитель мелкой кухонной техники
+          </h2>
 
-  <!-- ABOUT COMPANY ===================== -->
+          <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+            Zhongshan Yangle Electric Appliance Co., Ltd. (международное название YOLEC) — китайский производитель мелкой
+            кухонной техники в городе Дунфэн (Чжуншань, Гуандун). Компания <strong>основана в 2015 году</strong>,
+            специализируется на выпуске электрочайников, рисоварок, мультиварок-скороварок и электрических ланч-боксов
+            для международных импортеров, дистрибьюторов, владельцев брендов и розничных сетей.
+          </p>
 
-  <Content
-    tagline="О компании YOLEC"
-    title="Китайский производитель мелкой кухонной техники"
-    items={[
-      {
-        title: 'OEM и ODM производство',
-        description: 'Предоставляем комплексные OEM и ODM услуги для международных B2B клиентов.',
-      },
-      {
-        title: 'Полный цикл производства',
-        description:
-          'От разработки продукции и изготовления пресс-форм до массового производства и экспортной поддержки.',
-      },
-      {
-        title: 'Долгосрочное сотрудничество',
-        description: 'Работаем с импортерами, дистрибьюторами и владельцами брендов по всему миру.',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/factory3.png',
-      alt: 'Производитель мелкой кухонной техники в Китае',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">О производственной базе YOLEC</h3>
+          <ul class="mt-6 space-y-3 text-slate-600 dark:text-slate-300">
+            <li class="flex gap-3">
+              <span class="text-accent font-bold">✓</span>
+              <span><strong>5 автоматизированных линий</strong> сборки, <strong>30+ термопластавтоматов</strong> 250–420T</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent font-bold">✓</span>
+              <span>Собственный R&D: <strong>13 инженеров</strong> — от концепции и 3D-макета до сертификационного образца</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent font-bold">✓</span>
+              <span>Мощность: <strong>≈ 200 000 единиц в месяц</strong> (более 2,5 млн в год)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent font-bold">✓</span>
+              <span><strong>Верифицирован SGS</strong> (отчёт № 483515034-P+T), аудит TÜV и Intertek</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent font-bold">✓</span>
+              <span><strong>Повторные заказы — более 80 %</strong> — стабильность QC, сроков и коммуникации</span>
+            </li>
+          </ul>
+        </div>
 
-      <p class="mt-4">
-        Zhongshan Yangle Electric Appliance Co., Ltd. (международное название YOLEC) — китайский производитель мелкой
-        кухонной техники в городе Дунфэн (Чжуншань, Гуандун). Компания <strong
-          >основана в 2015 году (более 10 лет опыта OEM/ODM)</strong
-        >, специализируется на выпуске электрочайников, рисоварок, мультиварок-скороварок и электрических ланч-боксов
-        для международных импортеров, дистрибьюторов, владельцев брендов и розничных сетей. Проекты сопровождаем от
-        разработки и изготовления пресс-форм до массового производства и экспортной логистики.
+        <div class="overflow-hidden rounded-2xl shadow-lg">
+          <img
+            src="/images/factory/taller-inyeccion.jpg"
+            alt="Цех литья пластика на фабрике YOLEC Electric в Чжуншане"
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПРОИЗВОДСТВЕННЫЕ ЦЕХА (реальные фото) -->
+
+  <section class="bg-slate-50 py-20 dark:bg-slate-900 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-widest text-accent">Производство</p>
+
+      <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+        Цеха нашей фабрики в Чжуншане
+      </h2>
+
+      <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+        На площадке 20 000 м² все этапы производства сосредоточены на одном предприятии: литьё пластика, штамповка
+        металла, полировка, сборка и лаборатория испытаний. Перед началом OEM-проекта вы можете лично проверить фабрику
+        — приехать с аудитом или провести видеоинспекцию.
       </p>
 
-      <ul class="mt-4 list-disc space-y-2 pl-6 text-slate-700 dark:text-slate-300">
-        <li>
-          <strong>5 автоматизированных линий</strong> сборки, <strong>30+ термопластавтоматов</strong> 250–420T, собственный
-          цех штамповки металла и полировки изделий.
-        </li>
-        <li>
-          Собственная R&D-служба: <strong>13 инженеров</strong> — от концепции и 3D-макета до сертификационного образца.
-        </li>
-        <li>
-          Производственная мощность: <strong>≈ 200 000 единиц в месяц</strong> (более 2,5 млн в год) — надёжно для крупных
-          оптовых партий.
-        </li>
-        <li>
-          <strong>Верифицирован SGS</strong> (отчёт № 483515034-P+T). Продукция соответствует CE, CB, CCC, RoHS, LFGB, REACH,
-          EAC (ЕАЭС), пройдена аудит TÜV и Intertek.
-        </li>
-        <li>
-          <strong>Процент повторных заказов клиентов — более 80 %</strong> — подтверждение стабильности QC, сроков и коммуникации.
-        </li>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <figure class="overflow-hidden rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+          <img src="/images/factory/taller-inyeccion.jpg" alt="Цех литья пластика фабрики YOLEC Electric" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+          <figcaption class="p-4 text-sm font-semibold text-slate-700 dark:text-slate-200">Цех литья пластика</figcaption>
+        </figure>
+        <figure class="overflow-hidden rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+          <img src="/images/factory/taller-estampado.jpg" alt="Цех штамповки металла OEM" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+          <figcaption class="p-4 text-sm font-semibold text-slate-700 dark:text-slate-200">Цех штамповки металла</figcaption>
+        </figure>
+        <figure class="overflow-hidden rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+          <img src="/images/factory/pulido-producto.jpg" alt="Полировка изделий YOLEC" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+          <figcaption class="p-4 text-sm font-semibold text-slate-700 dark:text-slate-200">Полировка и финишная обработка</figcaption>
+        </figure>
+        <figure class="overflow-hidden rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+          <img src="/images/factory/laboratorio-pruebas.jpg" alt="Лаборатория испытаний YOLEC Electric" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+          <figcaption class="p-4 text-sm font-semibold text-slate-700 dark:text-slate-200">Лаборатория испытаний</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- СЕРТИФИКАТЫ -->
+
+  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-widest text-accent">Сертифицированное качество</p>
+
+      <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+        Сертификаты: CE, RoHS, CB, CCC, TÜV и LFGB
+      </h2>
+
+      <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+        Строгая система контроля качества действует на каждом этапе — от закупки сырья до финальной инспекции. Продукция
+        проходит сертификацию под требования ЕАЭС, ЕС, Северной Америки и Ближнего Востока.
+      </p>
+
+      <ul class="mt-8 grid gap-4 text-base leading-7 text-slate-600 dark:text-slate-300 sm:grid-cols-2">
+        <li class="flex gap-3"><span class="text-accent">✓</span><span><strong>CE</strong> — соответствие директивам безопасности ЕС</span></li>
+        <li class="flex gap-3"><span class="text-accent">✓</span><span><strong>RoHS</strong> — экологические требования для рынка Европы</span></li>
+        <li class="flex gap-3"><span class="text-accent">✓</span><span><strong>CB</strong> — международное признание для десятков стран</span></li>
+        <li class="flex gap-3"><span class="text-accent">✓</span><span><strong>LFGB</strong> — допуск к контакту с пищевыми продуктами (Германия)</span></li>
+        <li class="flex gap-3"><span class="text-accent">✓</span><span><strong>CCC</strong> — обязательная сертификация для рынка Китая</span></li>
+        <li class="flex gap-3"><span class="text-accent">✓</span><span><strong>TÜV</strong> — испытания независимым германским органом</span></li>
+        <li class="flex gap-3"><span class="text-accent">✓</span><span><strong>ETL</strong> — сертификация безопасности для Северной Америки</span></li>
+        <li class="flex gap-3"><span class="text-accent">✓</span><span><strong>Intertek</strong> — тестирование в независимой лаборатории</span></li>
       </ul>
-    </Fragment>
-  </Content>
 
-  <Features3
-    title="OEM/ODM кухонная техника из Китая — поставщик оптом от завода"
-    subtitle="Категории продукции для импортеров, дистрибьюторов и private label брендов"
-    columns={3}
-    isBeforeContent={true}
+      <div class="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
+        <figure class="flex items-center justify-center rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+          <img src="/images/factory/certificado-ccc.png" alt="Сертификат CCC YOLEC" class="max-h-56 w-auto object-contain" loading="lazy" />
+        </figure>
+        <figure class="flex items-center justify-center rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+          <img src="/images/factory/certificado-cb.png" alt="Сертификат CB YOLEC" class="max-h-56 w-auto object-contain" loading="lazy" />
+        </figure>
+        <figure class="flex items-center justify-center rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+          <img src="/images/factory/certificado-tuv.png" alt="Сертификат TÜV YOLEC" class="max-h-56 w-auto object-contain" loading="lazy" />
+        </figure>
+        <figure class="flex items-center justify-center rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+          <img src="/images/factory/certificado-ce.png" alt="Сертификат CE YOLEC" class="max-h-56 w-auto object-contain" loading="lazy" />
+        </figure>
+        <figure class="flex items-center justify-center rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+          <img src="/images/factory/certificado-intertek-1.png" alt="Отчёт Intertek YOLEC" class="max-h-56 w-auto object-contain" loading="lazy" />
+        </figure>
+        <figure class="flex items-center justify-center rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+          <img src="/images/factory/certificado-intertek-2.png" alt="Сертификация Intertek YOLEC" class="max-h-56 w-auto object-contain" loading="lazy" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ВИДЕО С ФАБРИКИ -->
+
+  <section class="bg-slate-50 py-20 dark:bg-slate-900 lg:py-28">
+    <div class="mx-auto max-w-4xl px-6 text-center lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-widest text-accent">Фабрика в видео</p>
+
+      <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+        Посмотрите наш завод изнутри
+      </h2>
+
+      <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+        Реальные видео производства, испытаний продукции и сборочных линий. Полная прозрачность — часть нашей работы с
+        брендами и импортерами.
+      </p>
+
+      <div class="mt-10 overflow-hidden rounded-2xl shadow-xl">
+        <div class="relative aspect-video w-full">
+          <iframe
+            class="absolute inset-0 h-full w-full"
+            src="https://www.youtube.com/embed/rEMDD8mcuqM"
+            title="Видео с фабрики YOLEC Electric — производство кухонной техники в Китае"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            loading="lazy"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a
+          href="https://www.youtube.com/@yolec-electric-adrian"
+          target="_blank"
+          rel="noopener nofollow"
+          class="inline-flex items-center gap-2 rounded-full bg-red-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-red-700"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5" aria-hidden="true">
+            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"></path>
+          </svg>
+          Все видео на YouTube-канале
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ИСТОРИЯ -->
+
+  <Steps2
+    title="История развития компании"
+    subtitle="Основные этапы развития нашего OEM/ODM производства"
     items={[
-      {
-        title: 'OEM производство электрических чайников в Китае',
-        description: 'Стеклянные / нержавеющие / gooseneck модели. OEM и private label под ваш бренд.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'OEM производство мелкой кухонной техники в Китае',
-        description: 'OEM/ODM производство для оптовых покупателей и дистрибьюторов.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'OEM производство другой мелкой кухонной техники',
-        description: 'Ланч-боксы, breakfast machine, бытовая техника для private label брендов.',
-        icon: 'tabler:template',
-      },
+      { title: '2015', description: 'Основание компании и запуск производства мелкой кухонной техники.' },
+      { title: '2018', description: 'Расширение производственных мощностей и запуск новых производственных линий.' },
+      { title: '2021', description: 'Расширение экспортных поставок на рынки Европы, Ближнего Востока и Южной Америки.' },
+      { title: 'Сегодня', description: 'Надежный OEM/ODM производитель для международных импортеров, дистрибьюторов и владельцев брендов.' },
     ]}
   />
+
+  <!-- ПРЕИМУЩЕСТВА -->
 
   <Features2
     title="Преимущества сотрудничества с заводом YOLEC"
     subtitle="Почему международные B2B покупатели выбирают нашего производителя"
+    tagline="Конкурентные преимущества"
     columns={3}
     items={[
-      {
-        title: 'Собственный производственный комплекс',
-        description: 'Все ключевые производственные процессы выполняются на собственном заводе.',
-        icon: 'tabler:building-factory',
-      },
-      {
-        title: 'OEM и ODM производство',
-        description: 'Поддерживаем разработку продукции, изготовление пресс-форм и производство под брендом заказчика.',
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'Контроль качества',
-        description: 'Контроль качества осуществляется на каждом этапе производства перед экспортом.',
-        icon: 'tabler:shield-check',
-      },
-      {
-        title: 'Экспортный опыт',
-        description: 'Поставляем продукцию в Европу, Ближний Восток, Южную Америку и другие регионы.',
-        icon: 'tabler:world',
-      },
-      {
-        title: 'Поддержка международной сертификации',
-        description: 'Подготавливаем продукцию к требованиям CE, CB, LFGB, RoHS и других рынков.',
-        icon: 'tabler:certificate',
-      },
-      {
-        title: 'Оперативная коммуникация',
-        description: 'Предоставляем коммерческие предложения и техническую поддержку в кратчайшие сроки.',
-        icon: 'tabler:message-circle',
-      },
+      { title: 'Собственный производственный комплекс', description: 'Все ключевые производственные процессы выполняются на собственном заводе.', icon: 'tabler:building-factory' },
+      { title: 'OEM и ODM производство', description: 'Разработка продукции, изготовление пресс-форм и производство под брендом заказчика.', icon: 'tabler:settings' },
+      { title: 'Контроль качества', description: 'Строгая инспекция на каждом этапе производства перед экспортом.', icon: 'tabler:shield-check' },
+      { title: 'Экспорт в 60+ стран', description: 'Поставляем продукцию в Европу, Ближний Восток, Южную Америку и другие регионы.', icon: 'tabler:world' },
+      { title: 'Международная сертификация', description: 'CE, CB, LFGB, RoHS, EAC и другие требования различных рынков.', icon: 'tabler:certificate' },
+      { title: 'Оперативная коммуникация', description: 'Коммерческие предложения и техническая поддержка в кратчайшие сроки.', icon: 'tabler:message-circle' },
     ]}
   />
 
-  <!-- WHY THIS FACTORY ===================== -->
+  <!-- FAQ -->
 
-  <Features3
-    columns={3}
-    isAfterContent={true}
+  <FAQs
+    title="Часто задаваемые вопросы о заводе YOLEC"
+    subtitle="Ответы на вопросы о нашем производстве и OEM/ODM сотрудничестве."
     items={[
-      {
-        title: 'Прямой завод (не посредник)',
-        description: 'OEM/ODM производитель кухонной техники в Китае без торговых компаний.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'OEM/ODM производство под бренд',
-        description: 'Разработка продукта, логотип, упаковка, private label решения.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Оптовые поставки стабильно',
-        description: 'Производственные линии обеспечивают массовые и повторные заказы.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Контроль качества на всех этапах производства',
-        description: '100% проверка продукции перед экспортом.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Поддержка международной сертификации',
-        description:
-          'Поддерживаем подготовку продукции к международной сертификации, включая CE, CB, LFGB, RoHS и другие требования различных рынков.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Оперативная поддержка OEM/ODM проектов',
-        description: 'Коммерческое предложение для B2B покупателей в короткие сроки.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1740&q=80',
-      alt: 'Kitchen appliance OEM ODM factory China production line',
-    }}
-  />
-
-  <!-- TRUST BLOCK ===================== -->
-
-  <Steps2
-    title="Почему импортеры выбирают OEM/ODM завод из Китая"
-    subtitle="Мы работаем как прямой производитель кухонной техники для B2B рынка"
-    items={[
-      {
-        title: 'OEM/ODM производитель Китай',
-        description: 'Прямой завод без посредников и торговых компаний.',
-      },
-      {
-        title: 'Оптовые B2B поставки',
-        description: 'Стабильные объемы производства для импортеров и брендов.',
-      },
-      {
-        title: 'Экспортный опыт',
-        description: '8+ лет поставок в Европу и Ближний Восток.',
-      },
+      { title: 'Вы являетесь производителем?', description: 'Да. YOLEC является производителем мелкой кухонной техники в Китае и предоставляет услуги OEM и ODM.' },
+      { title: 'Какие продукты вы производите?', description: 'Мы производим электрические чайники, чайники для кофе, рисоварки, мультиварки, скороварки и электрические ланч-боксы.' },
+      { title: 'Вы поддерживаете производство под брендом заказчика?', description: 'Да. Мы предоставляем услуги по нанесению логотипа, разработке упаковки и OEM/ODM производству.' },
+      { title: 'Какой минимальный объем заказа (MOQ)?', description: 'Минимальный объем зависит от модели и требований к кастомизации. Базовый MOQ — от 500 шт.' },
+      { title: 'Какие сертификаты поддерживаются?', description: 'CE, CB, CCC, RoHS, LFGB, EAC, TÜV, Intertek. Также поддерживаем подготовку под конкретный рынок.' },
+      { title: 'Сколько времени занимает производство?', description: 'Обычно 30–45 дней после утверждения образцов. Сроки зависят от модели и объёма заказа.' },
+      { title: 'Можно ли приехать на аудит фабрики?', description: 'Да. Мы приветствуем аудиты — очные или видеоинспекцию. Координируем визит по предварительной договорённости.' },
     ]}
   />
 
-  <!-- FINAL CTA ===================== -->
+  <!-- CTA -->
 
   <Steps2
     title="Запросить OEM/ODM предложение от завода"
-    subtitle="Получите цену производителя и начните производство кухонной техники под вашим брендом"
+    subtitle="Получите цену производителя и начните производство под вашим брендом"
     isReversed={true}
     callToAction={{
       text: 'Получить коммерческое предложение',
-      href: 'https://www.yolec-electronics.com/contact/',
-      target: '_blank',
+      href: '/contact',
     }}
     items={[
-      {
-        title: 'Быстрый расчет',
-        description: 'Ответ в течение 24 часов для B2B клиентов.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'OEM/ODM разработка',
-        description: 'Поддержка private label проектов.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Оптовое производство',
-        description: 'Поддержка крупных и повторных заказов.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
-
-  <Steps2
-    title="История развития компании YOLEC"
-    subtitle="Основные этапы развития нашего OEM/ODM производства"
-    items={[
-      {
-        title: '2015',
-        description: 'Основание компании и запуск производства мелкой кухонной техники.',
-      },
-      {
-        title: '2018',
-        description: 'Расширение производственных мощностей и запуск новых производственных линий.',
-      },
-      {
-        title: '2021',
-        description: 'Расширение экспортных поставок на рынки Европы, Ближнего Востока и Южной Америки.',
-      },
-      {
-        title: 'Сегодня',
-        description:
-          'Надежный OEM/ODM производитель для международных импортеров, дистрибьюторов и владельцев брендов.',
-      },
-    ]}
-  />
-
-  <FAQs
-    title="Часто задаваемые вопросы о компании YOLEC"
-    subtitle="Ответы на вопросы о нашем производстве и OEM/ODM сотрудничестве."
-    items={[
-      {
-        title: 'Вы являетесь производителем?',
-        description:
-          'Да. YOLEC является производителем мелкой кухонной техники в Китае и предоставляет услуги OEM и ODM.',
-      },
-      {
-        title: 'Какие продукты вы производите?',
-        description:
-          'Мы производим электрические чайники, чайники для кофе, рисоварки, мультиварки, скороварки и электрические ланч-боксы.',
-      },
-      {
-        title: 'Вы поддерживаете производство под брендом заказчика?',
-        description: 'Да. Мы предоставляем услуги по нанесению логотипа, разработке упаковки и OEM/ODM производству.',
-      },
-      {
-        title: 'Какой минимальный объем заказа (MOQ)?',
-        description:
-          'Минимальный объем заказа зависит от модели продукции и требований к индивидуальной доработке. Мы предложим оптимальное решение после обсуждения проекта.',
-      },
-      {
-        title: 'Какие сертификаты поддерживаются?',
-        description:
-          'Мы поддерживаем подготовку продукции к международной сертификации, включая CE, CB, LFGB, RoHS и другие требования различных рынков.',
-      },
-      {
-        title: 'Сколько времени занимает производство заказа?',
-        description:
-          'Обычно производство занимает от 30 до 45 дней после утверждения образцов и подтверждения заказа. Конкретные сроки зависят от модели продукции и объема заказа.',
-      },
+      { title: 'Быстрый расчет', description: 'Ответ в течение 24 часов для B2B клиентов.', icon: 'tabler:globe' },
+      { title: 'OEM/ODM разработка', description: 'Поддержка private label проектов.', icon: 'tabler:message-star' },
+      { title: 'Оптовое производство', description: 'Поддержка крупных и повторных заказов.', icon: 'tabler:award' },
     ]}
   />
 </Layout>
