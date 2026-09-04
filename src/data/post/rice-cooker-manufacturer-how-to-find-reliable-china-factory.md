@@ -1,10 +1,10 @@
 ---
-pubDate: 2026-08-27T10:00:00+08:00
-title: "Как выбрать надежного rice cooker manufacturer в Китае для российского рынка"
-author: "Adrian"
-excerpt: "Как найти надежного производителя рисоварок в Китае: проверка фабрики, OEM возможности, контроль качества, сертификаты и важные моменты для импортеров."
-image: "/images/blog/52.jpg"
-category: "OEM Manufacturing"
+publishDate: 2026-08-27T10:00:00+08:00
+title: 'Как выбрать rice cooker manufacturer в Китае'
+author: 'Adrian'
+excerpt: 'Как найти надежного производителя рисоварок в Китае: проверка фабрики, OEM возможности, контроль качества, сертификаты и важные моменты для импортеров.'
+image: '/images/blog/52.jpg'
+category: 'OEM Manufacturing'
 tags:
   - rice cooker manufacturer
   - производитель рисоварок Китай
@@ -12,8 +12,9 @@ tags:
   - рисоварки оптом
   - китайская фабрика бытовой техники
 metadata:
-  canonical: "https://www.yolec-electronics.com"
-robots: "index, follow"
+  robots:
+    index: true
+    follow: true
 ---
 
 Когда компания планирует импортировать рисоварки из Китая, первый вопрос обычно не связан с ценой.
@@ -257,7 +258,7 @@ Yolec Electric работает как производитель малой к�
 
 Подробнее:
 
-https://www.yolec-electronics.com/
+[фабрика рисоварок YOLEC](/electric-rice-cooker-manufacturer)
 
 ## Посмотрите реальные процессы производства
 

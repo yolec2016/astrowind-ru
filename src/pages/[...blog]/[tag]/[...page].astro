@@ -20,7 +20,8 @@ const { page, tag } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
 
 const metadata = {
-  title: `Posts by tag '${tag.title}'${currentPage > 1 ? ` — Page ${currentPage} ` : ''}`,
+  title: `Тег: ${tag.title}${currentPage > 1 ? ` — страница ${currentPage}` : ''}`,
+  description: `Статьи по тегу «${tag.title}» в блоге завода YOLEC Electric о производстве кухонной техники в Китае.`,
   robots: {
     index: blogTagRobots?.index,
     follow: blogTagRobots?.follow,

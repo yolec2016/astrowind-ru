@@ -29,13 +29,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) => {
-        return (
-          !page.includes('/tag/') &&
-          !page.includes('/category/') &&
-          !page.includes('/privacy') &&
-          !page.includes('/terms') &&
-          !page.match(/\/blog\/\d+$/)
-        );
+        return !page.includes('/tag/') && !page.includes('/decapcms') && !page.match(/\/blog\/\d+$/);
       },
     }),
 

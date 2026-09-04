@@ -1,10 +1,10 @@
 ---
-pubDate: 2026-08-26T20:00:00+08:00
-title: "Как выбрать надежного electric kettle manufacturer в Китае для российского рынка"
-author: "Adrian"
-excerpt: "На что обратить внимание при выборе производителя электрических чайников в Китае: производство, качество, OEM возможности, сертификаты и контроль поставок."
-image: "/images/blog/1.jpg"
-category: "OEM Manufacturing"
+publishDate: 2026-08-26T20:00:00+08:00
+title: 'Как выбрать electric kettle manufacturer в Китае'
+author: 'Adrian'
+excerpt: 'На что обратить внимание при выборе производителя электрических чайников в Китае: производство, качество, OEM возможности, сертификаты и контроль поставок.'
+image: '/images/blog/1.jpg'
+category: 'OEM Manufacturing'
 tags:
   - electric kettle manufacturer
   - производитель электрических чайников Китай
@@ -12,8 +12,9 @@ tags:
   - завод бытовой техники Китай
   - импорт электрических чайников
 metadata:
-  canonical: "https://www.yolec-electronics.com"
-robots: "index, follow"
+  robots:
+    index: true
+    follow: true
 ---
 
 Когда российская компания планирует импортировать электрические чайники из Китая, первый вопрос обычно звучит так:
@@ -244,7 +245,7 @@ Yolec Electric работает как производитель малой к�
 
 Подробнее о производстве:
 
-https://www.yolec-electronics.com/
+[фабрика электрочайников YOLEC](/electric-kettle-manufacturer)
 
 ## Посмотрите реальные процессы производства
 

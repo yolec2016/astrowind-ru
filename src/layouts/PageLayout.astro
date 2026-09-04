@@ -3,16 +3,22 @@ import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
 import Announcement from '~/components/widgets/Announcement.astro';
+import StructuredData from '~/components/common/StructuredData.astro';
 
 import { headerData, footerData } from '~/navigation';
+
+import { ANALYTICS } from 'astrowind:config';
 
 import type { MetaData } from '~/types';
 
 export interface Props {
   metadata?: MetaData;
+  /** Extra JSON-LD nodes (e.g. homepage AggregateRating + Reviews) */
+  structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
-const { metadata } = Astro.props;
+const { metadata, structuredData } = Astro.props;
+const _gaId = ANALYTICS?.googleAnalytics?.id || '';
 ---
 
 <Layout metadata={metadata}>
@@ -30,16 +36,24 @@ const { metadata } = Astro.props;
   </slot>
 </Layout>
 
+<StructuredData
+  pagePath={Astro.url.pathname}
+  pageTitle={typeof metadata?.title === 'string' ? metadata.title : undefined}
+  data={structuredData}
+/>
+
 <!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-824EMW4MZF"></script>
-
-<script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-
-  gtag('js', new Date());
-
-  gtag('config', 'G-824EMW4MZF', {
-    send_page_view: true
-  });
-</script>
+{
+  _gaId && (
+    <>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${_gaId}`} />
+      <script
+        is:inline
+        set:html={`window.dataLayer = window.dataLayer || [];
+function gtag(...args) { dataLayer.push(...args); }
+gtag('js', new Date());
+gtag('config', '${_gaId}', { send_page_view: true });`}
+      />
+    </>
+  )
+}

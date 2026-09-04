@@ -16,6 +16,7 @@ import BasicScripts from '~/components/common/BasicScripts.astro';
 import { ClientRouter } from 'astro:transitions';
 
 import type { MetaData as MetaDataType } from '~/types';
+import { SITE } from 'astrowind:config';
 
 export interface Props {
   metadata?: MetaDataType;
@@ -23,7 +24,8 @@ export interface Props {
 
 const { metadata = {} } = Astro.props;
 const { language, textDirection } = I18N;
-const siteUrl = 'https://www.yoleckitchen.xyz';
+const siteUrl = String(SITE?.site || '').replace(/\/$/, '');
+const xDefaultUrl = `${siteUrl}/`;
 ---
 
 <!doctype html>
@@ -36,17 +38,9 @@ const siteUrl = 'https://www.yoleckitchen.xyz';
     <Metadata {...metadata} />
 
     <!-- 新增 -->
-    <link
-      rel="alternate"
-      hreflang="ru"
-      href={`${siteUrl}${Astro.url.pathname}`}
-    />
+    <link rel="alternate" hreflang={language} href={`${siteUrl}${Astro.url.pathname}`} />
 
-    <link
-      rel="alternate"
-      hreflang="x-default"
-      href={siteUrl}
-    />
+    <link rel="alternate" hreflang="x-default" href={xDefaultUrl} />
 
     <SiteVerification />
     <Analytics />

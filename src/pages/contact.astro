@@ -5,24 +5,48 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Контакты — запрос КП, образцы, сертификаты OEM/ODM',
+  description:
+    'Свяжитесь с производственной базой в Китае: коммерческое предложение OEM/ODM, образцы, сертификаты. Ответ в течение 24 часов. WhatsApp, Telegram, email.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="Контакты" title="Свяжитесь с заводом напрямую" />
+
+  <!-- 询盘表单 CTA 卡片（用户要求保留主站表单链接） -->
+
+  <div class="px-6 sm:px-6">
+    <div class="mx-auto max-w-7xl mb-12 rounded-2xl border-2 border-accent bg-accent/5 p-8 text-center">
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Форма запроса коммерческого предложения</h2>
+
+      <p class="mx-auto mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
+        Опишите интересующую продукцию, ориентировочный объем и рынок сбыта в форме запроса — коммерческое предложение
+        от завода вы получите менее чем за 24 часа.
+      </p>
+
+      <a
+        href="https://www.yolec-electronics.com/contact/"
+        target="_blank"
+        rel="noopener"
+        class="mt-6 inline-block rounded-full bg-accent px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:opacity-90"
+      >
+        Открыть форму запроса →
+      </a>
+    </div>
+  </div>
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Напишите нам сегодня!"
+    subtitle="Быстрые ответы можно найти в разделе FAQ — возможно, решение вашего вопроса уже там. Если нет, наша команда с радостью поможет."
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Name',
+        label: 'Ваше имя',
       },
       {
         type: 'email',
@@ -31,49 +55,175 @@ const metadata = {
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Сообщение',
     }}
     disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+      label: 'Отправляя эту форму, вы подтверждаете согласие на обработку указанных персональных данных.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="Наша команда обычно отвечает в течение 24 рабочих часов."
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="We are here to help!"
+    title="Контакты завода — все каналы связи"
+    columns={3}
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
+        title: 'Оптовые закупки',
         description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+          'Вопросы по ассортименту, MOQ, срокам производства и условиям поставки OEM/ODM. Ответ от завода в течение 24 часов.',
+        icon: 'tabler:shopping-cart',
       },
       {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+        title: 'Отдел продаж (WhatsApp / Тел.)',
+        description: '+86 139 2233 2584 — быстрый канал КП, фото образцов и логистика',
+        icon: 'tabler:brand-whatsapp',
       },
       {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
+        title: 'Офисный телефон фабрики',
+        description: '+86 760 226 3622 — пн–пт 9:00–18:00 (GMT+8). Дунфэн, Чжуншань',
+        icon: 'tabler:phone-calling',
       },
       {
         title: 'Email',
-        description: 'contact@support.com',
+        description: 'adrian@yolec-electronics.com',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        title: 'Telegram продаж',
+        description: '@adrian198512 — связь с руководителем B2B-направления',
+        icon: 'tabler:brand-telegram',
+      },
+      {
+        title: 'Адрес фабрики',
+        description:
+          'No. 411 Dongfu Road, Dongfeng Town, Zhongshan City, Guangdong 528425, PRC. Офис: No. 68 Donghai 6 Road, Dongfeng Town',
         icon: 'tabler:map-pin',
       },
     ]}
   />
+
+  <!-- Контактная визитка (schema-friendly html 5 телефона+адрес как ссылки) -->
+  <section id="vcard" class="bg-white py-16 dark:bg-slate-950 lg:py-20">
+    <div class="mx-auto max-w-5xl px-6 lg:px-8">
+      <article
+        vocab="http://schema.org/"
+        typeof="LocalBusiness"
+        class="rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 via-white to-indigo-50 p-8 shadow-sm dark:border-slate-700 dark:from-slate-900/60 dark:to-slate-900/40"
+      >
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">
+          Завод Zhongshan Yangle Electric Appliance Co., Ltd. <span class="text-accent">(торговая марка YOLEC)</span>
+        </h2>
+        <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+          Производство — с 2015 года. Верифицирован SGS (отчёт № 483515034-P+T). Экспорт бытовой техники в 60+ стран.
+        </p>
+        <dl class="mt-6 grid gap-5 sm:grid-cols-2">
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+              WhatsApp / Телефон отдела продаж
+            </dt>
+            <dd class="mt-1">
+              <a
+                property="telephone"
+                href="tel:+8613922332584"
+                class="text-lg font-semibold text-accent hover:underline"
+              >
+                +86 139 2233 2584
+              </a>
+              <span
+                class="ml-2 inline-flex items-center rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200"
+              >
+                Быстрый ответ · WhatsApp
+              </span>
+            </dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+              Стационарный офисный телефон
+            </dt>
+            <dd class="mt-1">
+              <a
+                property="telephone"
+                href="tel:+867602263622"
+                class="text-lg font-semibold text-accent hover:underline"
+              >
+                +86 760 2263 622
+              </a>
+              <span class="ml-2 text-sm text-slate-500 dark:text-slate-400">пн–пт 9:00–18:00 (GMT+8)</span>
+            </dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Email</dt>
+            <dd class="mt-1">
+              <a
+                property="email"
+                href="mailto:adrian@yolec-electronics.com"
+                class="text-lg font-semibold text-accent hover:underline"
+              >
+                adrian@yolec-electronics.com
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Telegram</dt>
+            <dd class="mt-1">
+              <a
+                href="https://t.me/adrian198512"
+                rel="noopener nofollow"
+                target="_blank"
+                class="text-lg font-semibold text-accent hover:underline"
+              >
+                @adrian198512
+              </a>
+            </dd>
+          </div>
+          <div class="sm:col-span-2">
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+              Производство / Почтовый адрес (промзона)
+            </dt>
+            <dd
+              property="address"
+              typeof="PostalAddress"
+              class="mt-1 text-base leading-relaxed text-slate-800 dark:text-slate-200"
+            >
+              <span property="streetAddress">No. 411 Dongfu Road, Dongfeng Town</span>,&nbsp;
+              <span property="addressLocality">Zhongshan City</span>,&nbsp;
+              <span property="addressRegion">Guangdong Province</span>, почтовый индекс&nbsp;
+              <span property="postalCode">528425</span>,&nbsp;<span property="addressCountry">PRC (Китай)</span>.
+              <span class="mt-1 block text-sm text-slate-500 dark:text-slate-400">
+                Офис приёма гостей: No. 68 Donghai 6 Road, Dongfeng Town — запись на экскурсию по фабрике за 3 дня.
+              </span>
+            </dd>
+          </div>
+          <div class="sm:col-span-2">
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+              Заводские сертификаты / Верификация
+            </dt>
+            <dd class="mt-2 flex flex-wrap gap-2">
+              {
+                [
+                  'CE (EU)',
+                  'CB Scheme',
+                  'CCC (PRC)',
+                  'EAC / ТР ТС (ЕАЭС)',
+                  'RoHS / REACH',
+                  'ISO 9001-ready',
+                  'TÜV tested',
+                  'Intertek tested',
+                  'SGS № 483515034-P+T',
+                ]
+                  .map(
+                    (c) =>
+                      `<span class="inline-flex items-center rounded-full border border-slate-300 bg-white px-3 py-1 text-xs font-medium text-slate-700 shadow-sm dark:border-slate-600 dark:bg-slate-800/40 dark:text-slate-200">${c}</span>`
+                  )
+                  .join('')
+              }
+              <Fragment set:html={''} />
+            </dd>
+          </div>
+        </dl>
+      </article>
+    </div>
+  </section>
 </Layout>

@@ -21,7 +21,7 @@ const {
   canonical = String(getCanonical(String(Astro.url.pathname))),
   robots = {},
   description,
-  keywords = '',  
+  keywords = '',
   openGraph = {},
   twitter = {},
 } = Astro.props;
@@ -69,9 +69,16 @@ function buildOpenGraph(og: MetaDataOpenGraph): SEOProps['openGraph'] | undefine
   };
 }
 
+const _firstOgImage = firstImage?.url || '';
+const _defaultTitle = title || METADATA?.title?.default || '';
+const _defaultDesc = description || METADATA?.description || '';
+
 const mergedTwitter = merge(
   {
     card: (adaptedOg?.images?.length ? 'summary_large_image' : 'summary') as 'summary_large_image' | 'summary',
+    image: _firstOgImage,
+    title: _defaultTitle,
+    description: _defaultDesc,
   },
   METADATA?.twitter
     ? {
@@ -113,16 +120,22 @@ const seoProps: SEOProps = {
 ---
 
 <SEO {...seoProps} />
-{keywords && (
-  <meta
-    name="keywords"
-    content={keywords}
-  />
-)}
+{keywords && <meta name="keywords" content={keywords} />}
 
-<meta name="author" content="YOLEC Electric" />
+{
+  _firstOgImage && (
+    <>
+      <meta name="twitter:image" content={_firstOgImage} />
+      <meta name="twitter:image:alt" content={_defaultTitle || _defaultDesc || ''} />
+    </>
+  )
+}
+{_defaultTitle && <meta name="twitter:title" content={_defaultTitle} />}
+{_defaultDesc && <meta name="twitter:description" content={_defaultDesc} />}
 
-<meta name="publisher" content="YOLEC Electric" />
+<meta name="author" content="YOLEC Electric Appliance Factory" />
+
+<meta name="publisher" content="Zhongshan YOLEC Electric Co., Ltd." />
 
 <meta name="theme-color" content="#ffffff" />
 

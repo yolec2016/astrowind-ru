@@ -6,19 +6,16 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
-  title:
-    'Private Label производитель кухонной техники в Китае | OEM производство под собственной торговой маркой',
+  title: 'Private Label производитель кухонной техники в Китае',
 
   description:
-    'YOLEC — китайский производитель кухонной техники, предоставляющий услуги Private Label, OEM и ODM. Производство электрических чайников, чайников для кофе, рисоварок, мультиварок, скороварок и электрических ланч-боксов для импортеров, дистрибьюторов и владельцев брендов.',
+    'Private Label и OEM производство кухонной техники под собственной торговой маркой: логотип, упаковка, индивидуальные характеристики. Завод YOLEC.',
 };
 ---
 
 <Layout metadata={metadata}>
-
   <!-- Hero -->
 
   <HeroText
@@ -32,7 +29,6 @@ const metadata = {
   <Prices
     title="Варианты сотрудничества Private Label"
     subtitle="Стоимость проекта рассчитывается индивидуально в зависимости от модели продукции, уровня кастомизации, объема заказа и требований к упаковке."
-
     prices={[
       {
         title: 'White Label',
@@ -109,13 +105,11 @@ const metadata = {
     items={[
       {
         title: 'Полное Private Label производство',
-        description:
-          'Разработка продукции под вашим брендом, включая логотип, упаковку, инструкции и фирменный стиль.',
+        description: 'Разработка продукции под вашим брендом, включая логотип, упаковку, инструкции и фирменный стиль.',
       },
       {
         title: 'Прямой китайский производитель',
-        description:
-          'Вы работаете напрямую с заводом без посредников, что позволяет снизить закупочную стоимость.',
+        description: 'Вы работаете напрямую с заводом без посредников, что позволяет снизить закупочную стоимость.',
       },
       {
         title: 'OEM и ODM решения',
@@ -124,8 +118,7 @@ const metadata = {
       },
       {
         title: 'Строгий контроль качества',
-        description:
-          'Контроль качества осуществляется на каждом этапе производства перед экспортом.',
+        description: 'Контроль качества осуществляется на каждом этапе производства перед экспортом.',
       },
       {
         title: 'Международная сертификация',
@@ -175,7 +168,7 @@ const metadata = {
       alt: 'Private label kitchen appliance manufacturing process in China',
     }}
   />
-    <!-- FAQs Widget ******************* -->
+  <!-- FAQs Widget ******************* -->
 
   <FAQs
     title="Часто задаваемые вопросы о Private Label производстве"
@@ -229,5 +222,4 @@ const metadata = {
       },
     ]}
   />
-
-</Layout>  
+</Layout>

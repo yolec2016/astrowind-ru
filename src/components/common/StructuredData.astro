@@ -1,0 +1,533 @@
+---
+/**
+ * StructuredData.astro — Schema.org JSON-LD for YOLEC Russian site
+ * Organization, WebSite, BreadcrumbList, Product, BlogPosting, FAQPage
+ *
+ * Для русского B2B-сайта цель: сообщить Google / Яндекс что YOLEC —
+ * реальная китайская фабрика-производитель, а не торговый посредник,
+ * улучшить индексируемость страниц блога и 4 производственных лендингов.
+ */
+import { SITE, METADATA } from 'astrowind:config';
+
+export interface BlogPostSchemaInput {
+  slug: string;
+  title: string;
+  description?: string;
+  publishDate?: Date;
+  updateDate?: Date;
+  image?: string;
+  tags?: string[];
+  authorName?: string;
+  category?: string;
+  bodyExcerpt?: string;
+}
+
+export interface Props {
+  data?: Record<string, unknown> | Array<Record<string, unknown>>;
+  pagePath?: string;
+  pageTitle?: string;
+  blogPost?: BlogPostSchemaInput;
+}
+
+const { data, pagePath = '/', pageTitle, blogPost } = Astro.props;
+const pageUrl = `${SITE.site.replace(/\/$/, '')}${pagePath}`;
+
+// ---------- Organization ----------
+const orgId = `${SITE.site}/#organization`;
+// УТВЕРЖДЁННЫЕ ДАННЫЕ (первичный источник: https://www.yolec-electronics.com/about/ & /contact/)
+const ORG_ADDRESS = {
+  '@type': 'PostalAddress',
+  streetAddress: 'No. 411 Dongfu Road, Dongfeng Town',
+  addressLocality: 'Zhongshan City',
+  addressRegion: 'Guangdong Province',
+  postalCode: '528425',
+  addressCountry: 'CN',
+  name: 'Zhongshan City, Guangdong — Адрес производства',
+};
+const ORG_OFFICE = {
+  '@type': 'PostalAddress',
+  streetAddress: 'No. 68 Donghai 6 Road, Dongfeng Town',
+  addressLocality: 'Zhongshan City',
+  addressRegion: 'Guangdong Province',
+  postalCode: '528425',
+  addressCountry: 'CN',
+};
+const ORG_GEO = {
+  '@type': 'GeoCoordinates',
+  latitude: 22.6247,
+  longitude: 113.2363,
+  name: 'Zhongshan, Guangdong — регион производства бытовой техники Китая',
+};
+const ORG_LOGO_URL = `${SITE.site.replace(/\/$/, '')}/_astro/favicon.DHIlG7dp.png`;
+const ORG_SAME_AS = [
+  'https://www.yolec-electronics.com/',
+  'https://yangledq.en.alibaba.com/',
+  'https://wa.me/8613922332584',
+  'https://www.youtube.com/@yolec-electric-adrian',
+  'https://www.linkedin.com/in/adrian2010/',
+  'https://vk.ru/kitchen_appliance_factory',
+];
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': orgId,
+  name: SITE.name || 'Zhongshan Yangle Electric Appliance Co., Ltd.',
+  alternateName: 'YOLEC Electric',
+  tradeName: 'YOLEC',
+  legalName: 'Zhongshan Yangle Electric Appliance Co., Ltd.',
+  nameRu: 'Китайский завод Zhongshan Yangle Electric — бренд YOLEC',
+  url: SITE.site,
+  logo: {
+    '@type': 'ImageObject',
+    url: ORG_LOGO_URL,
+    width: 180,
+    height: 180,
+  },
+  image: `${SITE.site}/images/factory/taller-inyeccion.jpg`,
+  description:
+    METADATA?.description ||
+    'Zhongshan Yangle Electric Appliance Co., Ltd. (международное название YOLEC) — китайский производитель мелкой кухонной техники в Дунфэне, Чжуншань. Более 20 000 м², 200+ сотрудников, 5 производственных линий, собственные цеха литья, штамповки, полировки и лаборатория испытаний. OEM / ODM / Private Label по CE / CB / CCC / EAC.',
+  foundingDate: '2015',
+  foundingLocation: {
+    '@type': 'Place',
+    name: 'Dongfeng Town, Zhongshan, Guangdong, China',
+    address: ORG_ADDRESS,
+    geo: ORG_GEO,
+  },
+  numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 180, maxValue: 260, unitText: 'persons' },
+  areaServed: [
+    'RU',
+    'BY',
+    'KZ',
+    'AM',
+    'KG',
+    'TJ',
+    'UZ',
+    'MD',
+    'DE',
+    'PL',
+    'NL',
+    'FR',
+    'ES',
+    'IT',
+    'GB',
+    'AE',
+    'SA',
+    'QA',
+    'KW',
+    'TR',
+    'US',
+    'MX',
+    'BR',
+    'AR',
+    'CL',
+    'NG',
+    'KE',
+    'ZA',
+    'EG',
+  ],
+  address: ORG_ADDRESS,
+  headquartersAddress: ORG_OFFICE,
+  geo: ORG_GEO,
+  knowsLanguage: ['ru', 'en', 'zh-CN'],
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      telephone: '+86-13922332584',
+      contactType: 'sales',
+      email: 'adrian@yolec-electronics.com',
+      contactOption: 'WhatsApp',
+      areaServed: ['RU', 'KZ', 'BY', 'EAEU', 'EU', 'MENA', 'AFRICA'],
+      availableLanguage: ['Russian', 'English', 'Chinese'],
+      hoursAvailable: [
+        { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Monday', opens: '09:00', closes: '18:00' },
+        { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '09:00', closes: '18:00' },
+      ],
+    },
+    {
+      '@type': 'ContactPoint',
+      telephone: '+86-760-2263622',
+      contactType: 'office',
+      email: 'adrian@yolec-electronics.com',
+      contactOption: 'Telephone',
+      areaServed: ['CN', 'EAEU', 'EU'],
+      availableLanguage: ['English', 'Chinese'],
+    },
+  ],
+  sameAs: ORG_SAME_AS,
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'OEM/ODM услуги Zhongshan Yangle Electric (YOLEC)',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: 'OEM производство электрочайников', provider: { '@id': orgId } },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'ODM дизайн и разработка кухонной техники',
+          provider: { '@id': orgId },
+        },
+      },
+    ],
+  },
+  award: ['SGS Verified Manufacturer, report 483515034-P+T', 'B2B Kitchen Appliance Supplier — RU & EAEU Market 2025'],
+  identifier: [{ '@type': 'PropertyValue', name: 'SGS Verification Report No.', value: '483515034-P+T' }],
+  hasMerchantReturnPolicy: {
+    '@type': 'MerchantReturnPolicy',
+    inStoreReturnsOffered: false,
+    returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+    merchantReturnDays: 7,
+    returnMethod: 'https://schema.org/ReturnByMail',
+    returnFees: 'https://schema.org/FreeReturn',
+  },
+  makesOffer: [
+    {
+      '@type': 'Offer',
+      businessFunction: 'http://purl.org/goodrelations/v1#ProvideService',
+      itemOffered: {
+        '@type': 'Product',
+        name: 'OEM/ODM производство электрических чайников',
+        nameRu: 'OEM/ODM производство электрических чайников',
+        category: 'Электрические чайники',
+        sku: 'YC-EK',
+      },
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      eligibleRegion: ['RU', 'BY', 'KZ', 'EAEU', 'EU', 'MENA'],
+    },
+    {
+      '@type': 'Offer',
+      businessFunction: 'http://purl.org/goodrelations/v1#ProvideService',
+      itemOffered: {
+        '@type': 'Product',
+        name: 'OEM/ODM производство рисоварок и мультиварок',
+        category: 'Рисоварки / Мультиварки',
+        sku: 'YC-RC',
+      },
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      eligibleRegion: ['RU', 'KZ', 'EAEU', 'MENA', 'SEA'],
+    },
+    {
+      '@type': 'Offer',
+      businessFunction: 'http://purl.org/goodrelations/v1#ProvideService',
+      itemOffered: {
+        '@type': 'Product',
+        name: 'OEM/ODM производство электрических скороварок',
+        category: 'Электрические скороварки',
+        sku: 'YC-PC',
+      },
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      eligibleRegion: ['RU', 'EU', 'MENA', 'LATAM'],
+    },
+    {
+      '@type': 'Offer',
+      businessFunction: 'http://purl.org/goodrelations/v1#ProvideService',
+      itemOffered: {
+        '@type': 'Product',
+        name: 'OEM/ODM производство электрических ланч-боксов',
+        category: 'Электрические ланч-боксы',
+        sku: 'YC-LB',
+      },
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      eligibleRegion: ['RU', 'EU', 'MENA', 'SEA'],
+    },
+  ],
+};
+
+// ---------- WebSite + SearchAction ----------
+const website = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE.site}/#website`,
+  url: SITE.site,
+  name: SITE.name || 'YOLEC Electric',
+  inLanguage: 'ru-RU',
+  publisher: { '@id': orgId },
+  potentialAction: [
+    {
+      '@type': 'SearchAction',
+      target: `${SITE.site}/blog?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  ],
+};
+
+// ---------- BreadcrumbList ----------
+function buildBreadcrumb(): Record<string, unknown> | null {
+  const cleanPath = pagePath.replace(/\/+$/, '');
+  const parts = cleanPath.split('/').filter(Boolean);
+  if (parts.length === 0) return null; // homepage: no breadcrumb needed
+  const items: Array<Record<string, unknown>> = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Главная',
+      item: SITE.site,
+    },
+  ];
+  let acc = '';
+  parts.forEach((seg, idx) => {
+    acc += `/${seg}`;
+    const isLast = idx === parts.length - 1;
+    let prettyName: string;
+    if (isLast && pageTitle) {
+      prettyName = pageTitle.replace(/\s*\|.*/, '').trim();
+    } else if (seg === 'blog') {
+      prettyName = 'Блог';
+    } else if (seg === 'category') {
+      prettyName = 'Категории';
+    } else if (seg === 'tag') {
+      prettyName = 'Теги';
+    } else {
+      prettyName = seg
+        .replace(/-/g, ' ')
+        .replace(/manufacturer/gi, 'Производитель')
+        .replace(/\b\w/g, (m) => m.toUpperCase());
+    }
+    items.push({
+      '@type': 'ListItem',
+      position: idx + 2,
+      name: prettyName,
+      item: `${SITE.site.replace(/\/$/, '')}${acc}`,
+    });
+  });
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items,
+  };
+}
+
+// ---------- Product landing page detection ----------
+type ProductKey = 'electric-kettle' | 'rice-cooker' | 'electric-pressure-cooker' | 'electric-lunch-box';
+
+function detectProductKey(p: string): ProductKey | null {
+  if (p.includes('electric-kettle')) return 'electric-kettle';
+  if (p.includes('rice-cooker')) return 'rice-cooker';
+  if (p.includes('electric-pressure-cooker')) return 'electric-pressure-cooker';
+  if (p.includes('electric-lunch-box')) return 'electric-lunch-box';
+  return null;
+}
+
+const productMap: Record<ProductKey, Record<string, unknown>> = {
+  'electric-kettle': {
+    name: 'OEM/ODM электрический чайник от китайского производителя',
+    alternateName: ['Electric Kettle', 'Электрочайник оптом', 'Завод электрочайников'],
+    description:
+      'OEM/ODM производство электрических чайников на нашей фабрике в Китае. Модели из нержавеющей стали, стеклянные, гусиный носик для кофе и с регулировкой температуры. Подходит импортёрам, дистрибьюторам и B2B-покупателям, выпускающим продукцию под собственной торговой маркой.',
+    keywords:
+      'производитель электрочайников, поставщик электрических чайников, фабрика электрочайников Китай, OEM электрочайник, ODM чайник, частная торговая марка, EAC сертификат, CE CB LFGB',
+    mpn: 'YC-EK-08L ~ YC-EK-25L',
+    category: 'Малая кухонная техника / Электрические чайники',
+    capacityRange: '0.8L, 1.0L, 1.2L, 1.5L, 1.7L, 1.8L, 2.0L, 2.5L',
+  },
+  'rice-cooker': {
+    name: 'OEM/ODM электрическая рисоварка / мультиварка от завода',
+    alternateName: ['Rice Cooker', 'Рисоварка оптом', 'Производитель рисоварок'],
+    description:
+      'Китайский завод-производитель рисоварок и мультиварок объёмом от 0,6 до 10 литров: механические и цифровые модели, антипригарное покрытие, функция подогрева. Сертификация CE/CB/EAC/LFGB/RoHS. Услуги OEM/ODM под ваш бренд.',
+    keywords:
+      'производитель рисоварок, поставщик мультиварок, фабрика рисоварок Китай, OEM рисоварка, ODM мультиварка, EAC сертификат, опт бытовой техники',
+    mpn: 'YC-RC-06 ~ YC-RC-10L',
+    category: 'Малая кухонная техника / Рисоварки и мультиварки',
+    capacityRange: '0.6L, 1L, 1.2L, 1.5L, 1.8L, 2.2L, 2.8L, 4L, 5L, 6L, 8L, 10L',
+  },
+  'electric-pressure-cooker': {
+    name: 'OEM/ODM электрическая скороварка от китайской фабрики',
+    alternateName: ['Electric Pressure Cooker', 'Скороварка оптом', 'Мультиварка-скороварка'],
+    description:
+      'Производство электрических скороварок (мультиварок под давлением) 4–12 литров на нашем китайском предприятии. Безопасные клапаны, 10+ программ приготовления, пищевой 304 SS котёл. Сертифицировано по стандартам ЕАЭС, CE, CB, LFGB, RoHS.',
+    keywords:
+      'производитель скороварок, поставщик электрических скороварок, фабрика скороварок Китай, OEM скороварка, сертификат EAC, опт мультиварок',
+    mpn: 'YC-PC-04 ~ YC-PC-12L',
+    category: 'Малая кухонная техника / Электрические скороварки',
+    capacityRange: '4L, 5L, 6L, 8L, 10L, 12L',
+  },
+  'electric-lunch-box': {
+    name: 'OEM/ODM электрический ланч-бокс от завода YOLEC',
+    alternateName: ['Electric Lunch Box', 'Подогреваемый ланч-бокс оптом', 'Фабрика пищевых контейнеров'],
+    description:
+      'Производство портативных электрических ланч-боксов с подогревом: 12В для автомобиля, 220В для дома/офиса и универсальные двухрежимные модели. Съёмный лоток из пищевой нержавейки 304, герметичное уплотнение, сумка-чехол опционально. OEM под логотип заказчика.',
+    keywords:
+      'производитель электрических ланч-боксов, поставщик подогреваемых ланч-боксов, фабрика ланч-боксов Китай, OEM ланч-бокс, автомобильный подогрев пищи, B2B опт',
+    mpn: 'YC-LB-02 ~ YC-LB-04W',
+    category: 'Малая кухонная техника / Электрические ланч-боксы',
+    capacityRange: '1.0L, 1.5L, 2.0L; 1/2/3 отсека',
+  },
+};
+
+function buildProduct(pk: ProductKey): Record<string, unknown> | null {
+  const p = productMap[pk];
+  if (!p) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: p.name,
+    alternateName: p.alternateName,
+    description: p.description,
+    keywords: p.keywords,
+    category: p.category,
+    mpn: p.mpn,
+    sku: p.mpn,
+    brand: { '@type': 'Brand', name: 'YOLEC Electric', url: SITE.site },
+    manufacturer: { '@id': orgId },
+    originCountry: 'CN',
+    productionDate: '2015',
+    inLanguage: 'ru-RU',
+    image: [`${SITE.site}/images/default.png`, `${SITE.site}/images/hero-image.png`],
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': pageUrl,
+    },
+    isAccessoryOrSparePartFor: [],
+    additionalProperty: [
+      { '@type': 'PropertyValue', name: 'Вид услуг', value: 'OEM / ODM / Private Label / Contract Manufacturing' },
+      {
+        '@type': 'PropertyValue',
+        name: 'MOQ (минимальный заказ)',
+        value: '500 шт. / модель, гибко при повторных заказах',
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'Сроки производства',
+        value: '30–45 рабочих дней после подтверждения PP sample',
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'Сертификаты',
+        value: 'CE, CB, LFGB, RoHS, REACH, EAC (для ЕАЭС), ISO 9001, BSCI/Sedex готовность к аудиту',
+      },
+      { '@type': 'PropertyValue', name: 'Объёмы линейки, л', value: String(p.capacityRange) },
+      {
+        '@type': 'PropertyValue',
+        name: 'Упаковка',
+        value: 'Gift box / Color box + 5-слойный мастер-картон; OEM макет принят',
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'Термины поставки',
+        value: 'FOB Guangzhou / Shenzhen, EXW factory, CIF/CIP порт назначения по запросу',
+      },
+      { '@type': 'PropertyValue', name: 'Страна происхождения', value: 'Guangdong Province, PRC (Китай)' },
+    ],
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      itemCondition: 'https://schema.org/NewCondition',
+      businessFunction: 'http://purl.org/goodrelations/v1#Sell',
+      offersCount: 12,
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        priceType: 'https://schema.org/ListPrice',
+        referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'H87' },
+      },
+      seller: { '@id': orgId },
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: 127,
+      reviewCount: 46,
+      bestRating: '5',
+      worstRating: '1',
+      ratingExplanation: 'Оценки текущих B2B-партнёров по показателям QC, срокам и коммуникации',
+    },
+    award: 'B2B Kitchen Appliance Supplier Award — RU Market 2025',
+  };
+}
+
+// ---------- BlogPosting ----------
+function buildBlogPosting(bp: BlogPostSchemaInput): Record<string, unknown> {
+  const postUrl = `${SITE.site.replace(/\/$/, '')}/blog/${bp.slug}`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': ['BlogPosting', 'Article'],
+    headline: bp.title,
+    description: bp.description || '',
+    mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
+    datePublished: bp.publishDate ? new Date(bp.publishDate).toISOString() : new Date().toISOString(),
+    dateModified: bp.updateDate
+      ? new Date(bp.updateDate).toISOString()
+      : bp.publishDate
+        ? new Date(bp.publishDate).toISOString()
+        : new Date().toISOString(),
+    inLanguage: 'ru-RU',
+    keywords: (bp.tags || []).join(', '),
+    articleSection: bp.category || 'Блог фабрики Zhongshan Yangle Electric — бренд YOLEC',
+    wordCount: (bp.bodyExcerpt || '').length,
+    author: {
+      '@type': 'Person',
+      name: bp.authorName || 'Adrian YOLEC',
+      jobTitle: 'B2B Sales Director — Zhongshan Yangle Electric Appliance Co., Ltd.',
+      worksFor: { '@id': orgId },
+      url: 'https://www.linkedin.com/in/adrian2010/',
+      sameAs: ['https://wa.me/8613922332584', 'https://www.linkedin.com/in/adrian2010/'],
+      affiliate: { '@id': orgId },
+      knowsAbout: [
+        'OEM мелкой бытовой техники',
+        'Китайские фабрики',
+        'B2B импорт электрочайников',
+        'Логистика ЕАЭС',
+        'Сертификация EAC',
+        'OEM/ODM производство рисоварок',
+        'Контроль качества на китайской фабрике',
+      ],
+      hasCredential: [
+        {
+          '@type': 'EducationalOccupationalCredential',
+          name: 'Компания верифицирована SGS (отчёт 483515034-P+T)',
+        },
+      ],
+    },
+    editor: {
+      '@type': 'Person',
+      name: 'Adrian YOLEC',
+      worksFor: { '@id': orgId },
+    },
+    publisher: { '@id': orgId },
+    image: bp.image
+      ? {
+          '@type': 'ImageObject',
+          url: bp.image.startsWith('http') ? bp.image : `${SITE.site.replace(/\/$/, '')}${bp.image}`,
+        }
+      : undefined,
+    articleBody: bp.bodyExcerpt ? bp.bodyExcerpt.slice(0, 500) : undefined,
+    potentialAction: {
+      '@type': 'ReadAction',
+      target: postUrl,
+      name: 'Читать статью',
+    },
+  };
+}
+
+// ---------- Aggregate schemas ----------
+const schemas: Array<Record<string, unknown>> = [];
+schemas.push(organization);
+schemas.push(website);
+const breadcrumb = buildBreadcrumb();
+if (breadcrumb) schemas.push(breadcrumb);
+
+const pk = detectProductKey(pagePath);
+if (pk) {
+  const ps = buildProduct(pk);
+  if (ps) schemas.push(ps);
+}
+
+if (blogPost) {
+  schemas.push(buildBlogPosting(blogPost));
+}
+
+if (data) {
+  if (Array.isArray(data)) schemas.push(...(data as Array<Record<string, unknown>>));
+  else schemas.push(data as Record<string, unknown>);
+}
+---
+
+{schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}

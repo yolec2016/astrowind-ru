@@ -1,26 +1,26 @@
 site:
-  name: YOLEC Electric
+  name: Zhongshan YOLEC Electric Appliance Factory
   site: 'https://yoleckitchen.xyz'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: '你的Google验证码'
+  googleSiteVerificationId: ''
 
 # Default SEO metadata
 metadata:
   title:
-    default: 'Китайский OEM/ODM завод кухонной техники | YOLEC Electric'
-    template: '%s | YOLEC Electric'
+    default: 'Китайский OEM/ODM завод кухонной техники — производство напрямую'
+    template: '%s | Китайский завод OEM/ODM кухонной техники'
 
-  description: 'YOLEC Electric — китайский OEM/ODM завод по производству кухонной техники. Производим электрические чайники, рисоварки, мультиварки, скороварки и другую мелкую бытовую технику под собственной торговой маркой для импортеров, дистрибьюторов и B2B-компаний.'
+  description: 'Китайский OEM/ODM завод по производству кухонной техники. Прямые поставки электрочайников, рисоварок, мультиварок, скороварок и ланч-боксов из Чжуншана — от 500 шт. под частный бренд для импортеров и дистрибьюторов.'
   robots:
     index: true
     follow: true
 
   openGraph:
-    site_name: YOLEC Electric
+    site_name: Zhongshan YOLEC Electric OEM/ODM Factory
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/factory.png'
         width: 1200
         height: 630
     type: website

@@ -1,5 +1,6 @@
 ---
 title: 'Политика конфиденциальности'
+description: 'Политика конфиденциальности YOLEC Electric: какие данные мы собираем при обработке запросов OEM/ODM и как их защищаем.'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 

@@ -1,10 +1,10 @@
 ---
-pubDate: 2026-08-28T11:00:00+08:00
-title: "Как выбрать electric pressure cooker manufacturer в Китае для оптовых закупок"
-author: "Adrian"
-excerpt: "Как найти надежного производителя электрических скороварок в Китае: проверяем фабрику, OEM и ODM возможности, качество, сертификаты, MOQ и сроки поставки."
-image: "/images/blog/57.jpg"
-category: "OEM Manufacturing"
+publishDate: 2026-08-28T11:00:00+08:00
+title: 'Как выбрать electric pressure cooker manufacturer'
+author: 'Adrian'
+excerpt: 'Как найти надежного производителя электрических скороварок в Китае: проверяем фабрику, OEM и ODM возможности, качество, сертификаты, MOQ и сроки поставки.'
+image: '/images/blog/57.jpg'
+category: 'OEM Manufacturing'
 tags:
   - electric pressure cooker manufacturer
   - производитель электрических скороварок Китай
@@ -13,8 +13,9 @@ tags:
   - ODM электрическая скороварка
   - китайская фабрика бытовой техники
 metadata:
-  canonical: "https://www.yolec-electronics.com"
-robots: "index, follow"
+  robots:
+    index: true
+    follow: true
 ---
 
 Если вы ищете в Китае производителя электрических скороварок для российского или другого русскоязычного рынка, то наверняка уже заметили одну вещь:
@@ -367,7 +368,7 @@ Yolec Electric — китайский производитель малой ку
 
 Подробнее о производственных возможностях:
 
-https://www.yolec-electronics.com/
+[поставщик скороварок оптом](/electric-pressure-cooker-manufacturer)
 
 ## Лучше один раз увидеть фабрику
 

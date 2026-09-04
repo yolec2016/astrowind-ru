@@ -1,51 +1,97 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import ProductsGrid from '~/components/widgets/ProductsGrid.astro';
 
 const metadata = {
-  title: 'Electric Lunch Box Manufacturer in China | Производитель электрических ланч-боксов',
+  title: 'Производитель электрических ланч-боксов в Китае — OEM/ODM завод',
   description:
-    'Electric lunch box manufacturer in China для импортеров, дистрибьюторов, оптовых компаний и private label брендов. OEM и ODM производство электрических ланч-боксов, индивидуальная упаковка и прямые поставки с фабрики.',
+    'Завод электрических ланч-боксов с подогревом в Китае: 12В и 220В, лоток из нержавейки 304, OEM под ваш логотип. Опт от производителя — поставки напрямую с фабрики в Чжуншане.',
   ignoreTitleTemplate: true,
 };
+
+const products = [
+  {
+    model: 'HS-A5',
+    tag: '2 яруса',
+    title: 'Двухъярусный ланч-бокс с подогревом для офиса: два контейнера и равномерный нагрев.',
+    image: '/images/products/lunch/HS-A5-1.jpg',
+    image2: '/images/products/lunch/HS-A5-2.png',
+    url: 'https://www.yolec-electronics.com/products/electric-lunch-box/oem-2-layers-portable-electric-lunch-box-for-office-hs-a5/',
+  },
+  {
+    model: 'HS-ST01',
+    tag: 'Сталь 304',
+    title: 'Базовая модель с лотком из нержавеющей стали 304 — оптимальная цена для опта.',
+    image: '/images/products/lunch/HS-ST01-1.png',
+    image2: '/images/products/lunch/HS-ST01-2.png',
+    url: 'https://www.yolec-electronics.com/products/electric-lunch-box/oem-304-stainless-steel-electric-lunch-box-basic-hs-st01/',
+  },
+  {
+    model: 'HS-A6',
+    tag: 'Многофункциональный',
+    title: 'Многофункциональный ланч-бокс: сталь 304, три лотка, нагрев 12В/220В.',
+    image: '/images/products/lunch/HS-A6-1.jpg',
+    image2: '/images/products/lunch/HS-A6-2.png',
+    url: 'https://www.yolec-electronics.com/products/electric-lunch-box/oem-electric-lunch-box-304-stainless-steel-multi-function-heating-hs-a6/',
+  },
+  {
+    model: 'HS-A5E',
+    tag: 'Герметичный',
+    title: 'Ланч-бокс для путешествий с защитой от протечек, версия 12В для автомобиля.',
+    image: '/images/products/lunch/HS-A5E-1.jpg',
+    image2: '/images/products/lunch/HS-A5E-2.png',
+    url: 'https://www.yolec-electronics.com/products/electric-lunch-box/oem-leak-proof-electric-lunch-box-for-travel-hs-a5e/',
+  },
+  {
+    model: 'ZT-TG08',
+    tag: 'Мини',
+    title: 'Компактный ланч-бокс на одного человека для маркетплейсов.',
+    image: '/images/products/lunch/ZT-TG08-1.png',
+    image2: '/images/products/lunch/ZT-TG08-2.png',
+    url: 'https://www.yolec-electronics.com/products/electric-lunch-box/oem-mini-portable-electric-lunch-box-single-person-zt-tg08/',
+  },
+  {
+    model: 'HS-ST02',
+    tag: 'С ручкой',
+    title: 'Улучшенная версия с ручкой для переноски и усиленной крышкой.',
+    image: '/images/products/lunch/HS-ST02-1.jpg',
+    image2: '/images/products/lunch/HS-ST02-2.jpg',
+    url: 'https://www.yolec-electronics.com/products/electric-lunch-box/oem-upgrade-electric-lunch-box-with-handle-portable-hs-st02/',
+  },
+];
 ---
 
 <Layout metadata={metadata}>
-
   <!-- =========================================================
        HERO
   ========================================================== -->
 
   <section class="relative overflow-hidden bg-slate-50 dark:bg-slate-900">
     <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-
       <div class="grid items-center gap-14 lg:grid-cols-2">
-
         <!-- LEFT -->
 
         <div>
-
-          <div class="mb-6 inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300">
-            OEM и ODM производство · Китай
+          <div
+            class="mb-6 inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
+          >
+            Electric Lunch Box Manufacturer · Supplier & Factory
           </div>
 
           <h1 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl">
-            Electric Lunch Box Manufacturer
-            <span class="block text-accent">
-              in China
-            </span>
+            Производитель электрических ланч-боксов
+            <span class="block text-accent"> в Китае — завод-поставщик </span>
           </h1>
 
           <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-            Производим электрические ланч-боксы для импортеров,
-            дистрибьюторов, оптовых компаний и private label брендов.
-            Предлагаем прямые поставки с фабрики, OEM и ODM производство,
-            индивидуальную упаковку и решения для различных рынков.
+            Производим электрические ланч-боксы для импортеров, дистрибьюторов, оптовых компаний и private label
+            брендов. Предлагаем прямые поставки с фабрики, OEM и ODM производство, индивидуальную упаковку и решения для
+            различных рынков.
           </p>
 
           <div class="mt-8 flex flex-wrap gap-4">
-
             <a
-              href="/contacto"
+              href="/contact"
               class="inline-flex items-center rounded-lg bg-accent px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
             >
               Запросить предложение
@@ -57,11 +103,9 @@ const metadata = {
             >
               Связаться в WhatsApp
             </a>
-
           </div>
 
           <div class="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-sm text-slate-600 dark:text-slate-400">
-
             <div>
               <strong class="text-slate-900 dark:text-white">10+</strong>
               лет производства
@@ -76,122 +120,81 @@ const metadata = {
               <strong class="text-slate-900 dark:text-white">200+</strong>
               сотрудников
             </div>
-
           </div>
-
         </div>
-
 
         <!-- RIGHT -->
 
         <div class="relative">
-
-          <div class="overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-200 dark:bg-slate-800 dark:ring-slate-700">
-
+          <div
+            class="overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-200 dark:bg-slate-800 dark:ring-slate-700"
+          >
             <img
               src="/images/blog/73.jpg"
               alt="Electric lunch box manufacturer in China - производитель электрических ланч-боксов"
               class="h-auto w-full object-cover"
               loading="eager"
             />
-
           </div>
 
-          <div class="absolute -bottom-6 -left-6 hidden rounded-xl bg-white p-5 shadow-xl ring-1 ring-slate-200 dark:bg-slate-800 dark:ring-slate-700 sm:block">
+          <div
+            class="absolute -bottom-6 -left-6 hidden rounded-xl bg-white p-5 shadow-xl ring-1 ring-slate-200 dark:bg-slate-800 dark:ring-slate-700 sm:block"
+          >
+            <p class="text-xs font-medium uppercase tracking-wide text-slate-500">Прямое производство</p>
 
-            <p class="text-xs font-medium uppercase tracking-wide text-slate-500">
-              Прямое производство
-            </p>
-
-            <p class="mt-1 text-lg font-bold text-slate-900 dark:text-white">
-              OEM / ODM
-            </p>
-
+            <p class="mt-1 text-lg font-bold text-slate-900 dark:text-white">OEM / ODM</p>
           </div>
-
         </div>
-
       </div>
-
     </div>
   </section>
-
 
   <!-- =========================================================
        TRUST / STATS
   ========================================================== -->
 
   <section class="border-y border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
-
     <div class="mx-auto grid max-w-6xl grid-cols-2 divide-x divide-slate-200 dark:divide-slate-800 lg:grid-cols-4">
-
       <div class="px-6 py-8 text-center">
-        <div class="text-3xl font-bold text-slate-900 dark:text-white">
-          10+
-        </div>
-        <div class="mt-1 text-sm text-slate-500">
-          Лет производства
-        </div>
+        <div class="text-3xl font-bold text-slate-900 dark:text-white">10+</div>
+        <div class="mt-1 text-sm text-slate-500">Лет производства</div>
       </div>
 
       <div class="px-6 py-8 text-center">
-        <div class="text-3xl font-bold text-slate-900 dark:text-white">
-          20 000㎡
-        </div>
-        <div class="mt-1 text-sm text-slate-500">
-          Производственная площадь
-        </div>
+        <div class="text-3xl font-bold text-slate-900 dark:text-white">20 000㎡</div>
+        <div class="mt-1 text-sm text-slate-500">Производственная площадь</div>
       </div>
 
       <div class="border-t px-6 py-8 text-center dark:border-slate-800 lg:border-t-0">
-        <div class="text-3xl font-bold text-slate-900 dark:text-white">
-          200+
-        </div>
-        <div class="mt-1 text-sm text-slate-500">
-          Сотрудников
-        </div>
+        <div class="text-3xl font-bold text-slate-900 dark:text-white">200+</div>
+        <div class="mt-1 text-sm text-slate-500">Сотрудников</div>
       </div>
 
       <div class="border-t px-6 py-8 text-center dark:border-slate-800 lg:border-t-0">
-        <div class="text-3xl font-bold text-slate-900 dark:text-white">
-          3
-        </div>
-        <div class="mt-1 text-sm text-slate-500">
-          Производственные линии
-        </div>
+        <div class="text-3xl font-bold text-slate-900 dark:text-white">3</div>
+        <div class="mt-1 text-sm text-slate-500">Производственные линии</div>
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =========================================================
        PRODUCT RANGE
   ========================================================== -->
 
   <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
-
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-
       <div class="mx-auto max-w-3xl text-center">
-
-        <p class="text-sm font-semibold uppercase tracking-widest text-accent">
-          Наша продукция
-        </p>
+        <p class="text-sm font-semibold uppercase tracking-widest text-accent">Наша продукция</p>
 
         <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
           Электрические ланч-боксы для разных рынков
         </h2>
 
         <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-          Мы предлагаем различные решения для покупателей B2B, которым нужен
-          надежный производитель электрических ланч-боксов с возможностью
-          адаптации продукции под целевой рынок и коммерческую модель.
+          Мы предлагаем различные решения для покупателей B2B, которым нужен надежный производитель электрических
+          ланч-боксов с возможностью адаптации продукции под целевой рынок и коммерческую модель.
         </p>
-
       </div>
-
 
       <!-- PRODUCT IMAGE -->
 
@@ -204,126 +207,82 @@ const metadata = {
         />
       </div>
 
-
       <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-
         <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900">
+          <div class="text-2xl font-bold text-slate-900 dark:text-white">01</div>
 
-          <div class="text-2xl font-bold text-slate-900 dark:text-white">
-            01
-          </div>
-
-          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">
-            Электрические ланч-боксы
-          </h3>
+          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">Электрические ланч-боксы</h3>
 
           <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-            Практичные модели для покупателей, которым требуется удобный
-            способ разогрева еды дома, в офисе или на рабочем месте.
+            Практичные модели для покупателей, которым требуется удобный способ разогрева еды дома, в офисе или на
+            рабочем месте.
           </p>
-
         </div>
-
 
         <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900">
+          <div class="text-2xl font-bold text-slate-900 dark:text-white">02</div>
 
-          <div class="text-2xl font-bold text-slate-900 dark:text-white">
-            02
-          </div>
-
-          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">
-            Ланч-боксы с подогревом
-          </h3>
+          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">Ланч-боксы с подогревом</h3>
 
           <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-            Модели с функцией электрического нагрева для сегмента товаров
-            для офиса, работы и повседневного использования.
+            Модели с функцией электрического нагрева для сегмента товаров для офиса, работы и повседневного
+            использования.
           </p>
-
         </div>
-
 
         <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900">
+          <div class="text-2xl font-bold text-slate-900 dark:text-white">03</div>
 
-          <div class="text-2xl font-bold text-slate-900 dark:text-white">
-            03
-          </div>
-
-          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">
-            Модели для private label
-          </h3>
+          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">Модели для private label</h3>
 
           <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-            Возможность адаптировать внешний вид, логотип, цвет и упаковку
-            под требования вашей торговой марки.
+            Возможность адаптировать внешний вид, логотип, цвет и упаковку под требования вашей торговой марки.
           </p>
-
         </div>
-
 
         <div class="rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900">
+          <div class="text-2xl font-bold text-slate-900 dark:text-white">04</div>
 
-          <div class="text-2xl font-bold text-slate-900 dark:text-white">
-            04
-          </div>
-
-          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">
-            OEM / ODM решения
-          </h3>
+          <h3 class="mt-5 text-xl font-bold text-slate-900 dark:text-white">OEM / ODM решения</h3>
 
           <p class="mt-3 leading-7 text-slate-600 dark:text-slate-400">
-            Производство по согласованным требованиям для импортеров,
-            дистрибьюторов и международных брендов.
+            Производство по согласованным требованиям для импортеров, дистрибьюторов и международных брендов.
           </p>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =========================================================
        RELATED PRODUCTS
   ========================================================== -->
 
   <section class="mt-20 border-t border-slate-200 pt-20 dark:border-slate-800">
-
     <div class="mx-auto max-w-6xl text-center">
-
-      <p class="text-sm font-semibold uppercase tracking-widest text-accent">
-        Другие OEM и ODM решения
-      </p>
+      <p class="text-sm font-semibold uppercase tracking-widest text-accent">Другие OEM и ODM решения</p>
 
       <h3 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
         Другие малые бытовые приборы
       </h3>
 
       <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-400">
-        Помимо электрических ланч-боксов, мы производим другие категории
-        малой бытовой техники для международных B2B покупателей.
+        Помимо электрических ланч-боксов, мы производим другие категории малой бытовой техники для международных B2B
+        покупателей.
       </p>
 
-
       <div class="mx-auto mt-12 grid max-w-5xl gap-5 md:grid-cols-3">
-
         <a
           href="/electric-kettle-manufacturer"
           class="group rounded-2xl border border-slate-200 bg-slate-50 px-7 py-8 text-left transition duration-300 hover:-translate-y-1 hover:border-accent/30 hover:bg-white hover:shadow-lg dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800"
         >
-
           <div class="flex items-start justify-between">
+            <span class="text-sm font-semibold text-slate-400"> 01 </span>
 
-            <span class="text-sm font-semibold text-slate-400">
-              01
-            </span>
-
-            <span class="text-xl text-slate-300 transition duration-300 group-hover:translate-x-1 group-hover:text-accent">
+            <span
+              class="text-xl text-slate-300 transition duration-300 group-hover:translate-x-1 group-hover:text-accent"
+            >
               →
             </span>
-
           </div>
 
           <h4 class="mt-7 text-xl font-bold text-slate-900 transition group-hover:text-accent dark:text-white">
@@ -331,32 +290,24 @@ const metadata = {
           </h4>
 
           <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Электрические чайники OEM и ODM для импортеров, дистрибьюторов
-            и private label брендов.
+            Электрические чайники OEM и ODM для импортеров, дистрибьюторов и private label брендов.
           </p>
 
-          <div class="mt-6 text-sm font-semibold text-accent">
-            Подробнее →
-          </div>
-
+          <div class="mt-6 text-sm font-semibold text-accent">Подробнее →</div>
         </a>
-
 
         <a
           href="/electric-rice-cooker-manufacturer"
           class="group rounded-2xl border border-slate-200 bg-slate-50 px-7 py-8 text-left transition duration-300 hover:-translate-y-1 hover:border-accent/30 hover:bg-white hover:shadow-lg dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800"
         >
-
           <div class="flex items-start justify-between">
+            <span class="text-sm font-semibold text-slate-400"> 02 </span>
 
-            <span class="text-sm font-semibold text-slate-400">
-              02
-            </span>
-
-            <span class="text-xl text-slate-300 transition duration-300 group-hover:translate-x-1 group-hover:text-accent">
+            <span
+              class="text-xl text-slate-300 transition duration-300 group-hover:translate-x-1 group-hover:text-accent"
+            >
               →
             </span>
-
           </div>
 
           <h4 class="mt-7 text-xl font-bold text-slate-900 transition group-hover:text-accent dark:text-white">
@@ -364,32 +315,24 @@ const metadata = {
           </h4>
 
           <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Электрические рисоварки OEM и ODM для импортеров, оптовиков
-            и международных брендов.
+            Электрические рисоварки OEM и ODM для импортеров, оптовиков и международных брендов.
           </p>
 
-          <div class="mt-6 text-sm font-semibold text-accent">
-            Подробнее →
-          </div>
-
+          <div class="mt-6 text-sm font-semibold text-accent">Подробнее →</div>
         </a>
-
 
         <a
           href="/electric-pressure-cooker-manufacturer"
           class="group rounded-2xl border border-slate-200 bg-slate-50 px-7 py-8 text-left transition duration-300 hover:-translate-y-1 hover:border-accent/30 hover:bg-white hover:shadow-lg dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800"
         >
-
           <div class="flex items-start justify-between">
+            <span class="text-sm font-semibold text-slate-400"> 03 </span>
 
-            <span class="text-sm font-semibold text-slate-400">
-              03
-            </span>
-
-            <span class="text-xl text-slate-300 transition duration-300 group-hover:translate-x-1 group-hover:text-accent">
+            <span
+              class="text-xl text-slate-300 transition duration-300 group-hover:translate-x-1 group-hover:text-accent"
+            >
               →
             </span>
-
           </div>
 
           <h4 class="mt-7 text-xl font-bold text-slate-900 transition group-hover:text-accent dark:text-white">
@@ -397,243 +340,161 @@ const metadata = {
           </h4>
 
           <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Электрические скороварки OEM и ODM для проектов импорта и
-            private label.
+            Электрические скороварки OEM и ODM для проектов импорта и private label.
           </p>
 
-          <div class="mt-6 text-sm font-semibold text-accent">
-            Подробнее →
-          </div>
-
+          <div class="mt-6 text-sm font-semibold text-accent">Подробнее →</div>
         </a>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =========================================================
        WHY CHOOSE YOLEC
   ========================================================== -->
 
   <section class="bg-slate-50 py-20 dark:bg-slate-900 lg:py-28">
-
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-
       <div class="grid gap-14 lg:grid-cols-2 lg:items-center">
-
         <div>
-
-          <p class="text-sm font-semibold uppercase tracking-widest text-accent">
-            Прямой производитель
-          </p>
+          <p class="text-sm font-semibold uppercase tracking-widest text-accent">Прямой производитель</p>
 
           <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Не просто поставщик электрических ланч-боксов
           </h2>
 
           <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-            Для B2B покупателя важна не только цена. Стабильность производства,
-            контроль качества, техническая поддержка и возможность
-            персонализации напрямую влияют на результат проекта.
+            Для B2B покупателя важна не только цена. Стабильность производства, контроль качества, техническая поддержка
+            и возможность персонализации напрямую влияют на результат проекта.
           </p>
 
           <p class="mt-5 leading-7 text-slate-600 dark:text-slate-400">
-            YOLEC Electric напрямую работает с импортерами, дистрибьюторами
-            и международными брендами, помогая им развивать и производить
-            электрические ланч-боксы под требования конкретного рынка.
+            YOLEC Electric напрямую работает с импортерами, дистрибьюторами и международными брендами, помогая им
+            развивать и производить электрические ланч-боксы под требования конкретного рынка.
           </p>
-
         </div>
 
-
         <div class="grid gap-5 sm:grid-cols-2">
-
           <div class="rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-800">
-
-            <div class="text-lg font-bold text-slate-900 dark:text-white">
-              Прямое производство
-            </div>
+            <div class="text-lg font-bold text-slate-900 dark:text-white">Прямое производство</div>
 
             <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
               Прямая коммуникация с фабрикой на протяжении всего проекта.
             </p>
-
           </div>
 
-
           <div class="rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-800">
-
-            <div class="text-lg font-bold text-slate-900 dark:text-white">
-              Собственный R&D
-            </div>
+            <div class="text-lg font-bold text-slate-900 dark:text-white">Собственный R&D</div>
 
             <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
               Техническая поддержка при адаптации и разработке продукции.
             </p>
-
           </div>
 
-
           <div class="rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-800">
-
-            <div class="text-lg font-bold text-slate-900 dark:text-white">
-              Контроль качества
-            </div>
+            <div class="text-lg font-bold text-slate-900 dark:text-white">Контроль качества</div>
 
             <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
               Контроль ключевых этапов производства и готовой продукции.
             </p>
-
           </div>
 
-
           <div class="rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-800">
-
-            <div class="text-lg font-bold text-slate-900 dark:text-white">
-              Стабильное производство
-            </div>
+            <div class="text-lg font-bold text-slate-900 dark:text-white">Стабильное производство</div>
 
             <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
               Возможность поддерживать OEM заказы различного объема.
             </p>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =========================================================
        OEM ODM
   ========================================================== -->
 
   <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
-
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-
       <div class="grid gap-14 lg:grid-cols-2 lg:items-center">
-
         <div class="overflow-hidden rounded-2xl">
-
           <img
             src="/images/blog/75.jpg"
             alt="OEM ODM производство электрических ланч-боксов"
             class="w-full object-cover"
             loading="lazy"
           />
-
         </div>
 
-
         <div>
-
-          <p class="text-sm font-semibold uppercase tracking-widest text-accent">
-            OEM / ODM
-          </p>
+          <p class="text-sm font-semibold uppercase tracking-widest text-accent">OEM / ODM</p>
 
           <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Адаптируйте электрический ланч-бокс под свой бренд
           </h2>
 
           <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-            OEM-проект не обязательно начинать с нуля. Вы можете выбрать
-            существующую модель и изменить ключевые элементы в соответствии
-            с требованиями вашего бренда и рынка.
+            OEM-проект не обязательно начинать с нуля. Вы можете выбрать существующую модель и изменить ключевые
+            элементы в соответствии с требованиями вашего бренда и рынка.
           </p>
 
-
           <div class="mt-8 space-y-5">
-
             <div>
-              <h3 class="font-bold text-slate-900 dark:text-white">
-                Логотип и фирменный стиль
-              </h3>
+              <h3 class="font-bold text-slate-900 dark:text-white">Логотип и фирменный стиль</h3>
 
               <p class="mt-1 text-slate-600 dark:text-slate-400">
                 Нанесение логотипа и других элементов фирменной идентичности.
               </p>
             </div>
 
-
             <div>
-              <h3 class="font-bold text-slate-900 dark:text-white">
-                Цвет и отделка
-              </h3>
+              <h3 class="font-bold text-slate-900 dark:text-white">Цвет и отделка</h3>
 
               <p class="mt-1 text-slate-600 dark:text-slate-400">
-                Возможность подобрать внешний вид продукта под существующую
-                линейку вашего бренда.
+                Возможность подобрать внешний вид продукта под существующую линейку вашего бренда.
               </p>
             </div>
 
-
             <div>
-              <h3 class="font-bold text-slate-900 dark:text-white">
-                Технические характеристики
-              </h3>
+              <h3 class="font-bold text-slate-900 dark:text-white">Технические характеристики</h3>
 
               <p class="mt-1 text-slate-600 dark:text-slate-400">
-                Конфигурация, мощность, емкость и другие параметры зависят
-                от выбранной модели и требований проекта.
+                Конфигурация, мощность, емкость и другие параметры зависят от выбранной модели и требований проекта.
               </p>
             </div>
 
-
             <div>
-              <h3 class="font-bold text-slate-900 dark:text-white">
-                Упаковка
-              </h3>
+              <h3 class="font-bold text-slate-900 dark:text-white">Упаковка</h3>
 
               <p class="mt-1 text-slate-600 dark:text-slate-400">
-                Индивидуальные коробки, инструкции, этикетки и другие
-                материалы для вашего бренда.
+                Индивидуальные коробки, инструкции, этикетки и другие материалы для вашего бренда.
               </p>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =========================================================
        FACTORY
   ========================================================== -->
 
   <section class="bg-slate-900 py-20 text-white lg:py-28">
-
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-
       <div class="mx-auto max-w-3xl text-center">
-
-        <p class="text-sm font-semibold uppercase tracking-widest text-slate-400">
-          Производственные возможности
-        </p>
+        <p class="text-sm font-semibold uppercase tracking-widest text-slate-400">Производственные возможности</p>
 
         <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
           Фабрика, готовая к OEM-проектам электрических ланч-боксов
         </h2>
 
         <p class="mt-5 text-lg leading-8 text-slate-300">
-          Производственная инфраструктура позволяет контролировать различные
-          этапы изготовления и работать с международными B2B покупателями.
+          Производственная инфраструктура позволяет контролировать различные этапы изготовления и работать с
+          международными B2B покупателями.
         </p>
-
       </div>
-
 
       <!-- FACTORY IMAGE -->
 
@@ -646,597 +507,496 @@ const metadata = {
         />
       </div>
 
-
       <div class="mt-10 grid gap-6 md:grid-cols-3">
-
         <div class="rounded-2xl border border-slate-700 p-7">
+          <div class="text-4xl font-bold">20 000㎡</div>
 
-          <div class="text-4xl font-bold">
-            20 000㎡
-          </div>
+          <h3 class="mt-4 text-xl font-bold">Производственная площадь</h3>
 
-          <h3 class="mt-4 text-xl font-bold">
-            Производственная площадь
-          </h3>
-
-          <p class="mt-3 leading-7 text-slate-400">
-            Производственные и операционные помещения для OEM и ODM проектов.
-          </p>
-
+          <p class="mt-3 leading-7 text-slate-400">Производственные и операционные помещения для OEM и ODM проектов.</p>
         </div>
 
-
         <div class="rounded-2xl border border-slate-700 p-7">
+          <div class="text-4xl font-bold">200+</div>
 
-          <div class="text-4xl font-bold">
-            200+
-          </div>
+          <h3 class="mt-4 text-xl font-bold">Сотрудников</h3>
 
-          <h3 class="mt-4 text-xl font-bold">
-            Сотрудников
-          </h3>
-
-          <p class="mt-3 leading-7 text-slate-400">
-            Команды производства, инженерии, контроля качества и операций.
-          </p>
-
+          <p class="mt-3 leading-7 text-slate-400">Команды производства, инженерии, контроля качества и операций.</p>
         </div>
 
-
         <div class="rounded-2xl border border-slate-700 p-7">
+          <div class="text-4xl font-bold">3</div>
 
-          <div class="text-4xl font-bold">
-            3
-          </div>
+          <h3 class="mt-4 text-xl font-bold">Производственные линии</h3>
 
-          <h3 class="mt-4 text-xl font-bold">
-            Производственные линии
-          </h3>
-
-          <p class="mt-3 leading-7 text-slate-400">
-            Возможность работать с OEM заказами различного объема.
-          </p>
-
+          <p class="mt-3 leading-7 text-slate-400">Возможность работать с OEM заказами различного объема.</p>
         </div>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =========================================================
        MANUFACTURING
   ========================================================== -->
 
   <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
-
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-
       <div class="grid gap-14 lg:grid-cols-2 lg:items-center">
-
         <div>
-
-          <p class="text-sm font-semibold uppercase tracking-widest text-accent">
-            Производство
-          </p>
+          <p class="text-sm font-semibold uppercase tracking-widest text-accent">Производство</p>
 
           <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Контролируем производство от компонентов до готового продукта
           </h2>
 
           <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-            Стабильное производство требует координации между инженерным
-            отделом, производством и контролем качества. Наша команда
-            контролирует ключевые этапы заказа для поддержания стабильности
-            продукции.
+            Стабильное производство требует координации между инженерным отделом, производством и контролем качества.
+            Наша команда контролирует ключевые этапы заказа для поддержания стабильности продукции.
           </p>
-
         </div>
 
         <div class="overflow-hidden rounded-2xl">
-
           <img
             src="/images/blog/77.png"
             alt="Процесс производства электрических ланч-боксов в Китае"
             class="h-auto w-full object-cover"
             loading="lazy"
           />
-
         </div>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =========================================================
        QUALITY & CERTIFICATIONS
   ========================================================== -->
 
   <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
-
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-
       <div class="grid gap-14 lg:grid-cols-2">
-
         <div>
-
-          <p class="text-sm font-semibold uppercase tracking-widest text-accent">
-            Качество и соответствие требованиям
-          </p>
+          <p class="text-sm font-semibold uppercase tracking-widest text-accent">Качество и соответствие требованиям</p>
 
           <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
             Контроль качества для стабильных поставок
           </h2>
 
           <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-            Для импортеров и дистрибьюторов стабильность качества между
-            различными партиями имеет большое значение. Наш отдел качества
-            контролирует ключевые этапы производственного процесса.
+            Для импортеров и дистрибьюторов стабильность качества между различными партиями имеет большое значение. Наш
+            отдел качества контролирует ключевые этапы производственного процесса.
           </p>
 
           <div class="mt-8 space-y-4">
-
             <div class="rounded-xl border border-slate-200 p-5 dark:border-slate-800">
-
-              <strong class="text-slate-900 dark:text-white">
-                Проверка материалов
-              </strong>
+              <strong class="text-slate-900 dark:text-white"> Проверка материалов </strong>
 
               <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
                 Контроль материалов и компонентов в соответствии с требованиями проекта.
               </p>
-
             </div>
 
-
             <div class="rounded-xl border border-slate-200 p-5 dark:border-slate-800">
-
-              <strong class="text-slate-900 dark:text-white">
-                Контроль в процессе производства
-              </strong>
+              <strong class="text-slate-900 dark:text-white"> Контроль в процессе производства </strong>
 
               <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
                 Контроль производства помогает выявлять проблемы на раннем этапе.
               </p>
-
             </div>
 
-
             <div class="rounded-xl border border-slate-200 p-5 dark:border-slate-800">
-
-              <strong class="text-slate-900 dark:text-white">
-                Финальная инспекция
-              </strong>
+              <strong class="text-slate-900 dark:text-white"> Финальная инспекция </strong>
 
               <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
                 Проверка готовой продукции перед упаковкой и отправкой.
               </p>
-
             </div>
-
           </div>
-
         </div>
 
-
         <div>
-
           <div class="overflow-hidden rounded-2xl">
-
             <img
               src="/images/blog/67.jpg"
               alt="Контроль качества электрических ланч-боксов"
               class="h-auto w-full object-cover"
               loading="lazy"
             />
-
           </div>
 
           <div class="mt-8 rounded-2xl bg-slate-50 p-8 dark:bg-slate-900">
-
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
-              Сертификация и международные требования
-            </h3>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Сертификация и международные требования</h3>
 
             <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-              В зависимости от модели и рынка назначения мы можем работать
-              с соответствующими требованиями к продукции и документации.
+              В зависимости от модели и рынка назначения мы можем работать с соответствующими требованиями к продукции и
+              документации.
             </p>
 
             <div class="mt-8 grid grid-cols-2 gap-4">
-
-              <div class="rounded-xl bg-white p-5 text-center font-bold text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white">
+              <div
+                class="rounded-xl bg-white p-5 text-center font-bold text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white"
+              >
                 CE
               </div>
 
-              <div class="rounded-xl bg-white p-5 text-center font-bold text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white">
+              <div
+                class="rounded-xl bg-white p-5 text-center font-bold text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white"
+              >
                 CB
               </div>
 
-              <div class="rounded-xl bg-white p-5 text-center font-bold text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white">
+              <div
+                class="rounded-xl bg-white p-5 text-center font-bold text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white"
+              >
                 RoHS
               </div>
 
-              <div class="rounded-xl bg-white p-5 text-center font-bold text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white">
+              <div
+                class="rounded-xl bg-white p-5 text-center font-bold text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white"
+              >
                 LFGB
               </div>
 
-              <div class="rounded-xl bg-white p-5 text-center font-bold text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white">
+              <div
+                class="rounded-xl bg-white p-5 text-center font-bold text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white"
+              >
                 ISO 9001
               </div>
 
-              <div class="rounded-xl bg-white p-5 text-center font-bold text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white">
+              <div
+                class="rounded-xl bg-white p-5 text-center font-bold text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white"
+              >
                 SGS
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =========================================================
        WHO WE SERVE
   ========================================================== -->
 
   <section class="bg-slate-50 py-20 dark:bg-slate-900 lg:py-28">
-
     <div class="mx-auto max-w-6xl px-6 lg:px-8">
-
       <div class="text-center">
-
-        <p class="text-sm font-semibold uppercase tracking-widest text-accent">
-          B2B клиенты
-        </p>
+        <p class="text-sm font-semibold uppercase tracking-widest text-accent">B2B клиенты</p>
 
         <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
           Для кого мы производим электрические ланч-боксы?
         </h2>
 
         <p class="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-          Наши решения предназначены для компаний, которым нужен стабильный
-          производитель для импорта, дистрибуции или развития собственной
-          торговой марки.
+          Наши решения предназначены для компаний, которым нужен стабильный производитель для импорта, дистрибуции или
+          развития собственной торговой марки.
         </p>
-
       </div>
 
-
       <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-
         <div class="rounded-2xl bg-white p-7 shadow-sm dark:bg-slate-800">
-
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white">
-            Импортеры
-          </h3>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Импортеры</h3>
 
           <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Для компаний, которые ищут прямые поставки электрических
-            ланч-боксов из Китая.
+            Для компаний, которые ищут прямые поставки электрических ланч-боксов из Китая.
           </p>
-
         </div>
 
-
         <div class="rounded-2xl bg-white p-7 shadow-sm dark:bg-slate-800">
-
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white">
-            Дистрибьюторы
-          </h3>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Дистрибьюторы</h3>
 
           <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Модели для расширения ассортимента и работы с различными
-            ценовыми сегментами.
+            Модели для расширения ассортимента и работы с различными ценовыми сегментами.
           </p>
-
         </div>
 
-
         <div class="rounded-2xl bg-white p-7 shadow-sm dark:bg-slate-800">
-
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white">
-            Private label бренды
-          </h3>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Private label бренды</h3>
 
           <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Производство продукции с фирменным логотипом, дизайном
-            и упаковкой.
+            Производство продукции с фирменным логотипом, дизайном и упаковкой.
           </p>
-
         </div>
 
-
         <div class="rounded-2xl bg-white p-7 shadow-sm dark:bg-slate-800">
-
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white">
-            Оптовые компании
-          </h3>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Оптовые компании</h3>
 
           <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
             Решения для коммерческих заказов и международной дистрибуции.
           </p>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =========================================================
        OEM PROCESS
   ========================================================== -->
 
   <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
-
     <div class="mx-auto max-w-6xl px-6 lg:px-8">
-
       <div class="mx-auto max-w-3xl text-center">
-
-        <p class="text-sm font-semibold uppercase tracking-widest text-accent">
-          OEM процесс
-        </p>
+        <p class="text-sm font-semibold uppercase tracking-widest text-accent">OEM процесс</p>
 
         <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
           От первого запроса до серийного производства
         </h2>
 
         <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-          Понятный процесс помогает снизить количество ошибок и упростить
-          взаимодействие между покупателем и производителем.
+          Понятный процесс помогает снизить количество ошибок и упростить взаимодействие между покупателем и
+          производителем.
         </p>
-
       </div>
 
-
       <div class="mt-14 grid gap-6 md:grid-cols-5">
-
         <div>
           <div class="text-4xl font-bold text-accent">01</div>
 
-          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-            Запрос
-          </h3>
+          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">Запрос</h3>
 
           <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
             Отправьте модель, количество и требования.
           </p>
         </div>
 
-
         <div>
           <div class="text-4xl font-bold text-accent">02</div>
 
-          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-            Оценка
-          </h3>
+          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">Оценка</h3>
 
           <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
             Изучаем требования и возможности проекта.
           </p>
         </div>
 
-
         <div>
           <div class="text-4xl font-bold text-accent">03</div>
 
-          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-            Образец
-          </h3>
+          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">Образец</h3>
 
           <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
             Проверяем выбранную модель перед производством.
           </p>
         </div>
 
-
         <div>
           <div class="text-4xl font-bold text-accent">04</div>
 
-          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-            Производство
-          </h3>
+          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">Производство</h3>
 
           <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
             Изготавливаем продукцию по согласованным спецификациям.
           </p>
         </div>
 
-
         <div>
           <div class="text-4xl font-bold text-accent">05</div>
 
-          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
-            Проверка и отправка
-          </h3>
+          <h3 class="mt-4 font-bold text-slate-900 dark:text-white">Проверка и отправка</h3>
 
           <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
             Проводим финальный контроль и готовим заказ к отправке.
           </p>
         </div>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =========================================================
        FAQ
   ========================================================== -->
 
   <section class="bg-slate-50 py-20 dark:bg-slate-900 lg:py-28">
-
     <div class="mx-auto max-w-4xl px-6 lg:px-8">
-
       <div class="text-center">
-
-        <p class="text-sm font-semibold uppercase tracking-widest text-accent">
-          FAQ
-        </p>
+        <p class="text-sm font-semibold uppercase tracking-widest text-accent">FAQ</p>
 
         <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
           Частые вопросы о производителе электрических ланч-боксов
         </h2>
-
       </div>
 
-
       <div class="mt-12 divide-y divide-slate-200 dark:divide-slate-700">
-
         <details class="group py-6">
-
           <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
             Является ли YOLEC Electric производителем электрических ланч-боксов в Китае?
           </summary>
 
           <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-            Да. YOLEC Electric производит малую бытовую технику в Китае
-            и предлагает OEM и ODM решения для международных B2B покупателей.
+            Да. YOLEC Electric производит малую бытовую технику в Китае и предлагает OEM и ODM решения для международных
+            B2B покупателей.
           </p>
-
         </details>
 
-
         <details class="group py-6">
-
           <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
             Производите ли вы электрические ланч-боксы OEM?
           </summary>
 
           <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-            Да. Мы работаем с OEM-проектами и можем согласовать различные
-            варианты персонализации, включая логотип, цвет, упаковку
-            и определенные характеристики продукции.
+            Да. Мы работаем с OEM-проектами и можем согласовать различные варианты персонализации, включая логотип,
+            цвет, упаковку и определенные характеристики продукции.
           </p>
-
         </details>
 
-
         <details class="group py-6">
-
           <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
             Можно ли заказать электрические ланч-боксы под private label?
           </summary>
 
           <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-            Да. Private label проекты могут включать нанесение логотипа,
-            изменение внешнего оформления и индивидуальную упаковку
-            в зависимости от выбранной модели.
+            Да. Private label проекты могут включать нанесение логотипа, изменение внешнего оформления и индивидуальную
+            упаковку в зависимости от выбранной модели.
           </p>
-
         </details>
 
-
         <details class="group py-6">
-
           <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
             Какие характеристики электрических ланч-боксов доступны?
           </summary>
 
           <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-            Конкретные характеристики зависят от модели. В зависимости
-            от проекта могут согласовываться емкость, мощность, количество
-            контейнеров, конструкция и другие параметры.
+            Конкретные характеристики зависят от модели. В зависимости от проекта могут согласовываться емкость,
+            мощность, количество контейнеров, конструкция и другие параметры.
           </p>
-
         </details>
 
-
         <details class="group py-6">
-
           <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
             Можно ли заказать образец?
           </summary>
 
           <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-            Да. Мы можем проверить выбранную модель и требования проекта,
-            после чего подтвердить возможность предоставления образца.
+            Да. Мы можем проверить выбранную модель и требования проекта, после чего подтвердить возможность
+            предоставления образца.
           </p>
-
         </details>
 
-
         <details class="group py-6">
-
           <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
             Какой MOQ для электрических ланч-боксов?
           </summary>
 
           <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-            MOQ зависит от модели и уровня персонализации. Сообщите
-            предполагаемый объем заказа, и мы уточним применимые условия.
+            MOQ зависит от модели и уровня персонализации. Сообщите предполагаемый объем заказа, и мы уточним применимые
+            условия.
           </p>
-
         </details>
 
-
         <details class="group py-6">
-
           <summary class="cursor-pointer list-none pr-8 text-lg font-bold text-slate-900 dark:text-white">
             Какие сертификаты доступны?
           </summary>
 
           <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
-            В зависимости от модели и рынка назначения могут применяться
-            такие требования, как CE, CB, RoHS и LFGB, а также соответствующая
-            документация по качеству и аудиту производства.
+            В зависимости от модели и рынка назначения могут применяться такие требования, как CE, CB, RoHS и LFGB, а
+            также соответствующая документация по качеству и аудиту производства.
           </p>
-
         </details>
-
       </div>
-
     </div>
-
   </section>
 
+  <!-- =========================================================
+       PRODUCT CATALOG
+  ========================================================== -->
+
+  <ProductsGrid
+    tagline="Электрические ланч-боксы"
+    title="Серийные модели ланч-боксов с подогревом"
+    subtitle="Линейка для офиса, автомобиля и путешествий: версии 12В, 220В и универсальные 12В/220В, лотки из нержавеющей стали 304. OEM-производство под ваш бренд с тестами нагрева в лаборатории фабрики."
+    products={products}
+  />
+
+  <!-- =========================================================
+       SUPPLIER & FACTORY
+  ========================================================== -->
+
+  <section class="bg-white py-20 dark:bg-slate-950 lg:py-28">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+            YOLEC — поставщик электрических ланч-боксов оптом: фабрика в Чжуншане
+          </h2>
+
+          <p class="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
+            Электрические ланч-боксы с подогревом — растущая ниша для маркетплейсов и сетей. Мы — производитель и
+            оптовый поставщик ланч-боксов с собственной сборкой и контролем нагревательных элементов: версии 12В для
+            автомобиля, 220В для офиса и универсальные 12В/220В.
+          </p>
+
+          <ul class="mt-8 space-y-4 text-slate-600 dark:text-slate-300">
+            <li class="flex gap-3">
+              <span class="text-accent font-bold">✓</span>
+              <span
+                ><strong>Поставки оптом</strong> от стартового MOQ до контейнерных партий на базе 300K+ изделий в месяц</span
+              >
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent font-bold">✓</span>
+              <span><strong>Образцы за 7–10 дней</strong> с вашим логотипом и цветом корпуса</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent font-bold">✓</span>
+              <span><strong>Отгрузка FOB Шэньчжэнь/Гуанчжоу</strong> с полным экспортным пакетом документов</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent font-bold">✓</span>
+              <span><strong>Сертификаты CE, CB, CCC, EAC</strong> и тесты нагрева из лаборатории фабрики</span>
+            </li>
+          </ul>
+
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a
+              href="/fabrika"
+              class="inline-flex items-center rounded-lg bg-accent px-7 py-3.5 text-sm font-bold text-white transition hover:opacity-90"
+            >
+              Смотреть фото и видео фабрики
+            </a>
+            <a
+              href="/pricing"
+              class="inline-flex items-center rounded-lg border border-slate-300 px-7 py-3.5 text-sm font-bold text-slate-700 transition hover:bg-slate-100 dark:border-slate-600 dark:text-white dark:hover:bg-slate-800"
+            >
+              Условия и цены оптом
+            </a>
+          </div>
+        </div>
+
+        <div class="overflow-hidden rounded-2xl shadow-lg">
+          <img
+            src="/images/factory/pulido-producto.jpg"
+            alt="Поставщик электрических ланч-боксов оптом — участок финишной обработки на фабрике YOLEC"
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- =========================================================
        FINAL CTA
   ========================================================== -->
 
   <section class="relative overflow-hidden bg-slate-900 py-20 text-white lg:py-28">
-
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-
       <div class="grid items-center gap-12 lg:grid-cols-2">
-
         <div>
-
-          <p class="text-sm font-semibold uppercase tracking-widest text-slate-400">
-            Electric Lunch Box Manufacturer
-          </p>
+          <p class="text-sm font-semibold uppercase tracking-widest text-slate-400">Electric Lunch Box Manufacturer</p>
 
           <h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
             Ищете производителя электрических ланч-боксов в Китае?
           </h2>
 
           <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Отправьте нам модель, фотографию образца, предполагаемый объем
-            заказа или требования к персонализации. Мы можем оценить ваш
-            OEM или ODM проект и предложить подходящее решение.
+            Отправьте нам модель, фотографию образца, предполагаемый объем заказа или требования к персонализации. Мы
+            можем оценить ваш OEM или ODM проект и предложить подходящее решение.
           </p>
 
           <div class="mt-9 flex flex-wrap gap-4">
-
             <a
-              href="/contacto"
+              href="/contact"
               class="inline-flex items-center rounded-lg bg-white px-7 py-3.5 text-sm font-bold text-slate-900 transition hover:bg-slate-100"
             >
               Запросить предложение
@@ -1248,85 +1008,59 @@ const metadata = {
             >
               WhatsApp
             </a>
-
           </div>
-
         </div>
 
-
         <div class="overflow-hidden rounded-2xl">
-
           <img
             src="/images/blog/67.jpg"
             alt="Электрический ланч-бокс для OEM и ODM проектов"
             class="h-auto w-full object-cover"
             loading="lazy"
           />
-
         </div>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =========================================================
        PACKAGING
   ========================================================== -->
 
   <section class="bg-white py-16 dark:bg-slate-950">
-
     <div class="mx-auto max-w-6xl px-6 lg:px-8">
-
       <div class="grid items-center gap-10 md:grid-cols-2">
-
         <div class="overflow-hidden rounded-2xl">
-
           <img
             src="/images/blog/75.jpg"
             alt="Упаковка электрических ланч-боксов OEM"
             class="h-auto w-full object-cover"
             loading="lazy"
           />
-
         </div>
 
         <div>
-
-          <p class="text-sm font-semibold uppercase tracking-widest text-accent">
-            Упаковка и доставка
-          </p>
+          <p class="text-sm font-semibold uppercase tracking-widest text-accent">Упаковка и доставка</p>
 
           <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
             Подготовка продукции к международной дистрибуции
           </h2>
 
           <p class="mt-5 leading-7 text-slate-600 dark:text-slate-400">
-            Для OEM и private label проектов мы можем работать с различными
-            требованиями к упаковке, включая коробки, этикетки, инструкции
-            и другие материалы, необходимые для вашего заказа.
+            Для OEM и private label проектов мы можем работать с различными требованиями к упаковке, включая коробки,
+            этикетки, инструкции и другие материалы, необходимые для вашего заказа.
           </p>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =========================================================
        WHATSAPP QR
   ========================================================== -->
 
   <div class="flex flex-col items-center justify-center gap-3 bg-white py-10 dark:bg-slate-950">
-
-    <p class="text-center text-sm text-slate-500 dark:text-slate-400">
-      Прямой контакт по вопросам OEM / ODM
-    </p>
+    <p class="text-center text-sm text-slate-500 dark:text-slate-400">Прямой контакт по вопросам OEM / ODM</p>
 
     <img
       src="/images/whatsapp.png"
@@ -1334,8 +1068,5 @@ const metadata = {
       class="h-auto w-[180px] rounded-lg shadow-md md:w-[220px]"
       loading="lazy"
     />
-
   </div>
-
 </Layout>
-

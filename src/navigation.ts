@@ -12,27 +12,23 @@ export const headerData = {
       links: [
         {
           text: 'Электрические чайники',
-          href: getPermalink('https://www.yolec-electronics.com/product-category/electric-water-kettle/'),
+          href: getPermalink('/electric-kettle-manufacturer'),
         },
         {
           text: 'Чайники для кофе',
-          href: getPermalink('https://www.yolec-electronics.com/product-category/electric-coffee-kettle/'),
+          href: getPermalink('/electric-kettle-manufacturer'),
         },
         {
           text: 'Рисоварки',
-          href: getPermalink('https://www.yolec-electronics.com/product-category/multi-cooker/'),
+          href: getPermalink('/electric-rice-cooker-manufacturer'),
         },
         {
           text: 'Скороварки',
-          href: getPermalink('https://www.yolec-electronics.com/product-category/pressure-cooker/'),
+          href: getPermalink('/electric-pressure-cooker-manufacturer'),
         },
         {
           text: 'Электрические ланч-боксы',
-          href: getPermalink('https://www.yolec-electronics.com/product-category/electric-lunch-box/'),
-        },
-        {
-          text: 'Ручные блендеры',
-          href: getPermalink('https://www.yolec-electronics.com/product-category/breakfast-machine/'),
+          href: getPermalink('/electric-lunch-box-manufacturer'),
         },
       ],
     },
@@ -46,6 +42,10 @@ export const headerData = {
         },
         {
           text: 'Цены и OEM стоимость',
+          href: getPermalink('/pricing'),
+        },
+        {
+          text: 'Private Label',
           href: getPermalink('/private-label'),
         },
         {
@@ -57,31 +57,35 @@ export const headerData = {
 
     {
       text: 'О фабрике',
-      links: [ 
+      links: [
         {
           text: 'О компании',
-          href: getPermalink('https://www.yolec-electronics.com/about/'),
+          href: getPermalink('/about'),
+        },
+        {
+          text: 'Наша фабрика',
+          href: getPermalink('/fabrika'),
         },
         {
           text: 'Блог',
           href: getBlogPermalink(),
-        },        
-       {
+        },
+        {
           text: 'Часто задаваемые вопросы',
-          href: getPermalink('/faq'), 
+          href: getPermalink('/faq'),
         },
       ],
     },
     {
       text: 'Контакты',
-      href: getPermalink('https://www.yolec-electronics.com/contact/'),
+      href: getPermalink('/contact'),
     },
   ],
 
   actions: [
     {
       text: 'Запросить предложение',
-      href: getPermalink('https://www.yolec-electronics.com/contact/'),
+      href: getPermalink('/contact'),
     },
   ],
 };
@@ -93,27 +97,23 @@ export const footerData = {
       links: [
         {
           text: 'Электрические чайники',
-          href: getPermalink('https://www.yolec-electronics.com/product-category/electric-water-kettle/'),
+          href: getPermalink('/electric-kettle-manufacturer'),
         },
         {
           text: 'Чайники для кофе',
-          href: getPermalink('https://www.yolec-electronics.com/product-category/electric-coffee-kettle/'),
+          href: getPermalink('/electric-kettle-manufacturer'),
         },
         {
           text: 'Рисоварки',
-          href: getPermalink('https://www.yolec-electronics.com/product-category/multi-cooker/'),
+          href: getPermalink('/electric-rice-cooker-manufacturer'),
         },
         {
           text: 'Скороварки',
-          href: getPermalink('https://www.yolec-electronics.com/product-category/pressure-cooker/'),
+          href: getPermalink('/electric-pressure-cooker-manufacturer'),
         },
         {
           text: 'Электрические ланч-боксы',
-          href: getPermalink('https://www.yolec-electronics.com/product-category/electric-lunch-box/'),
-        },
-        {
-          text: 'Ручные блендеры',
-          href: getPermalink('https://www.yolec-electronics.com/product-category/breakfast-machine/'),
+          href: getPermalink('/electric-lunch-box-manufacturer'),
         },
       ],
     },
@@ -148,12 +148,16 @@ export const footerData = {
           href: getBlogPermalink(),
         },
         {
-          text: 'О фабрике',
+          text: 'О компании',
           href: getPermalink('/about'),
         },
         {
+          text: 'Наша фабрика',
+          href: getPermalink('/fabrika'),
+        },
+        {
           text: 'Связаться с нами',
-          href: getPermalink('https://www.yolec-electronics.com/contact/'),
+          href: getPermalink('/contact'),
         },
       ],
     },
@@ -176,10 +180,10 @@ export const footerData = {
         {
           text: 'VK',
           href: 'https://vk.ru/kitchen_appliance_factory',
-        },        
+        },
         {
           text: 'YouTube',
-          href: 'https://www.youtube.com/@yolec-electric-adrian', 
+          href: 'https://www.youtube.com/@yolec-electric-adrian',
         },
       ],
     },

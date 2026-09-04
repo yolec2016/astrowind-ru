@@ -24,11 +24,17 @@ const currentPage = page.currentPage ?? 1;
 // const allTags = await findTags();
 
 const metadata = {
-  title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `Блог: кухонная техника из Китая${currentPage > 1 ? ` — страница ${currentPage}` : ''}`,
+  description:
+    currentPage > 1
+      ? `Блог OEM/ODM производства кухонной техники в Китае — страница ${currentPage}. Практика закупок, QC, сертификация и логистика.`
+      : 'Блог завода YOLEC о производстве кухонной техники в Китае: OEM/ODM, контроль качества, сертификаты и поставки для импортеров.',
+
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,
   },
+
   openGraph: {
     type: 'blog',
   },

@@ -1,5 +1,6 @@
 ---
-title: 'Условия использования (Terms and Conditions) | OEM/ODM производитель кухонной техники в Китае'
+title: 'Условия использования'
+description: 'Условия использования сайта YOLEC Electric: правила работы с контентом, запросами OEM/ODM и коммерческой информацией завода.'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
@@ -10,6 +11,7 @@ _Last updated_: January 06, 2026
 ## 1. Интерпретация и определения
 
 ### Интерпретация
+
 Слова с заглавной буквы имеют значения, определенные ниже. Эти определения применяются независимо от того, используются ли термины в единственном или множественном числе.
 
 ### Определения
@@ -123,9 +125,9 @@ _Last updated_: January 06, 2026
 
 По вопросам OEM/ODM производства:
 
-- Email: adrian@yolec-electronics.com  
-- Website: https://www.yolec-electronics.com/  
-- WhatsApp: +86 13922332584  
+- Email: adrian@yolec-electronics.com
+- Website: https://www.yolec-electronics.com/
+- WhatsApp: +86 13922332584
 
 ---
 

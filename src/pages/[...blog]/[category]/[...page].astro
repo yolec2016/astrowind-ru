@@ -20,7 +20,8 @@ const { page, category } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
 
 const metadata = {
-  title: `Category '${category.title}' ${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `Категория: ${category.title}${currentPage > 1 ? ` — страница ${currentPage}` : ''}`,
+  description: `Статьи блога в категории «${category.title}»: OEM/ODM производство кухонной техники в Китае для импортеров и B2B-покупателей.`,
   robots: {
     index: blogCategoryRobots?.index,
     follow: blogCategoryRobots?.follow,

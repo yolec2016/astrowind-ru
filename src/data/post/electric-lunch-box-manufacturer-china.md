@@ -1,10 +1,10 @@
 ---
-pubDate: 2026-08-29T16:00:00+08:00
-title: "Как выбрать electric lunch box manufacturer в Китае для оптовых закупок"
-author: "Adrian"
-excerpt: "Как найти надежного производителя электрических ланч-боксов в Китае: проверка фабрики, качества, нагрева, материалов, OEM возможностей, MOQ и поставок для российского рынка."
-image: "/images/blog/72.jpeg"
-category: "OEM Manufacturing"
+publishDate: 2026-08-29T16:00:00+08:00
+title: 'Как выбрать electric lunch box manufacturer в Китае'
+author: 'Adrian'
+excerpt: 'Как найти надежного производителя электрических ланч-боксов в Китае: проверка фабрики, качества, нагрева, материалов, OEM возможностей, MOQ и.'
+image: '/images/blog/72.jpeg'
+category: 'OEM Manufacturing'
 tags:
   - electric lunch box manufacturer
   - производитель электрических ланч-боксов Китай
@@ -13,8 +13,9 @@ tags:
   - ODM электрический ланч-бокс
   - китайская фабрика бытовой техники
 metadata:
-  canonical: "https://www.yolec-electronics.com"
-robots: "index, follow"
+  robots:
+    index: true
+    follow: true
 ---
 
 Если вы ищете в Китае **electric lunch box manufacturer** для оптовых поставок, скорее всего, вы уже столкнулись с одной проблемой.
@@ -354,7 +355,7 @@ Yolec Electric работает с малой кухонной техникой 
 
 Подробнее о производстве:
 
-https://www.yolec-electronics.com/
+[производитель электрических ланч-боксов в Китае](/electric-lunch-box-manufacturer)
 
 ## Посмотрите фабрику до размещения большого заказа
 

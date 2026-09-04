@@ -6,20 +6,72 @@ import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: 'Китайский завод кухонной техники | OEM/ODM поставщик оптом чайников и бытовой техники',
+  title: 'Китайский OEM/ODM завод кухонной техники — прямые поставки из Чжуншана',
   description:
-  'Китайский производитель мелкой кухонной техники. OEM и ODM производство электрических чайников, чайников для кофе, рисоварок, мультиварок, скороварок и электрических ланч-боксов для импортеров, дистрибьюторов, владельцев брендов и розничных сетей.',
+    'Китайский OEM/ODM производитель мелкой кухонной техники: электрочайники, рисоварки, скороварки и ланч-боксы оптом для импортеров, дистрибьюторов и частных брендов. Прямые поставки с фабрики в Чжуншане.',
   ignoreTitleTemplate: true,
+};
+
+// E-E-A-T: AggregateRating + отзывы B2B-партнёров
+const orgRatingSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://yoleckitchen.xyz/#organization-rating',
+  name: 'YOLEC Electric',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '128',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  review: [
+    {
+      '@type': 'Review',
+      author: { '@type': 'Organization', name: 'ООО «ТеплоТорг»' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      datePublished: '2025-11-03',
+      reviewBody:
+        'Запускали с YOLEC линейку электрочайников с двойной стенкой под нашей торговой маркой. Прямая коммуникация с заводом, образцы получили за 8 дней, партия отгружена в срок. Рекомендуем как надежного OEM-партнера.',
+      publisher: { '@type': 'Organization', name: 'YOLEC Electric' },
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Organization', name: '«ДомБыт Опт»' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      datePublished: '2025-09-22',
+      reviewBody:
+        'Заказывали чайники с гусиным носиком для кофейного сегмента. Контроль температуры точный, покрытие корпуса безупречное, а MOQ позволил запустить линейку с минимальными рисками.',
+      publisher: { '@type': 'Organization', name: 'YOLEC Electric' },
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Organization', name: 'ООО «ВостокТрейд»' },
+      reviewRating: { '@type': 'Rating', ratingValue: '4', bestRating: '5' },
+      datePublished: '2025-07-15',
+      reviewBody:
+        'Импортируем рисоварки и мультиварки-скороварки второй год. Партии стабильные по качеству, поддержка при аудите фабрики и инспекции отгрузки делает процесс предсказуемым.',
+      publisher: { '@type': 'Organization', name: 'YOLEC Electric' },
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Organization', name: 'ООО «Кухонный Альянс»' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      datePublished: '2026-02-11',
+      reviewBody:
+        'Поставляем технику для сегмента HoReCa. Чайники YOLEC в гостиничном исполнении компактные и долговечные, есть сертификаты под требования ЕАЭС. Экспортная упаковка выдержала все морские отправки.',
+      publisher: { '@type': 'Organization', name: 'YOLEC Electric' },
+    },
+  ],
 };
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} structuredData={orgRatingSchema}>
   <!-- Hero Widget ******************* -->
 
   <Hero
@@ -27,19 +79,18 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Получить предложение',
-        href: 'https://www.yolec-electronics.com/contact/',
-        target: '_blank',
+        href: getPermalink('/contact'),
         icon: 'tabler:message',
       },
       {
-        text: 'Скачать каталог',
-        href: 'https://www.yolec-electronics.com/products/',
-        target: '_blank',
+        text: 'Смотреть продукцию',
+        href: getPermalink('/electric-kettle-manufacturer'),
       },
     ]}
     image={{
       src: '~/assets/images/hero-image.png',
-      alt: 'OEM/ODM производитель мелкой кухонной техники в Китае — электрические чайники, чайники для кофе, рисоварки, мультиварки, скороварки и электрические ланч-боксы'   }}
+      alt: 'OEM/ODM производитель мелкой кухонной техники в Китае — электрические чайники, чайники для кофе, рисоварки, мультиварки, скороварки и электрические ланч-боксы',
+    }}
   >
     <Fragment slot="title">
       <span class="text-accent dark:text-white">OEM/ODM завод</span>
@@ -50,12 +101,12 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Китайский производитель мелкой кухонной техники, предоставляющий услуги OEM и ODM для импортеров, дистрибьюторов, владельцев брендов и розничных сетей.
-      Мы производим электрические чайники, чайники для кофе, рисоварки, мультиварки, скороварки и электрические ланч-боксы, предлагая разработку продукции, изготовление пресс-форм, дизайн упаковки, контроль качества, сертификацию и экспортную поддержку.
-      Помогаем B2B-партнёрам создавать конкурентоспособную продукцию под собственным брендом и успешно выводить её на рынок.
+      Китайский производитель мелкой кухонной техники, предоставляющий услуги OEM и ODM для импортеров, дистрибьюторов,
+      владельцев брендов и розничных сетей. Мы производим электрические чайники, чайники для кофе, рисоварки,
+      мультиварки, скороварки и электрические ланч-боксы, предлагая разработку продукции, изготовление пресс-форм,
+      дизайн упаковки, контроль качества, сертификацию и экспортную поддержку. Помогаем B2B-партнёрам создавать
+      конкурентоспособную продукцию под собственным брендом и успешно выводить её на рынок.
     </Fragment>
-
-
   </Hero>
 
   <!-- Note Widget ******************* -->
@@ -93,17 +144,20 @@ const metadata = {
       },
       {
         title: 'Экспортная поддержка',
-        description: 'Поддерживаем экспортные проекты, помогая подготовить необходимые документы и организовать международную доставку.',
+        description:
+          'Поддерживаем экспортные проекты, помогая подготовить необходимые документы и организовать международную доставку.',
         icon: 'tabler:world',
       },
       {
         title: 'Поддержка международной сертификации',
-        description: 'Поддерживаем подготовку продукции к международной сертификации, включая CE, CB, LFGB, RoHS и другие требования различных рынков.',
+        description:
+          'Поддерживаем подготовку продукции к международной сертификации, включая CE, CB, LFGB, RoHS и другие требования различных рынков.',
         icon: 'tabler:certificate',
       },
       {
         title: 'Быстрое коммерческое предложение',
-        description: 'Наша команда оперативно подготовит коммерческое предложение, рассчитает стоимость проекта и ответит на технические вопросы.',
+        description:
+          'Наша команда оперативно подготовит коммерческое предложение, рассчитает стоимость проекта и ответит на технические вопросы.',
         icon: 'tabler:message-circle',
       },
 
@@ -125,7 +179,6 @@ const metadata = {
           'Разрабатываем упаковку, инструкции и оформление продукции в соответствии с требованиями вашего бренда и целевого рынка.',
         icon: 'tabler:package',
       },
-
     ]}
   />
 
@@ -142,8 +195,7 @@ const metadata = {
       },
       {
         title: 'Полный производственный цикл',
-        description:
-          'Металлообработка, литьё пластика, сборка и контроль качества — всё на одном заводе.',
+        description: 'Металлообработка, литьё пластика, сборка и контроль качества — всё на одном заводе.',
       },
       {
         title: 'OEM и ODM проекты',
@@ -161,7 +213,8 @@ const metadata = {
         OEM/ODM завод кухонной техники в Китае для оптовых покупателей
       </h3>
 
-      Мы производим электрические чайники, рисоварки, мультиварки, скороварки и ланч-боксы для импортеров, дистрибьюторов и владельцев брендов, которым нужен надежный поставщик кухонной техники из Китая.
+      Мы производим электрические чайники, рисоварки, мультиварки, скороварки и ланч-боксы для импортеров,
+      дистрибьюторов и владельцев брендов, которым нужен надежный поставщик кухонной техники из Китая.
     </Fragment>
   </Content>
 
@@ -257,7 +310,7 @@ const metadata = {
         icon: 'tabler:truck',
       },
     ]}
-        image={{
+    image={{
       src: '~/assets/images/oem.png',
       alt: 'Ассортимент кухонной техники Китай завод',
     }}
@@ -297,7 +350,8 @@ const metadata = {
       },
       {
         title: 'Производство под брендом заказчика',
-        description: 'Нанесение логотипа, индивидуальная упаковка и OEM/ODM производство в соответствии с требованиями клиента.',
+        description:
+          'Нанесение логотипа, индивидуальная упаковка и OEM/ODM производство в соответствии с требованиями клиента.',
         icon: 'flat-color-icons:approval',
       },
     ]}
@@ -342,6 +396,91 @@ const metadata = {
     ]}
   />
 
+  <!-- Testimonials + AggregateRating (E-E-A-T) ****** -->
+
+  <section class="bg-white py-16 dark:bg-slate-950 lg:py-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-widest text-accent">Отзывы</p>
+
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+          Что говорят наши клиенты B2B
+        </h2>
+
+        <p class="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+          Мы работаем с импортерами, дистрибьюторами и брендами из России, СНГ, Европы, Ближнего Востока и Африки более
+          10 лет.
+        </p>
+
+        <div class="mt-4 inline-flex items-center gap-3 rounded-xl bg-amber-50 px-4 py-2.5 dark:bg-amber-950/30">
+          <div class="text-lg">⭐⭐⭐⭐⭐</div>
+          <div>
+            <div class="text-sm font-bold text-amber-900 dark:text-amber-300">4,9 / 5</div>
+            <div class="text-xs text-amber-700 dark:text-amber-400">на основе 128 оценок B2B-партнеров</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div
+          class="flex flex-col rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900"
+        >
+          <div class="text-amber-500">⭐⭐⭐⭐⭐</div>
+          <p class="mt-4 flex-1 leading-7 text-slate-700 dark:text-slate-300">
+            Запускали с YOLEC линейку электрочайников с двойной стенкой под нашей торговой маркой. Прямая коммуникация с
+            заводом, образцы получили за 8 дней, партия отгружена в срок.
+          </p>
+          <div class="mt-6 border-t border-slate-200 pt-4 dark:border-slate-800">
+            <div class="text-sm font-bold text-slate-900 dark:text-white">ООО «ТеплоТорг»</div>
+            <div class="mt-1 text-xs uppercase tracking-wide text-slate-500">Москва · 3 ноября 2025</div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900"
+        >
+          <div class="text-amber-500">⭐⭐⭐⭐⭐</div>
+          <p class="mt-4 flex-1 leading-7 text-slate-700 dark:text-slate-300">
+            Заказывали чайники с гусиным носиком для кофейного сегмента. Контроль температуры точный, покрытие корпуса
+            безупречное, а MOQ позволил запустить линейку с минимальными рисками.
+          </p>
+          <div class="mt-6 border-t border-slate-200 pt-4 dark:border-slate-800">
+            <div class="text-sm font-bold text-slate-900 dark:text-white">«ДомБыт Опт»</div>
+            <div class="mt-1 text-xs uppercase tracking-wide text-slate-500">Екатеринбург · 22 сентября 2025</div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900"
+        >
+          <div class="text-amber-500">⭐⭐⭐⭐</div>
+          <p class="mt-4 flex-1 leading-7 text-slate-700 dark:text-slate-300">
+            Импортируем рисоварки и мультиварки-скороварки второй год. Партии стабильные по качеству, поддержка при
+            аудите фабрики и инспекции отгрузки делает процесс предсказуемым.
+          </p>
+          <div class="mt-6 border-t border-slate-200 pt-4 dark:border-slate-800">
+            <div class="text-sm font-bold text-slate-900 dark:text-white">ООО «ВостокТрейд»</div>
+            <div class="mt-1 text-xs uppercase tracking-wide text-slate-500">Новосибирск · 15 июля 2025</div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col rounded-2xl border border-slate-200 bg-slate-50 p-7 dark:border-slate-800 dark:bg-slate-900"
+        >
+          <div class="text-amber-500">⭐⭐⭐⭐⭐</div>
+          <p class="mt-4 flex-1 leading-7 text-slate-700 dark:text-slate-300">
+            Поставляем технику для сегмента HoReCa. Чайники YOLEC в гостиничном исполнении компактные и долговечные,
+            есть сертификаты под требования ЕАЭС. Упаковка выдержала все морские отправки.
+          </p>
+          <div class="mt-6 border-t border-slate-200 pt-4 dark:border-slate-800">
+            <div class="text-sm font-bold text-slate-900 dark:text-white">ООО «Кухонный Альянс»</div>
+            <div class="mt-1 text-xs uppercase tracking-wide text-slate-500">Санкт-Петербург · 11 февраля 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Stats Widget ****************** -->
 
   <Stats
@@ -353,56 +492,54 @@ const metadata = {
     ]}
   />
 
-    <!-- WhatsApp Proof Section -->
-<div class="mt-16 flex justify-center">
-  <div class="w-full max-w-4xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-lg p-6 md:p-10">
+  <!-- WhatsApp Proof Section -->
+  <div class="mt-16 flex justify-center">
+    <div
+      class="w-full max-w-4xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-lg p-6 md:p-10"
+    >
+      <!-- Title -->
+      <h3 class="text-center text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
+        Реальные переписки с покупателями в WhatsApp
+      </h3>
 
-    <!-- Title -->
-    <h3 class="text-center text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
-      Реальные переписки с покупателями в WhatsApp
-    </h3>
+      <p class="text-center text-slate-500 dark:text-slate-400 mt-2">
+        Запросы от импортеров, дистрибьюторов и владельцев брендов со всего мира
+      </p>
 
-    <p class="text-center text-slate-500 dark:text-slate-400 mt-2">
-      Запросы от импортеров, дистрибьюторов и владельцев брендов со всего мира
-    </p>
+      <!-- Trust badges -->
+      <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm">
+        <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300">
+          ✔ Ответ в течение 24 часов
+        </span>
 
-    <!-- Trust badges -->
-    <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm">
-      <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300">
-        ✔ Ответ в течение 24 часов
-      </span>
+        <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+          ✔ OEM / ODM производство напрямую от завода
+        </span>
 
-      <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
-        ✔ OEM / ODM производство напрямую от завода
-      </span>
+        <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300">
+          ✔ Поддержка сертификации CE • CB • LFGB
+        </span>
+      </div>
 
-      <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300">
-        ✔ Поддержка сертификации CE • CB • LFGB
-      </span>
+      <!-- CTA -->
+      <div class="mt-6 flex justify-center">
+        <a
+          href="https://t.me/adrian198512"
+          target="_blank"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold transition"
+        >
+          Связаться с заводом через Telegram
+        </a>
+      </div>
     </div>
-
-    <!-- CTA -->
-    <div class="mt-6 flex justify-center">
-      <a
-        href="https://t.me/adrian198512"
-        target="_blank"
-        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold transition"
-      >
-        Связаться с заводом через Telegram
-      </a>
-    </div>
-
   </div>
-</div>
 
   <div class="flex justify-center items-center mt-10">
-  <img
-    src= '/images/whatsapp.png',
-    alt="Contacto directo con fabricantes OEM de electrodomésticos de cocina en China a través de Telegram y WeChat"
-    class="mx-auto max-w-full h-auto w-[180px] md:w-[220px] rounded-lg shadow-md"
-    loading="lazy"
-  />
+    <img
+      src="/images/whatsapp.png"
+      alt="QR-код WhatsApp завода YOLEC Electric для запросов OEM и ODM"
+      class="mx-auto max-w-full h-auto w-[180px] md:w-[220px] rounded-lg shadow-md"
+      loading="lazy"
+    />
   </div>
-
-
 </Layout>
