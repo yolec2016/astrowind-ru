@@ -5,19 +5,18 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import { Icon } from 'astro-icon/components';
 
 const metadata = {
-  title: 'Контакты завода — WhatsApp, КП за 24 часа, образцы OEM/ODM',
+  title: 'Контакты завода YOLEC — WhatsApp, КП за 24 часа, OEM/ODM',
   description:
-    'Свяжитесь с заводом напрямую: WhatsApp +86 139 2233 2584, email, Telegram. КП за 24 часа, образцы за 7–10 дней, MOQ от 500 шт. Zhongshan Yangle Electric (YOLEC), Чжуншань, Китай.',
+    'Свяжитесь с заводом YOLEC напрямую: WhatsApp, email и Telegram. Получите коммерческое предложение, запросите образец и обсудите OEM/ODM производство бытовой кухонной техники.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HERO + CTA -->
-
   <HeroText
     tagline="Контакты"
     title="Свяжитесь с заводом напрямую"
-    subtitle="Ваше контактное лицо — Адриан, руководитель B2B-направления (русский / английский / китайский). Опишите задачу — коммерческое предложение от завода в течение 24 часов, по WhatsApp обычно быстрее."
+    subtitle="Ваше контактное лицо — Адриан, руководитель B2B-направления (русский / английский / китайский). Опишите задачу — мы подготовим предложение по вашему проекту."
     callToAction={{
       text: 'Написать в WhatsApp',
       href: 'https://wa.me/8613922332584?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%97%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%9A%D0%9F%3A%20OEM%2FODM%20%D0%BA%D1%83%D1%85%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0.',
@@ -33,27 +32,33 @@ const metadata = {
     }}
   />
 
-  <!-- QUICK FACTS STRIP -->
-
+  <!-- QUICK FACTS -->
   <section class="border-y border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900">
     <div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-6 py-8 text-center sm:grid-cols-3">
       <div>
         <div class="text-2xl font-bold text-slate-900 dark:text-white">≤ 24 часов</div>
-        <div class="mt-1 text-sm text-slate-500 dark:text-slate-400">Ответ с коммерческим предложением</div>
+        <div class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+          Ориентировочный срок ответа
+        </div>
       </div>
+
       <div>
         <div class="text-2xl font-bold text-slate-900 dark:text-white">7–10 дней</div>
-        <div class="mt-1 text-sm text-slate-500 dark:text-slate-400">Образец с вашим логотипом</div>
+        <div class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+          Ориентировочный срок подготовки образца
+        </div>
       </div>
+
       <div>
-        <div class="text-2xl font-bold text-slate-900 dark:text-white">от 500 шт</div>
-        <div class="mt-1 text-sm text-slate-500 dark:text-slate-400">MOQ для первой партии</div>
+        <div class="text-2xl font-bold text-slate-900 dark:text-white">от 500 шт.</div>
+        <div class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+          Ориентировочный MOQ для стандартных моделей
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- КАНАЛЫ СВЯЗИ (кликабельные карточки) -->
-
+  <!-- CONTACT CHANNELS -->
   <section class="bg-white py-16 dark:bg-slate-950 lg:py-20">
     <div class="mx-auto max-w-6xl px-6 lg:px-8">
       <h2 class="text-center text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
@@ -61,7 +66,8 @@ const metadata = {
       </h2>
 
       <div class="mt-10 grid gap-5 sm:grid-cols-2">
-        <!-- WhatsApp — приоритетный канал -->
+
+        <!-- WhatsApp -->
         <a
           href="https://wa.me/8613922332584?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%97%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D0%9A%D0%9F%3A%20OEM%2FODM%20%D0%BA%D1%83%D1%85%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0."
           target="_blank"
@@ -69,16 +75,22 @@ const metadata = {
           class="group rounded-2xl border-2 border-emerald-500 bg-emerald-50 p-6 transition hover:shadow-lg dark:border-emerald-500/60 dark:bg-emerald-900/20"
         >
           <div class="flex items-start justify-between">
-            <Icon name="tabler:brand-whatsapp" class="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
-            <span
-              class="inline-flex items-center rounded-full bg-emerald-600 px-2.5 py-0.5 text-xs font-semibold text-white"
-            >
+            <Icon
+              name="tabler:brand-whatsapp"
+              class="h-8 w-8 text-emerald-600 dark:text-emerald-400"
+            />
+
+            <span class="inline-flex items-center rounded-full bg-emerald-600 px-2.5 py-0.5 text-xs font-semibold text-white">
               Быстрый ответ
             </span>
           </div>
-          <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">WhatsApp: +86 139 2233 2584</h3>
+
+          <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">
+            WhatsApp: +86 139 2233 2584
+          </h3>
+
           <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            КП, фото и видео образцов, логистика. Отвечаем и вне рабочих часов.
+            КП, фото и видео образцов, обсуждение OEM/ODM и логистики.
           </p>
         </a>
 
@@ -88,9 +100,13 @@ const metadata = {
           class="group rounded-2xl border border-slate-200 bg-slate-50 p-6 transition hover:border-slate-300 hover:shadow-lg dark:border-slate-700 dark:bg-slate-900"
         >
           <Icon name="tabler:mail" class="h-8 w-8 text-accent" />
-          <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">adrian@yolec-electronics.com</h3>
+
+          <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">
+            adrian@yolec-electronics.com
+          </h3>
+
           <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Для официальных запросов, спецификаций и документов.
+            Для официальных запросов, спецификаций, технических требований и документов.
           </p>
         </a>
 
@@ -102,173 +118,251 @@ const metadata = {
           class="group rounded-2xl border border-slate-200 bg-slate-50 p-6 transition hover:border-slate-300 hover:shadow-lg dark:border-slate-700 dark:bg-slate-900"
         >
           <Icon name="tabler:brand-telegram" class="h-8 w-8 text-sky-500" />
-          <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">Telegram: @adrian198512</h3>
+
+          <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">
+            Telegram: @adrian198512
+          </h3>
+
           <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
             Прямая связь с руководителем B2B-направления.
           </p>
         </a>
 
-        <!-- Телефон фабрики -->
+        <!-- Factory phone -->
         <a
           href="tel:+867602263622"
           class="group rounded-2xl border border-slate-200 bg-slate-50 p-6 transition hover:border-slate-300 hover:shadow-lg dark:border-slate-700 dark:bg-slate-900"
         >
           <Icon name="tabler:phone-calling" class="h-8 w-8 text-accent" />
-          <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">+86 760 2263 622</h3>
+
+          <h3 class="mt-4 text-lg font-bold text-slate-900 dark:text-white">
+            +86 760 2263 622
+          </h3>
+
           <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Офис фабрики, пн–пт 9:00–18:00 (GMT+8). Разница с Москвой +5 часов.
+            Офис фабрики, пн–пт 9:00–18:00 (GMT+8).
           </p>
         </a>
+
       </div>
     </div>
   </section>
 
-  <!-- ЧТО ВКЛЮЧИТЬ В ЗАПРОС + ЧТО ДАЛЬШЕ -->
-
+  <!-- REQUEST + PROCESS -->
   <section class="bg-slate-50 py-16 dark:bg-slate-900 lg:py-20">
     <div class="mx-auto grid max-w-6xl gap-8 px-6 lg:grid-cols-2 lg:px-8">
-      <!-- Чек-лист запроса -->
+
+      <!-- Request checklist -->
       <div class="rounded-2xl border border-slate-200 bg-white p-8 dark:border-slate-800 dark:bg-slate-950">
         <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
           Что включить в запрос
         </h2>
+
         <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-          Чем полнее информация, тем точнее и быстрее будет цена. Достаточно 2–3 пунктов из списка.
+          Чем больше информации вы укажете, тем точнее мы сможем оценить проект.
+          Достаточно нескольких пунктов.
         </p>
+
         <ul class="mt-6 space-y-4">
+
           <li class="flex gap-3 text-sm leading-6 text-slate-700 dark:text-slate-300">
             <span class="mt-0.5 font-bold text-accent">01</span>
-            <span><strong>Категория и модель</strong> — модель из нашего каталога, фото или ссылка на аналог.</span>
+            <span>
+              <strong>Категория и модель</strong> — модель из нашего каталога,
+              фото или ссылка на аналог.
+            </span>
           </li>
+
           <li class="flex gap-3 text-sm leading-6 text-slate-700 dark:text-slate-300">
             <span class="mt-0.5 font-bold text-accent">02</span>
-            <span><strong>Объём первой партии</strong> — примерное количество и периодичность заказов.</span>
+            <span>
+              <strong>Объём первой партии</strong> — примерное количество
+              и планируемая периодичность заказов.
+            </span>
           </li>
+
           <li class="flex gap-3 text-sm leading-6 text-slate-700 dark:text-slate-300">
             <span class="mt-0.5 font-bold text-accent">03</span>
-            <span><strong>Рынок сбыта</strong> — подберём сертификацию: EAC (ЕАЭС), CE (ЕС) или другую.</span>
+            <span>
+              <strong>Рынок сбыта</strong> — страна или регион продаж,
+              чтобы заранее учитывать требования к продукции.
+            </span>
           </li>
+
           <li class="flex gap-3 text-sm leading-6 text-slate-700 dark:text-slate-300">
             <span class="mt-0.5 font-bold text-accent">04</span>
-            <span><strong>Кастомизация</strong> — логотип, цвет, упаковка, доработка функций.</span>
+            <span>
+              <strong>Кастомизация</strong> — логотип, цвет, упаковка,
+              комплектация или изменение функций.
+            </span>
           </li>
+
           <li class="flex gap-3 text-sm leading-6 text-slate-700 dark:text-slate-300">
             <span class="mt-0.5 font-bold text-accent">05</span>
-            <span><strong>Целевая цена</strong> — если есть, подберём модель под ваш бюджет.</span>
+            <span>
+              <strong>Целевая цена</strong> — если у вас есть целевой диапазон,
+              мы можем подобрать подходящую конфигурацию.
+            </span>
           </li>
+
         </ul>
       </div>
 
-      <!-- Процесс после запроса -->
+      <!-- Process -->
       <div class="rounded-2xl border border-slate-200 bg-white p-8 dark:border-slate-800 dark:bg-slate-950">
         <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
           Что происходит после вашего запроса
         </h2>
+
         <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-          Прозрачный процесс без сюрпризов — от первого сообщения до отгрузки.
+          Прозрачный процесс — от первого сообщения до производства и отгрузки.
         </p>
+
         <ol class="mt-6 space-y-5">
+
           <li class="flex gap-4">
-            <span
-              class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-white"
-            >
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-white">
               1
             </span>
+
             <div>
-              <h3 class="text-sm font-bold text-slate-900 dark:text-white">В течение 24 часов</h3>
+              <h3 class="text-sm font-bold text-slate-900 dark:text-white">
+                Первичная оценка
+              </h3>
+
               <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Ответ с ценой EXW/FOB под ваш объём и вопросы по проекту.
+                Уточняем модель, количество, рынок, требования к упаковке
+                и возможной кастомизации.
               </p>
             </div>
           </li>
+
           <li class="flex gap-4">
-            <span
-              class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-white"
-            >
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-white">
               2
             </span>
+
             <div>
-              <h3 class="text-sm font-bold text-slate-900 dark:text-white">7–10 дней — образец</h3>
+              <h3 class="text-sm font-bold text-slate-900 dark:text-white">
+                Цена и спецификация
+              </h3>
+
               <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Образец с вашим логотипом, доставка DHL/FedEx. Стоимость вычитается из первого заказа.
+                Подготавливаем предложение с ценой EXW/FOB,
+                характеристиками и условиями проекта.
               </p>
             </div>
           </li>
+
           <li class="flex gap-4">
-            <span
-              class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-white"
-            >
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-white">
               3
             </span>
+
             <div>
-              <h3 class="text-sm font-bold text-slate-900 dark:text-white">30–45 дней — производство</h3>
+              <h3 class="text-sm font-bold text-slate-900 dark:text-white">
+                Образец
+              </h3>
+
               <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Запуск партии после подтверждения образца. Фото- и видеоотчёты на каждом этапе.
+                При необходимости подготавливаем образец для проверки
+                дизайна, функций и качества.
               </p>
             </div>
           </li>
+
           <li class="flex gap-4">
-            <span
-              class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-white"
-            >
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-white">
               4
             </span>
+
             <div>
-              <h3 class="text-sm font-bold text-slate-900 dark:text-white">QC и отгрузка</h3>
+              <h3 class="text-sm font-bold text-slate-900 dark:text-white">
+                Производство, QC и отгрузка
+              </h3>
+
               <p class="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Финальная инспекция, полный пакет документов для таможни, отгрузка FOB Шэньчжэнь/Гуанчжоу.
+                После подтверждения спецификации запускаем производство,
+                проводим контроль качества и организуем отгрузку.
               </p>
             </div>
           </li>
+
         </ol>
       </div>
+
     </div>
   </section>
 
-  <!-- ВИЗИТКА (schema-friendly) -->
-
-  <section id="vcard" class="bg-white py-16 dark:bg-slate-950 lg:py-20">
+  <!-- FACTORY INFORMATION -->
+  <section id="factory" class="bg-white py-16 dark:bg-slate-950 lg:py-20">
     <div class="mx-auto max-w-5xl px-6 lg:px-8">
+
       <article
-        vocab="http://schema.org/"
-        typeof="LocalBusiness"
+        vocab="https://schema.org/"
+        typeof="Organization"
         class="rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 via-white to-indigo-50 p-8 shadow-sm dark:border-slate-700 dark:from-slate-900/60 dark:to-slate-900/40"
       >
+
         <h2 class="text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">
-          Завод Zhongshan Yangle Electric Appliance Co., Ltd. <span class="text-accent">(торговая марка YOLEC)</span>
+          Завод Zhongshan Yangle Electric Appliance Co., Ltd.
+          <span class="text-accent">(торговая марка YOLEC)</span>
         </h2>
+
         <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
-          Производство — с 2015 года. Верифицирован SGS (отчёт № 483515034-P+T). Экспорт бытовой техники в 60+ стран.
+          Производитель бытовой кухонной техники и OEM/ODM-партнёр для международных B2B-покупателей.
         </p>
+
         <dl class="mt-6 grid gap-5 sm:grid-cols-2">
+
+          <!-- WhatsApp -->
           <div>
             <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-              WhatsApp / Телефон отдела продаж
+              WhatsApp / Отдел продаж
             </dt>
+
             <dd class="mt-1">
-              <a property="telephone" href="tel:+8613922332584" class="text-lg font-semibold text-accent hover:underline">
+              <a
+                property="telephone"
+                href="tel:+8613922332584"
+                class="text-lg font-semibold text-accent hover:underline"
+              >
                 +86 139 2233 2584
               </a>
-              <span
-                class="ml-2 inline-flex items-center rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200"
-              >
-                Быстрый ответ · WhatsApp
+
+              <span class="ml-2 inline-flex items-center rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200">
+                WhatsApp
               </span>
             </dd>
           </div>
+
+          <!-- Factory phone -->
           <div>
             <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-              Стационарный офисный телефон
+              Стационарный телефон
             </dt>
+
             <dd class="mt-1">
-              <a property="telephone" href="tel:+867602263622" class="text-lg font-semibold text-accent hover:underline">
+              <a
+                property="telephone"
+                href="tel:+867602263622"
+                class="text-lg font-semibold text-accent hover:underline"
+              >
                 +86 760 2263 622
               </a>
-              <span class="ml-2 text-sm text-slate-500 dark:text-slate-400">пн–пт 9:00–18:00 (GMT+8)</span>
+
+              <span class="ml-2 text-sm text-slate-500 dark:text-slate-400">
+                пн–пт 9:00–18:00 (GMT+8)
+              </span>
             </dd>
           </div>
+
+          <!-- Email -->
           <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Email</dt>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+              Email
+            </dt>
+
             <dd class="mt-1">
               <a
                 property="email"
@@ -279,8 +373,13 @@ const metadata = {
               </a>
             </dd>
           </div>
+
+          <!-- Telegram -->
           <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Telegram</dt>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+              Telegram
+            </dt>
+
             <dd class="mt-1">
               <a
                 href="https://t.me/adrian198512"
@@ -292,56 +391,117 @@ const metadata = {
               </a>
             </dd>
           </div>
+
+          <!-- Address -->
           <div class="sm:col-span-2">
             <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-              Производство / Почтовый адрес (промзона)
+              Производство / Почтовый адрес
             </dt>
+
             <dd
               property="address"
               typeof="PostalAddress"
               class="mt-1 text-base leading-relaxed text-slate-800 dark:text-slate-200"
             >
-              <span property="streetAddress">No. 411 Dongfu Road, Dongfeng Town</span>,&nbsp;
-              <span property="addressLocality">Zhongshan City</span>,&nbsp;
-              <span property="addressRegion">Guangdong Province</span>, почтовый индекс&nbsp;
-              <span property="postalCode">528425</span>,&nbsp;<span property="addressCountry">PRC (Китай)</span>.
+              <span property="streetAddress">
+                No. 411 Dongfu Road, Dongfeng Town
+              </span>,&nbsp;
+
+              <span property="addressLocality">
+                Zhongshan City
+              </span>,&nbsp;
+
+              <span property="addressRegion">
+                Guangdong Province
+              </span>, почтовый индекс&nbsp;
+
+              <span property="postalCode">
+                528425
+              </span>,&nbsp;
+
+              <span property="addressCountry">
+                CN
+              </span>.
+
               <span class="mt-1 block text-sm text-slate-500 dark:text-slate-400">
-                Офис приёма гостей: No. 68 Donghai 6 Road, Dongfeng Town — запись на экскурсию по фабрике за 3 дня.
+                Офис приёма гостей: No. 68 Donghai 6 Road, Dongfeng Town.
+                Посещение фабрики рекомендуется согласовать заранее.
               </span>
             </dd>
           </div>
+
+          <!-- Certifications -->
           <div class="sm:col-span-2">
             <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-              Заводские сертификаты / Верификация
+              Сертификаты / тестирование / верификация
             </dt>
+
             <dd class="mt-2 flex flex-wrap gap-2">
-              {
-                [
-                  'CE (EU)',
-                  'CB Scheme',
-                  'CCC (PRC)',
-                  'EAC / ТР ТС (ЕАЭС)',
-                  'RoHS / REACH',
-                  'ISO 9001-ready',
-                  'TÜV tested',
-                  'Intertek tested',
-                  'SGS № 483515034-P+T',
-                ]
-                  .map(
-                    (c) =>
-                      `<span class="inline-flex items-center rounded-full border border-slate-300 bg-white px-3 py-1 text-xs font-medium text-slate-700 shadow-sm dark:border-slate-600 dark:bg-slate-800/40 dark:text-slate-200">${c}</span>`
-                  )
-                  .join('')
-              }
+
+              {[
+                'CE (EU)',
+                'CB Scheme',
+                'CCC (PRC)',
+                'EAC / ТР ТС (ЕАЭС)',
+                'RoHS / REACH',
+                'ISO 9001',
+                'TÜV tested',
+                'Intertek tested',
+                'SGS № 483515034-P+T',
+              ].map((certificate) => (
+                <span
+                  class="inline-flex items-center rounded-full border border-slate-300 bg-white px-3 py-1 text-xs font-medium text-slate-700 shadow-sm dark:border-slate-600 dark:bg-slate-800/40 dark:text-slate-200"
+                >
+                  {certificate}
+                </span>
+              ))}
+
             </dd>
           </div>
+
         </dl>
       </article>
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- CTA -->
+  <section class="bg-slate-900 py-16 dark:bg-black lg:py-20">
+    <div class="mx-auto max-w-4xl px-6 text-center lg:px-8">
 
+      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        Есть проект или запрос на OEM/ODM?
+      </h2>
+
+      <p class="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-300">
+        Отправьте модель, количество и рынок сбыта.
+        Мы поможем оценить подходящую конфигурацию, цену и следующие шаги.
+      </p>
+
+      <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+
+        <a
+          href="https://wa.me/8613922332584?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20OEM%2FODM%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82."
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-600"
+        >
+          <Icon name="tabler:brand-whatsapp" class="h-5 w-5" />
+          Написать в WhatsApp
+        </a>
+
+        <a
+          href="mailto:adrian@yolec-electronics.com?subject=OEM%2FODM%20Project"
+          class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+        >
+          <Icon name="tabler:mail" class="h-5 w-5" />
+          Отправить запрос по email
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
   <FAQs
     title="Частые вопросы о связи и заказе"
     subtitle="Короткие ответы о работе с заводом — до отправки первого запроса."
@@ -349,27 +509,27 @@ const metadata = {
       {
         title: 'Как быстро вы отвечаете?',
         description:
-          'По WhatsApp — обычно в течение часа в рабочее время (9:00–18:00, GMT+8) и часто вне графика. На email и форму запроса — до 24 часов в рабочие дни.',
+          'По WhatsApp обычно отвечаем быстрее всего в рабочее время (9:00–18:00, GMT+8). На email и форму запроса стараемся ответить в течение 24 часов в рабочие дни.',
       },
       {
         title: 'На каких языках вы общаетесь?',
         description:
-          'Ведём переговоры на русском, английском и китайском языках. Техническая документация и спецификации предоставляются на английском.',
+          'Ведём переговоры на русском, английском и китайском языках. Техническая документация и спецификации могут предоставляться на английском языке.',
       },
       {
         title: 'Можно ли получить образец до заказа партии?',
         description:
-          'Да. Образец с вашим логотипом изготавливается за 7–10 дней и отправляется DHL/FedEx. Стоимость образца вычитается из счёта первой партии.',
+          'Да. Для подходящих моделей можно организовать образец для оценки дизайна, функций и качества. Срок подготовки зависит от модели и требований к кастомизации.',
       },
       {
         title: 'Можно ли посетить фабрику?',
         description:
-          'Да, мы приветствуем аудиты. Возможен личный визит (запись за 3 дня) или видеоинспекция цехов в реальном времени — как вам удобнее.',
+          'Да. Возможен личный визит или предварительная видеоинспекция производства. Посещение фабрики рекомендуется согласовать заранее.',
       },
       {
         title: 'Работаете ли вы через Alibaba Trade Assurance?',
         description:
-          'Да. Заказ можно оформить через наш магазин на Alibaba с защитой платежа Trade Assurance, а также по банковскому переводу (T/T) или аккредитиву (L/C).',
+          'При необходимости заказ может быть оформлен через Alibaba Trade Assurance, а также возможна оплата банковским переводом T/T. Условия согласовываются для каждого проекта отдельно.',
       },
     ]}
   />
