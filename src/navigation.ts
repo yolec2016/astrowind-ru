@@ -151,6 +151,10 @@ export const footerData = {
           text: 'Связаться с нами',
           href: getPermalink('/contact'),
         },
+        {
+          text: 'Carbon Fiber Car Parts Manufacturer',
+          href: 'https://ccfrp.com',
+        },
       ],
     },
 
