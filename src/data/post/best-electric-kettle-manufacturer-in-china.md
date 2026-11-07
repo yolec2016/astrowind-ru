@@ -15,7 +15,7 @@ tags:
   - сертификат EAC
   - аудит фабрики
 author: 'Adrian YOLEC'
-category: Электрочайники
+category: 'Электрочайники'
 metadata:
   robots:
     index: true

@@ -6,7 +6,7 @@ const title = `Страница не найдена — 404`;
 const description = `Запрашиваемая страница не существует. Перейдите на главную страницу завода YOLEC Electric или в каталог продукции OEM/ODM.`;
 ---
 
-<Layout metadata={{ title, description }}>
+<Layout metadata={{ title, description, robots: { index: false, follow: true } }}>
   <section class="flex items-center h-full p-16">
     <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
       <div class="max-w-md text-center">

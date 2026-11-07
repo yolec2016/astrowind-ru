@@ -5,7 +5,7 @@ author: 'Adrian'
 excerpt: 'Разбор реальных причин, почему российские B2B-импортеры продолжают выбирать китайских производителей электрочайников: цена, EAC сертификация, OEM.'
 description: 'Практический анализ для российских импортеров бытовой техники: почему Китай остаётся главным поставщиком электрочайников и мелкой кухонной техники в 2026 году.'
 image: https://yoleckitchen.xyz/images/yolec-electric.png
-category: 'Закупки'
+category: 'Закупки и импорт'
 tags:
   - электрочайники
   - импорт Китай
@@ -176,7 +176,7 @@ YOLEC Electric — китайский производитель мелкой к
 
 ## Контакты для B2B-запросов
 
-**Веб-сайт:** [производитель электрических чайников в Китае](/electric-kettle-manufacturer)
+**Веб-сайт:** [поставщик электрочайников](/electric-kettle-manufacturer)
 YouTube: https://www.youtube.com/@yolec-electric-adrian  
 LinkedIn: https://www.linkedin.com/in/adrian2010/  
 Facebook: https://www.facebook.com/people/Yolec-Electric/61590792321803/

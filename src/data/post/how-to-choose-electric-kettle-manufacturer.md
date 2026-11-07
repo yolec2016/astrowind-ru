@@ -6,7 +6,7 @@ title: 'Как выбрать производителя электрическ�
 description: 'Практическое руководство для B2B-покупателей по выбору надежного производителя электрических чайников в Китае для OEM и ODM проектов. Помогает снизить риски при закупках и выбрать стабильного поставщика.'
 image: https://yoleckitchen.xyz/images/gooseneck-coffee-kettle.jpg
 author: 'Adrian'
-category: 'Электрические чайники'
+category: 'Электрочайники'
 tags:
   - OEM
   - ODM
@@ -247,7 +247,7 @@ tags:
 
 ## Свяжитесь с нами
 
-**Веб-сайт:** [производитель электрических чайников в Китае](/electric-kettle-manufacturer)
+**Веб-сайт:** [каталог электрочайников](/electric-kettle-manufacturer)
 **Email:** adrian@yolec-electronics.com
 
 **YouTube:** https://www.youtube.com/@yolec-electric-adrian

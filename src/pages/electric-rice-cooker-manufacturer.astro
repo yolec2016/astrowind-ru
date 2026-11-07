@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import ProductsGrid from '~/components/widgets/ProductsGrid.astro';
+import RelatedPosts from '~/components/widgets/RelatedPosts.astro';
 
 const metadata = {
   title: 'Производитель рисоварок в Китае | OEM & ODM завод',
@@ -982,6 +983,37 @@ const products = [
       </div>
     </div>
   </section>
+
+  <RelatedPosts
+    title="Полезные статьи о рисоварках"
+    intro="Практика закупки рисоварок: выбор фабрики, контроль качества партии, объём под канал сбыта и подготовка документов для ЕАЭС."
+    posts={[
+      {
+        title: 'Как выбрать надёжного производителя рисоварок в Китае',
+        href: '/blog/kak-vybrat-nadezhnogo-proizvoditelya-risovarok-v-kitae',
+      },
+      {
+        title: 'Как проверить контроль качества рисоварок на китайской фабрике',
+        href: '/blog/kak-proverit-kontrol-kachestva-risovarok-na-kitayskoy-fabrike',
+      },
+      {
+        title: 'Как выбрать объём рисоварки для разных каналов продаж',
+        href: '/blog/kak-vybrat-obem-risovarki-dlya-raznyh-kanalov-prodazh',
+      },
+      {
+        title: 'Какие сертификаты нужны для импорта рисоварок в ЕАЭС',
+        href: '/blog/kakie-sertifikaty-neobhodimy-dlya-importa-risovarok-v-eaes',
+      },
+      {
+        title: 'Как снизить транспортные расходы при импорте рисоварок',
+        href: '/blog/kak-snizit-transportnye-rashody-pri-importe-risovarok',
+      },
+      {
+        title: '10 вопросов поставщику рисоварок перед заказом',
+        href: '/blog/10-voprosov-postavshiku-risovarok-pered-zakazom',
+      },
+    ]}
+  />
 
   <!-- =========================================================
        FINAL CTA

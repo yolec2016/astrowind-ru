@@ -1,11 +1,12 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import ProductsGrid from '~/components/widgets/ProductsGrid.astro';
+import RelatedPosts from '~/components/widgets/RelatedPosts.astro';
 
 const metadata = {
-  title: 'Производитель электрических ланч-боксов в Китае — OEM/ODM завод',
+  title: 'Производитель ланч-боксов в Китае — OEM/ODM завод',
   description:
-    'Завод электрических ланч-боксов с подогревом в Китае: 12В и 220В, лоток из нержавейки 304, OEM под ваш логотип. Опт от производителя — поставки напрямую с фабрики в Чжуншане.',
+    'Завод электрических ланч-боксов с подогревом в Китае: 12В/220В, нержавейка 304, OEM под ваш логотип. Опт напрямую с фабрики в Чжуншане.',
   ignoreTitleTemplate: true,
 };
 
@@ -974,6 +975,45 @@ const products = [
       </div>
     </div>
   </section>
+
+  <RelatedPosts
+    title="Полезные статьи об электрических ланч-боксах"
+    intro="Как выбрать ланч-бокс под канал сбыта, проверить герметичность крышки, оценить фабрику и не переплатить за логистику."
+    posts={[
+      {
+        title: 'Поставщик электрических ланч-боксов из Китая: гайд по выбору',
+        href: '/blog/postavshchik-elektricheskih-lanch-boksov-iz-kitaya-gayd',
+      },
+      {
+        title: 'Ланч-бокс с подогревом оптом: офис, маркетплейс и разъездная работа',
+        href: '/blog/lanch-boks-s-podogrevom-optom-kanaly',
+      },
+      {
+        title: 'Герметичность ланч-бокса: как проверить крышку и упаковку',
+        href: '/blog/germetichnost-lanch-boksa-proverka',
+      },
+      {
+        title: 'Чек-лист проверки фабрики в Китае перед заказом',
+        href: '/blog/factory-audit-checklist',
+      },
+      {
+        title: 'OEM или ODM: что выбрать при закупке кухонной техники',
+        href: '/blog/oem-vs-odm-kitchen-appliances',
+      },
+      {
+        title: 'Как выбрать производителя кухонной техники в Китае',
+        href: '/blog/china-small-kitchen-appliance-manufacturer',
+      },
+      {
+        title: 'Упаковка и логистика: как снизить транспортные расходы',
+        href: '/blog/kak-snizit-transportnye-rashody-pri-importe-risovarok',
+      },
+      {
+        title: 'Как выбрать electric lunch box manufacturer в Китае',
+        href: '/blog/electric-lunch-box-manufacturer-china',
+      },
+    ]}
+  />
 
   <!-- =========================================================
        FINAL CTA

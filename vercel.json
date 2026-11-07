@@ -1,6 +1,32 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/category/oem-odm", "destination": "/category/oem-i-odm", "permanent": true },
+    { "source": "/category/oem-and-odm", "destination": "/category/oem-i-odm", "permanent": true },
+    { "source": "/category/oem-sourcing", "destination": "/category/oem-i-odm", "permanent": true },
+    { "source": "/category/oem-manufacturing", "destination": "/category/oem-i-odm", "permanent": true },
+    { "source": "/category/oem-buying-guide", "destination": "/category/oem-i-odm", "permanent": true },
+    { "source": "/category/oem-proizvodstvo", "destination": "/category/oem-i-odm", "permanent": true },
+    { "source": "/category/proizvodstvo", "destination": "/category/oem-i-odm", "permanent": true },
+    { "source": "/category/zakupki", "destination": "/category/zakupki-i-import", "permanent": true },
+    { "source": "/category/zakupki-iz-kitaya", "destination": "/category/zakupki-i-import", "permanent": true },
+    { "source": "/category/import-guide", "destination": "/category/zakupki-i-import", "permanent": true },
+    { "source": "/category/import-i-logistika", "destination": "/category/zakupki-i-import", "permanent": true },
+    {
+      "source": "/category/rukovodstvo-po-vyboru-proizvoditelya",
+      "destination": "/category/zakupki-i-import",
+      "permanent": true
+    },
+    { "source": "/category/quality-control", "destination": "/category/kontrol-kachestva", "permanent": true },
+    { "source": "/category/certification-guide", "destination": "/category/sertifikaciya", "permanent": true },
+    { "source": "/category/certification-and-import", "destination": "/category/sertifikaciya", "permanent": true },
+    { "source": "/category/market-trends", "destination": "/category/trendy-rynka", "permanent": true },
+    { "source": "/category/market-insights", "destination": "/category/trendy-rynka", "permanent": true },
+    { "source": "/category/rynok-bytovoi-tekhniki", "destination": "/category/trendy-rynka", "permanent": true },
+    { "source": "/category/elektricheskie-chainiki", "destination": "/category/elektrochainiki", "permanent": true },
+    { "source": "/category/electric-pressure-cooker", "destination": "/category/skorovarki", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/_astro/(.*)",

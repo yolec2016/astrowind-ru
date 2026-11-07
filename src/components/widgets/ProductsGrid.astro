@@ -25,6 +25,28 @@ const {
   subtitle = 'Готовые OEM/ODM-модели: возможен ребрендинг, изменение цвета, упаковки и функций под ваш рынок.',
   products,
 } = Astro.props;
+
+const origin = Astro.url.origin;
+
+// ItemList со ссылками на реальные карточки моделей на основном сайте фабрики.
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: title,
+  numberOfItems: products.length,
+  itemListElement: products.map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Product',
+      name: `Модель ${p.model} — ${p.title}`,
+      image: `${origin}${p.image}`,
+      url: p.url,
+      brand: { '@type': 'Brand', name: 'YOLEC' },
+      manufacturer: { '@type': 'Organization', name: 'Zhongshan Yangle Electric Appliance Co., Ltd.' },
+    },
+  })),
+};
 ---
 
 <section class="bg-slate-50 py-20 dark:bg-slate-900 lg:py-28">
@@ -104,3 +126,5 @@ const {
     </p>
   </div>
 </section>
+
+<script type="application/ld+json" set:html={JSON.stringify(itemListSchema)} />

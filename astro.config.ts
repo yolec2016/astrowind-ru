@@ -26,10 +26,39 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 export default defineConfig({
   output: 'static',
 
+  // Старые слаги категорий блога → канонические (23 категории были сведены к 7).
+  redirects: {
+    '/category/oem-odm': '/category/oem-i-odm',
+    '/category/oem-and-odm': '/category/oem-i-odm',
+    '/category/oem-sourcing': '/category/oem-i-odm',
+    '/category/oem-manufacturing': '/category/oem-i-odm',
+    '/category/oem-buying-guide': '/category/oem-i-odm',
+    '/category/oem-proizvodstvo': '/category/oem-i-odm',
+    '/category/proizvodstvo': '/category/oem-i-odm',
+    '/category/zakupki': '/category/zakupki-i-import',
+    '/category/zakupki-iz-kitaya': '/category/zakupki-i-import',
+    '/category/import-guide': '/category/zakupki-i-import',
+    '/category/import-i-logistika': '/category/zakupki-i-import',
+    '/category/rukovodstvo-po-vyboru-proizvoditelya': '/category/zakupki-i-import',
+    '/category/quality-control': '/category/kontrol-kachestva',
+    '/category/certification-guide': '/category/sertifikaciya',
+    '/category/certification-and-import': '/category/sertifikaciya',
+    '/category/market-trends': '/category/trendy-rynka',
+    '/category/market-insights': '/category/trendy-rynka',
+    '/category/rynok-bytovoi-tekhniki': '/category/trendy-rynka',
+    '/category/elektricheskie-chainiki': '/category/elektrochainiki',
+    '/category/electric-pressure-cooker': '/category/skorovarki',
+  },
+
   integrations: [
     sitemap({
       filter: (page) => {
-        return !page.includes('/tag/') && !page.includes('/decapcms') && !page.match(/\/blog\/\d+$/);
+        return (
+          !page.includes('/tag/') &&
+          !page.includes('/decapcms') &&
+          !page.match(/\/blog\/\d+$/) &&
+          !page.match(/\/category\/[^/]+\/\d+$/)
+        );
       },
     }),
 

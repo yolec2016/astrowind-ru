@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import ProductsGrid from '~/components/widgets/ProductsGrid.astro';
+import RelatedPosts from '~/components/widgets/RelatedPosts.astro';
 
 const metadata = {
   title: 'Производитель электрических чайников в Китае — OEM/ODM завод',
@@ -972,6 +973,37 @@ const products = [
       </div>
     </div>
   </section>
+
+  <RelatedPosts
+    title="Полезные статьи об электрочайниках"
+    intro="Разбираем то, что чаще всего спрашивают перед первой партией: материалы корпуса, проверка образца, сертификация и сроки OEM-производства."
+    posts={[
+      {
+        title: 'Стекло, нержавейка или пластик: какой электрочайник закупать оптом',
+        href: '/blog/steklo-nerzhaveyka-ili-plastik-kakoy-elektrochaynik-zakupat-optom',
+      },
+      {
+        title: 'Частые неисправности электрочайников и как снизить риски при закупке',
+        href: '/blog/rasprostranennye-neispravnosti-elektricheskih-chaynikov-i-kak-snizit-riski-pri-zakupke',
+      },
+      {
+        title: 'Как проверить образец электрочайника перед заказом из Китая',
+        href: '/blog/proverka-obrazca-elektrochaynika-pered-zakazom-iz-kitaya',
+      },
+      {
+        title: 'Сертификация электрочайников из Китая: EAC для России',
+        href: '/blog/sertifikatsiya-elektrochaynikov-iz-kitaya-eac-dlya-rossii',
+      },
+      {
+        title: 'Как выбрать MOQ при первом заказе электрочайников',
+        href: '/blog/kak-vybrat-moq-pri-pervom-zakaze-elektrochaynikov-iz-kitaya',
+      },
+      {
+        title: 'OEM-чайники из Китая: срок производства и поставки',
+        href: '/blog/oem-elektrochayniki-iz-kitaya-srok-proizvodstva-i-postavki',
+      },
+    ]}
+  />
 
   <!-- =========================================================
        FINAL CTA

@@ -1,0 +1,39 @@
+---
+interface PostLink {
+  title: string;
+  href: string;
+}
+
+interface Props {
+  title?: string;
+  intro?: string;
+  posts: PostLink[];
+}
+
+const { title = 'Полезные статьи по теме', intro, posts } = Astro.props;
+---
+
+<section class="border-t border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900/50">
+  <div class="mx-auto max-w-5xl px-6 py-16">
+    <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">
+      {title}
+    </h2>
+
+    {intro && <p class="mt-3 max-w-3xl text-slate-600 dark:text-slate-400">{intro}</p>}
+
+    <ul class="mt-8 grid gap-x-10 gap-y-4 sm:grid-cols-2">
+      {
+        posts.map((post) => (
+          <li class="leading-relaxed">
+            <a
+              href={post.href}
+              class="text-slate-700 underline decoration-slate-300 underline-offset-4 transition hover:text-slate-900 hover:decoration-slate-500 dark:text-slate-300 dark:decoration-slate-600 dark:hover:text-white"
+            >
+              {post.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

@@ -237,10 +237,7 @@ const organization = {
     ],
   },
 
-  award: [
-    'SGS Verified Manufacturer, report 483515034-P+T',
-    'B2B Kitchen Appliance Supplier — RU & EAEU Market 2025',
-  ],
+  award: ['SGS Verified Manufacturer, report 483515034-P+T', 'B2B Kitchen Appliance Supplier — RU & EAEU Market 2025'],
 
   identifier: [
     {
@@ -351,14 +348,8 @@ function buildBreadcrumb(): Record<string, unknown> | null {
  * /electric-rice-cooker-manufacturer/
  * from being treated as individual products.
  */
-function buildProductSchema(
-  p: ProductSchemaInput
-): Record<string, unknown> {
-  const productUrl = p.url
-    ? p.url.startsWith('http')
-      ? p.url
-      : `${siteUrl}${p.url}`
-    : pageUrl;
+function buildProductSchema(p: ProductSchemaInput): Record<string, unknown> {
+  const productUrl = p.url ? (p.url.startsWith('http') ? p.url : `${siteUrl}${p.url}`) : pageUrl;
 
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
@@ -370,14 +361,8 @@ function buildProductSchema(
 
     image: p.image
       ? Array.isArray(p.image)
-        ? p.image.map((img) =>
-            img.startsWith('http') ? img : `${siteUrl}${img}`
-          )
-        : [
-            p.image.startsWith('http')
-              ? p.image
-              : `${siteUrl}${p.image}`,
-          ]
+        ? p.image.map((img) => (img.startsWith('http') ? img : `${siteUrl}${img}`))
+        : [p.image.startsWith('http') ? p.image : `${siteUrl}${p.image}`]
       : undefined,
 
     sku: p.sku || undefined,
@@ -417,9 +402,7 @@ function buildProductSchema(
 }
 
 // ---------- BlogPosting ----------
-function buildBlogPosting(
-  bp: BlogPostSchemaInput
-): Record<string, unknown> {
+function buildBlogPosting(bp: BlogPostSchemaInput): Record<string, unknown> {
   const postUrl = `${siteUrl}/blog/${bp.slug}`;
 
   return {
@@ -435,9 +418,7 @@ function buildBlogPosting(
       '@id': postUrl,
     },
 
-    datePublished: bp.publishDate
-      ? new Date(bp.publishDate).toISOString()
-      : new Date().toISOString(),
+    datePublished: bp.publishDate ? new Date(bp.publishDate).toISOString() : new Date().toISOString(),
 
     dateModified: bp.updateDate
       ? new Date(bp.updateDate).toISOString()
@@ -449,25 +430,19 @@ function buildBlogPosting(
 
     keywords: (bp.tags || []).join(', '),
 
-    articleSection:
-      bp.category ||
-      'Блог фабрики Zhongshan Yangle Electric — бренд YOLEC',
+    articleSection: bp.category || 'Блог фабрики Zhongshan Yangle Electric — бренд YOLEC',
 
     wordCount: (bp.bodyExcerpt || '').length,
 
     author: {
       '@type': 'Person',
       name: bp.authorName || 'Adrian YOLEC',
-      jobTitle:
-        'B2B Sales Director — Zhongshan Yangle Electric Appliance Co., Ltd.',
+      jobTitle: 'B2B Sales Director — Zhongshan Yangle Electric Appliance Co., Ltd.',
       worksFor: {
         '@id': orgId,
       },
       url: 'https://www.linkedin.com/in/adrian2010/',
-      sameAs: [
-        'https://wa.me/8613922332584',
-        'https://www.linkedin.com/in/adrian2010/',
-      ],
+      sameAs: ['https://wa.me/8613922332584', 'https://www.linkedin.com/in/adrian2010/'],
       affiliate: {
         '@id': orgId,
       },
@@ -503,15 +478,11 @@ function buildBlogPosting(
     image: bp.image
       ? {
           '@type': 'ImageObject',
-          url: bp.image.startsWith('http')
-            ? bp.image
-            : `${siteUrl}${bp.image}`,
+          url: bp.image.startsWith('http') ? bp.image : `${siteUrl}${bp.image}`,
         }
       : undefined,
 
-    articleBody: bp.bodyExcerpt
-      ? bp.bodyExcerpt.slice(0, 500)
-      : undefined,
+    articleBody: bp.bodyExcerpt ? bp.bodyExcerpt.slice(0, 500) : undefined,
 
     potentialAction: {
       '@type': 'ReadAction',
@@ -560,6 +531,4 @@ if (data) {
 }
 ---
 
-{schemas.map((s) => (
-  <script type="application/ld+json" set:html={JSON.stringify(s)} />
-))}
+{schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}

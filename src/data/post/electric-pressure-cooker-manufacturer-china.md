@@ -4,7 +4,7 @@ title: 'Как выбрать electric pressure cooker manufacturer'
 author: 'Adrian'
 excerpt: 'Как найти надежного производителя электрических скороварок в Китае: проверяем фабрику, OEM и ODM возможности, качество, сертификаты, MOQ и сроки поставки.'
 image: '/images/blog/57.jpg'
-category: 'OEM Manufacturing'
+category: 'OEM и ODM'
 tags:
   - electric pressure cooker manufacturer
   - производитель электрических скороварок Китай

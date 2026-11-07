@@ -4,7 +4,7 @@ title: 'Поставщик рисоварок оптом из Китая: гай
 author: 'Adrian'
 excerpt: 'Как импортёру выбрать поставщика рисоварок оптом: проверка чаши и антипригарного покрытия, MOQ, сертификаты EAC, стабильность партий и условия прямой работы с фабрикой.'
 image: '/images/blog/28.jpg'
-category: 'OEM Sourcing'
+category: 'OEM и ODM'
 tags:
   - поставщик рисоварок оптом
   - рисоварки из Китая
@@ -78,7 +78,7 @@ metadata:
 
 ## Контакты для связи
 
-**Веб-сайт:** [производитель рисоварок в Китае](/electric-rice-cooker-manufacturer)
+**Веб-сайт:** [фабрика рисоварок YOLEC](/electric-rice-cooker-manufacturer)
 
 **Email:** adrian@yolec-electronics.com
 
