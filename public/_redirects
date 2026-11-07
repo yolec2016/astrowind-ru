@@ -1,0 +1,46 @@
+# Cloudflare Pages redirects
+
+# www -> apex
+https://www.yoleckitchen.xyz/* https://yoleckitchen.xyz/:splat 301!
+
+# Legacy category slugs -> current categories
+/category/oem-odm /category/oem-i-odm/ 301!
+/category/oem-odm/ /category/oem-i-odm/ 301!
+/category/oem-and-odm /category/oem-i-odm/ 301!
+/category/oem-and-odm/ /category/oem-i-odm/ 301!
+/category/oem-sourcing /category/oem-i-odm/ 301!
+/category/oem-sourcing/ /category/oem-i-odm/ 301!
+/category/oem-manufacturing /category/oem-i-odm/ 301!
+/category/oem-manufacturing/ /category/oem-i-odm/ 301!
+/category/oem-buying-guide /category/oem-i-odm/ 301!
+/category/oem-buying-guide/ /category/oem-i-odm/ 301!
+/category/oem-proizvodstvo /category/oem-i-odm/ 301!
+/category/oem-proizvodstvo/ /category/oem-i-odm/ 301!
+/category/proizvodstvo /category/oem-i-odm/ 301!
+/category/proizvodstvo/ /category/oem-i-odm/ 301!
+/category/zakupki /category/zakupki-i-import/ 301!
+/category/zakupki/ /category/zakupki-i-import/ 301!
+/category/zakupki-iz-kitaya /category/zakupki-i-import/ 301!
+/category/zakupki-iz-kitaya/ /category/zakupki-i-import/ 301!
+/category/import-guide /category/zakupki-i-import/ 301!
+/category/import-guide/ /category/zakupki-i-import/ 301!
+/category/import-i-logistika /category/zakupki-i-import/ 301!
+/category/import-i-logistika/ /category/zakupki-i-import/ 301!
+/category/rukovodstvo-po-vyboru-proizvoditelya /category/zakupki-i-import/ 301!
+/category/rukovodstvo-po-vyboru-proizvoditelya/ /category/zakupki-i-import/ 301!
+/category/quality-control /category/kontrol-kachestva/ 301!
+/category/quality-control/ /category/kontrol-kachestva/ 301!
+/category/certification-guide /category/sertifikaciya/ 301!
+/category/certification-guide/ /category/sertifikaciya/ 301!
+/category/certification-and-import /category/sertifikaciya/ 301!
+/category/certification-and-import/ /category/sertifikaciya/ 301!
+/category/market-trends /category/trendy-rynka/ 301!
+/category/market-trends/ /category/trendy-rynka/ 301!
+/category/market-insights /category/trendy-rynka/ 301!
+/category/market-insights/ /category/trendy-rynka/ 301!
+/category/rynok-bytovoi-tekhniki /category/trendy-rynka/ 301!
+/category/rynok-bytovoi-tekhniki/ /category/trendy-rynka/ 301!
+/category/elektricheskie-chainiki /category/elektrochainiki/ 301!
+/category/elektricheskie-chainiki/ /category/elektrochainiki/ 301!
+/category/electric-pressure-cooker /category/skorovarki/ 301!
+/category/electric-pressure-cooker/ /category/skorovarki/ 301!

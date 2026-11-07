@@ -346,7 +346,7 @@ YOLEC Electric помогает международным B2B клиентам 
 
 Подробнее о возможностях производства:
 
-[производитель рисоварок в Китае](/electric-rice-cooker-manufacturer)
+[производитель рисоварок в Китае/electric-rice-cooker-manufacturer/)
 
 ## Почему долгосрочное сотрудничество с фабрикой выгоднее постоянного поиска нового поставщика?
 
@@ -486,7 +486,7 @@ YOLEC Electric специализируется на производстве м
 
 Подробнее о возможностях производства:
 
-[рисоварки оптом](/electric-rice-cooker-manufacturer)
+[рисоварки оптом/electric-rice-cooker-manufacturer/)
 
 ## Качество и международные стандарты производства
 
@@ -533,7 +533,7 @@ YOLEC Electric поддерживает требования междунаро�
 
 ## Контакты для OEM сотрудничества
 
-**Веб-сайт:** [поставщик рисоварок оптом](/electric-rice-cooker-manufacturer)
+**Веб-сайт:** [поставщик рисоварок оптом/electric-rice-cooker-manufacturer/)
 YouTube:
 
 https://www.youtube.com/@yolec-electric-adrian

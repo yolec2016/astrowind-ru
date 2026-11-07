@@ -245,7 +245,7 @@ Yolec Electric работает как производитель малой к�
 
 Подробнее о производстве:
 
-[фабрика электрочайников YOLEC](/electric-kettle-manufacturer)
+[фабрика электрочайников YOLEC/electric-kettle-manufacturer/)
 
 ## Посмотрите реальные процессы производства
 

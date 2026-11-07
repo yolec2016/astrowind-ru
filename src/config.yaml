@@ -2,7 +2,7 @@ site:
   name: YOLEC Electric
   site: 'https://yoleckitchen.xyz'
   base: '/'
-  trailingSlash: false
+  trailingSlash: true
 
   googleSiteVerificationId: ''
 

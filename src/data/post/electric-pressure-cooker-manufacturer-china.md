@@ -368,7 +368,7 @@ Yolec Electric — китайский производитель малой ку
 
 Подробнее о производственных возможностях:
 
-[поставщик скороварок оптом](/electric-pressure-cooker-manufacturer)
+[поставщик скороварок оптом/electric-pressure-cooker-manufacturer/)
 
 ## Лучше один раз увидеть фабрику
 

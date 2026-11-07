@@ -56,8 +56,8 @@ export default defineConfig({
         return (
           !page.includes('/tag/') &&
           !page.includes('/decapcms') &&
-          !page.match(/\/blog\/\d+$/) &&
-          !page.match(/\/category\/[^/]+\/\d+$/)
+          !page.match(/\/blog\/\d+\/?$/) &&
+          !page.match(/\/category\/[^/]+\/\d+\/?$/)
         );
       },
     }),

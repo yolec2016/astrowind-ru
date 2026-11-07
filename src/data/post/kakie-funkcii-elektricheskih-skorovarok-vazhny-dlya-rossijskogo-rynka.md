@@ -299,7 +299,7 @@ Yolec Electric работает как OEM/ODM производитель мал
 
 Подробнее:
 
-[производитель электрических скороварок в Китае](/electric-pressure-cooker-manufacturer)
+[производитель электрических скороварок в Китае/electric-pressure-cooker-manufacturer/)
 
 ## Посмотрите производство перед выбором поставщика
 

@@ -226,7 +226,7 @@ metadata:
 
 ## Контакты для связи
 
-**Веб-сайт:** [производитель электрических чайников в Китае](/electric-kettle-manufacturer)
+**Веб-сайт:** [производитель электрических чайников в Китае/electric-kettle-manufacturer/)
 **Email:** Adrian@yolec-electronics.com
 
 **YouTube:** https://www.youtube.com/@yolec-electric-adrian
