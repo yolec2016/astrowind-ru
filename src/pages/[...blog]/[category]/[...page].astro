@@ -21,7 +21,7 @@ const currentPage = page.currentPage ?? 1;
 
 const metadata = {
   title: `Категория: ${category.title}${currentPage > 1 ? ` — страница ${currentPage}` : ''}`,
-  description: `Статьи блога в категории «${category.title}»: OEM/ODM производство кухонной техники в Китае для импортеров и B2B-покупателей.`,
+  description: `Статьи блога в категории «${category.title}»${currentPage > 1 ? ` — страница ${currentPage}` : ''}: OEM/ODM производство кухонной техники в Китае.`,
   robots: {
     index: blogCategoryRobots?.index,
     follow: blogCategoryRobots?.follow,

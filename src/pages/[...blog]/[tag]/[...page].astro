@@ -21,7 +21,7 @@ const currentPage = page.currentPage ?? 1;
 
 const metadata = {
   title: `Тег: ${tag.title}${currentPage > 1 ? ` — страница ${currentPage}` : ''}`,
-  description: `Статьи по тегу «${tag.title}» в блоге завода YOLEC Electric о производстве кухонной техники в Китае.`,
+  description: `Статьи по тегу «${tag.title}»${currentPage > 1 ? ` — страница ${currentPage}` : ''}: блог завода YOLEC Electric о производстве кухонной техники в Китае.`,
   robots: {
     index: blogTagRobots?.index,
     follow: blogTagRobots?.follow,
