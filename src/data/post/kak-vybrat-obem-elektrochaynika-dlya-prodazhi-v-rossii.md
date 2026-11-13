@@ -315,7 +315,7 @@ YOLEC Electric — китайский производитель мелкой к
 - около 200 сотрудников;
 - отдел QC;
 - отдел R&D.
-  **Веб-сайт:** [поставщик электрочайников оптом/electric-kettle-manufacturer/)
+  **Веб-сайт:** [поставщик электрочайников оптом](/electric-kettle-manufacturer/)
   Email:
   adrian@yolec-electronics.com
 

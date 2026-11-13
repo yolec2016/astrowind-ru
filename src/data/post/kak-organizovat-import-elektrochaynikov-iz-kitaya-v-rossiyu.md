@@ -420,7 +420,7 @@ YOLEC Electric — китайский производитель малой ку
 
 Подробнее о продукции и возможностях сотрудничества:
 
-[электрочайники оптом/electric-kettle-manufacturer/)
+[электрочайники оптом](/electric-kettle-manufacturer/)
 
 Также можно посмотреть реальные материалы о продукции и производстве:
 
@@ -621,7 +621,7 @@ YOLEC Electric помогает международным B2B клиентам 
 
 Подробнее о производственных возможностях:
 
-[производитель электрических чайников в Китае/electric-kettle-manufacturer/)
+[производитель электрических чайников в Китае](/electric-kettle-manufacturer/)
 
 Материалы о продукции и производстве:
 
@@ -651,7 +651,7 @@ https://www.linkedin.com/in/adrian2010/
 
 ## Контакты для OEM сотрудничества
 
-**Веб-сайт:** [фабрика электрочайников YOLEC/electric-kettle-manufacturer/)
+**Веб-сайт:** [фабрика электрочайников YOLEC](/electric-kettle-manufacturer/)
 YouTube:
 
 https://www.youtube.com/@yolec-electric-adrian

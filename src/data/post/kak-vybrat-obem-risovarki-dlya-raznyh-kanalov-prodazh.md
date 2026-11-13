@@ -352,7 +352,7 @@ YOLEC Electric специализируется на OEM и ODM производ
 
 Подробнее о производственных возможностях:
 
-[фабрика рисоварок YOLEC/electric-rice-cooker-manufacturer/)
+[фабрика рисоварок YOLEC](/electric-rice-cooker-manufacturer/)
 
 ---
 

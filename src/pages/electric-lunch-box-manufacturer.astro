@@ -1,14 +1,54 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import ProductSchema from '~/components/common/ProductSchema.astro';
+import ProcurementBar from '~/components/ui/ProcurementBar.astro';
 import ProductsGrid from '~/components/widgets/ProductsGrid.astro';
 import RelatedPosts from '~/components/widgets/RelatedPosts.astro';
 
 const metadata = {
-  title: 'Производитель ланч-боксов в Китае — OEM/ODM завод',
+  title: 'Ланч-боксы с подогревом оптом из Китая — OEM/ODM завод',
   description:
     'Завод электрических ланч-боксов с подогревом в Китае: 12В/220В, нержавейка 304, OEM под ваш логотип. Опт напрямую с фабрики в Чжуншане.',
   ignoreTitleTemplate: true,
 };
+
+const faqItems = [
+  {
+    title: 'Является ли YOLEC Electric производителем электрических ланч-боксов в Китае?',
+    description:
+      'Да. YOLEC Electric производит малую бытовую технику в Китае и предлагает OEM и ODM решения для международных B2B покупателей.',
+  },
+  {
+    title: 'Производите ли вы электрические ланч-боксы OEM?',
+    description:
+      'Да. Мы работаем с OEM-проектами и можем согласовать различные варианты персонализации, включая логотип, цвет, упаковку и определенные характеристики продукции.',
+  },
+  {
+    title: 'Можно ли заказать электрические ланч-боксы под private label?',
+    description:
+      'Да. Private label проекты могут включать нанесение логотипа, изменение внешнего оформления и индивидуальную упаковку в зависимости от выбранной модели.',
+  },
+  {
+    title: 'Какие характеристики электрических ланч-боксов доступны?',
+    description:
+      'Конкретные характеристики зависят от модели. В зависимости от проекта могут согласовываться емкость, мощность, количество контейнеров, конструкция и другие параметры.',
+  },
+  {
+    title: 'Можно ли заказать образец?',
+    description:
+      'Да. Мы можем проверить выбранную модель и требования проекта, после чего подтвердить возможность предоставления образца.',
+  },
+  {
+    title: 'Какой MOQ для электрических ланч-боксов?',
+    description:
+      'MOQ зависит от модели и уровня персонализации. Сообщите предполагаемый объем заказа, и мы уточним применимые условия.',
+  },
+  {
+    title: 'Какие сертификаты доступны?',
+    description:
+      'В зависимости от модели и рынка назначения могут применяться такие требования, как CE, CB, RoHS и LFGB, а также соответствующая документация по качеству и аудиту производства.',
+  },
+];
 
 const products = [
   {
@@ -135,6 +175,8 @@ const products = [
               alt="Electric lunch box manufacturer in China - производитель электрических ланч-боксов"
               class="h-auto w-full object-cover"
               loading="eager"
+              width="1205"
+              height="900"
             />
           </div>
 
@@ -149,6 +191,8 @@ const products = [
       </div>
     </div>
   </section>
+
+  <ProcurementBar price="$3,20–$7,80" />
 
   <!-- =========================================================
        TRUST / STATS
@@ -205,6 +249,8 @@ const products = [
           alt="Электрические ланч-боксы OEM и ODM производства"
           class="h-auto w-full object-cover"
           loading="lazy"
+          width="1205"
+          height="900"
         />
       </div>
 
@@ -425,6 +471,8 @@ const products = [
             alt="OEM ODM производство электрических ланч-боксов"
             class="w-full object-cover"
             loading="lazy"
+            width="1205"
+            height="900"
           />
         </div>
 
@@ -505,6 +553,8 @@ const products = [
           alt="Фабрика по производству электрических ланч-боксов в Китае"
           class="h-auto w-full object-cover"
           loading="lazy"
+          width="750"
+          height="751"
         />
       </div>
 
@@ -562,6 +612,8 @@ const products = [
             alt="Процесс производства электрических ланч-боксов в Китае"
             class="h-auto w-full object-cover"
             loading="lazy"
+            width="748"
+            height="748"
           />
         </div>
       </div>
@@ -621,6 +673,8 @@ const products = [
               alt="Контроль качества электрических ланч-боксов"
               class="h-auto w-full object-cover"
               loading="lazy"
+              width="1400"
+              height="1050"
             />
           </div>
 
@@ -970,6 +1024,8 @@ const products = [
             alt="Поставщик электрических ланч-боксов оптом — участок финишной обработки на фабрике YOLEC"
             class="h-full w-full object-cover"
             loading="lazy"
+            width="1400"
+            height="788"
           />
         </div>
       </div>
@@ -1015,6 +1071,17 @@ const products = [
     ]}
   />
 
+  <ProductSchema
+    name="Электрические ланч-боксы с подогревом OEM/ODM — фабрика YOLEC в Китае"
+    description={metadata.description}
+    image="/images/blog/73.jpg"
+    category="Электрические ланч-боксы"
+    lowPrice="3.20"
+    highPrice="7.80"
+    offerCount={6}
+    faq={faqItems}
+  />
+
   <!-- =========================================================
        FINAL CTA
   ========================================================== -->
@@ -1057,6 +1124,8 @@ const products = [
             alt="Электрический ланч-бокс для OEM и ODM проектов"
             class="h-auto w-full object-cover"
             loading="lazy"
+            width="1400"
+            height="1050"
           />
         </div>
       </div>
@@ -1076,6 +1145,8 @@ const products = [
             alt="Упаковка электрических ланч-боксов OEM"
             class="h-auto w-full object-cover"
             loading="lazy"
+            width="1205"
+            height="900"
           />
         </div>
 
@@ -1107,6 +1178,8 @@ const products = [
       alt="WhatsApp YOLEC Electric для запросов по производству электрических ланч-боксов"
       class="h-auto w-[180px] rounded-lg shadow-md md:w-[220px]"
       loading="lazy"
+      width="752"
+      height="944"
     />
   </div>
 </Layout>

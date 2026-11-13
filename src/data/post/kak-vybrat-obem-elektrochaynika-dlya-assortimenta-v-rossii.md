@@ -489,7 +489,7 @@ YOLEC Electric — китайский производитель мелкой к
 YOLEC Electric имеет опыт экспорта на европейские рынки и работает с международными требованиями качества, включая CE, RoHS и LFGB.
 
 Контакты для B2B запросов:
-**Веб-сайт:** [фабрика электрочайников YOLEC/electric-kettle-manufacturer/)
+**Веб-сайт:** [фабрика электрочайников YOLEC](/electric-kettle-manufacturer/)
 Email:
 adrian@yolec-electronics.com
 

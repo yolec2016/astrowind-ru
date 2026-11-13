@@ -1,0 +1,46 @@
+---
+/**
+ * ProcurementBar.astro — строка закупочных параметров под hero.
+ * Отвечает на первые вопросы B2B-закупщика: MOQ, цена, образец, срок, сертификация.
+ */
+export interface Props {
+  price: string;
+  moq?: string;
+  sampleTime?: string;
+  leadTime?: string;
+  certs?: string;
+  className?: string;
+}
+
+const {
+  price,
+  moq = 'от 500 шт',
+  sampleTime = '7–10 дней',
+  leadTime = '30–45 дней',
+  certs = 'CE, CB, RoHS, LFGB, EAC',
+  className,
+} = Astro.props;
+
+const items = [
+  { label: 'MOQ', value: moq },
+  { label: 'Цена FOB', value: price },
+  { label: 'Образец', value: sampleTime },
+  { label: 'Срок партии', value: leadTime },
+  { label: 'Сертификация', value: certs },
+];
+---
+
+<section class:list={['border-y border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900', className]}>
+  <dl class="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-7 px-6 py-8 sm:grid-cols-3 lg:grid-cols-5 lg:px-8">
+    {
+      items.map((item) => (
+        <div>
+          <dt class="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">
+            {item.label}
+          </dt>
+          <dd class="mt-1 text-base font-bold text-slate-900 dark:text-white">{item.value}</dd>
+        </div>
+      ))
+    }
+  </dl>
+</section>

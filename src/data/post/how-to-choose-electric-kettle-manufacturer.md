@@ -247,7 +247,7 @@ tags:
 
 ## Свяжитесь с нами
 
-**Веб-сайт:** [каталог электрочайников/electric-kettle-manufacturer/)
+**Веб-сайт:** [каталог электрочайников](/electric-kettle-manufacturer/)
 **Email:** adrian@yolec-electronics.com
 
 **YouTube:** https://www.youtube.com/@yolec-electric-adrian

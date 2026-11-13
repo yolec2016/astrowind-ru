@@ -320,7 +320,7 @@ Yolec Electric работает как OEM/ODM производитель мал
 
 Подробнее о производственных возможностях:
 
-[фабрика электрических скороварок YOLEC/electric-pressure-cooker-manufacturer/)
+[фабрика электрических скороварок YOLEC](/electric-pressure-cooker-manufacturer/)
 
 ## Посмотрите реальные процессы производства
 

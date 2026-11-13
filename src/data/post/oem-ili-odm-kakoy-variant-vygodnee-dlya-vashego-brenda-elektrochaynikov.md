@@ -442,7 +442,7 @@ YOLEC Electric помогает зарубежным компаниям:
 
 ## Контакты для B2B-запросов
 
-**Веб-сайт:** [фабрика электрочайников YOLEC/electric-kettle-manufacturer/)
+**Веб-сайт:** [фабрика электрочайников YOLEC](/electric-kettle-manufacturer/)
 YouTube: https://www.youtube.com/@yolec-electric-adrian
 
 LinkedIn: https://www.linkedin.com/in/adrian2010/

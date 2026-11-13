@@ -1,5 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import ProductSchema from '~/components/common/ProductSchema.astro';
+import ProcurementBar from '~/components/ui/ProcurementBar.astro';
 import ProductsGrid from '~/components/widgets/ProductsGrid.astro';
 import RelatedPosts from '~/components/widgets/RelatedPosts.astro';
 
@@ -9,6 +11,44 @@ const metadata = {
     'OEM/ODM производство электрических скороварок 4–12 л в Китае: 10+ программ, сталь 304, сертификация CE/CB/EAC, испытания давлением на фабрике Чжуншана.',
   ignoreTitleTemplate: true,
 };
+
+const faqItems = [
+  {
+    title: 'Является ли YOLEC Electric производителем электрических скороварок в Китае?',
+    description:
+      'Да. YOLEC Electric производит малую бытовую технику в Китае и работает с международными B2B-покупателями по OEM и ODM проектам, включая электрические скороварки.',
+  },
+  {
+    title: 'Производите ли вы электрические скороварки OEM?',
+    description:
+      'Да. В зависимости от модели можно согласовать логотип, цвет, упаковку, комплектацию и отдельные характеристики продукта.',
+  },
+  {
+    title: 'Можно ли заказать электрическую скороварку под private label?',
+    description:
+      'Да. Мы можем работать с private label проектами, включая персонализацию бренда, внешнего оформления и упаковки выбранной модели.',
+  },
+  {
+    title: 'Какие характеристики электрических скороварок доступны?',
+    description:
+      'Характеристики зависят от конкретной модели. Можно обсуждать объём чаши, мощность, управление, программы приготовления и другие параметры в соответствии с требованиями проекта.',
+  },
+  {
+    title: 'Можно ли получить образец?',
+    description:
+      'Да. После выбора модели мы можем проверить доступность образца и согласовать детали перед оформлением заказа.',
+  },
+  {
+    title: 'Какой MOQ для электрических скороварок?',
+    description:
+      'MOQ зависит от выбранной модели и уровня персонализации. Сообщите предполагаемый объём заказа, и мы уточним подходящие условия.',
+  },
+  {
+    title: 'Какие сертификаты могут быть доступны?',
+    description:
+      'В зависимости от модели и рынка назначения можем работать с такими требованиями, как CE, CB, RoHS и LFGB, а также с соответствующей документацией по качеству и аудиту фабрики.',
+  },
+];
 
 const products = [
   {
@@ -135,6 +175,8 @@ const products = [
               alt="Electric pressure cooker manufacturer in China - производство электрических скороварок"
               class="h-auto w-full object-cover"
               loading="eager"
+              width="1400"
+              height="934"
             />
           </div>
 
@@ -149,6 +191,8 @@ const products = [
       </div>
     </div>
   </section>
+
+  <ProcurementBar price="$8,50–$22,00" />
 
   <!-- =========================================================
        TRUST / STATS
@@ -210,6 +254,8 @@ const products = [
           alt="Электрические скороварки OEM и ODM производство в Китае"
           class="h-auto w-full object-cover"
           loading="lazy"
+          width="1400"
+          height="933"
         />
       </div>
 
@@ -435,6 +481,8 @@ const products = [
             alt="OEM ODM производство электрических скороварок в Китае"
             class="w-full object-cover"
             loading="lazy"
+            width="1400"
+            height="933"
           />
         </div>
 
@@ -517,6 +565,8 @@ const products = [
           alt="Фабрика электрических скороварок OEM в Китае"
           class="h-auto w-full object-cover"
           loading="lazy"
+          width="1400"
+          height="933"
         />
       </div>
 
@@ -574,6 +624,8 @@ const products = [
             alt="Процесс производства электрических скороварок в Китае"
             class="h-auto w-full object-cover"
             loading="lazy"
+            width="1400"
+            height="933"
           />
         </div>
       </div>
@@ -633,6 +685,8 @@ const products = [
               alt="Контроль качества электрических скороварок"
               class="h-auto w-full object-cover"
               loading="lazy"
+              width="1400"
+              height="933"
             />
           </div>
 
@@ -986,6 +1040,8 @@ const products = [
             alt="Поставщик электрических скороварок оптом — лаборатория испытаний фабрики YOLEC"
             class="h-full w-full object-cover"
             loading="lazy"
+            width="1400"
+            height="788"
           />
         </div>
       </div>
@@ -1040,6 +1096,17 @@ const products = [
     ]}
   />
 
+  <ProductSchema
+    name="Электрические скороварки OEM/ODM — производство на фабрике YOLEC в Китае"
+    description={metadata.description}
+    image="/images/blog/7.jpg"
+    category="Электрические скороварки"
+    lowPrice="8.50"
+    highPrice="22.00"
+    offerCount={6}
+    faq={faqItems}
+  />
+
   <!-- =========================================================
        FINAL CTA
   ========================================================== -->
@@ -1084,6 +1151,8 @@ const products = [
             alt="Электрическая скороварка для OEM и ODM проектов"
             class="h-auto w-full object-cover"
             loading="lazy"
+            width="1400"
+            height="1050"
           />
         </div>
       </div>
@@ -1103,6 +1172,8 @@ const products = [
             alt="Упаковка и подготовка электрических скороварок OEM к международной отгрузке"
             class="h-auto w-full object-cover"
             loading="lazy"
+            width="1308"
+            height="715"
           />
         </div>
 
@@ -1134,6 +1205,8 @@ const products = [
       alt="WhatsApp YOLEC Electric для запросов по производству электрических скороварок"
       class="h-auto w-[180px] rounded-lg shadow-md md:w-[220px]"
       loading="lazy"
+      width="752"
+      height="944"
     />
   </div>
 </Layout>

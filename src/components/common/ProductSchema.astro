@@ -1,0 +1,82 @@
+---
+/**
+ * ProductSchema.astro — структурированные данные Product / AggregateOffer и FAQPage
+ * для коммерческих страниц продукции (OEM/ODM).
+ */
+export interface Props {
+  name: string;
+  description: string;
+  image: string;
+  category: string;
+  lowPrice: string;
+  highPrice?: string;
+  offerCount?: number;
+  moq?: string;
+  sampleTime?: string;
+  leadTime?: string;
+  certs?: string;
+  faq?: { title: string; description: string }[];
+}
+
+const {
+  name,
+  description,
+  image,
+  category,
+  lowPrice,
+  highPrice,
+  offerCount,
+  moq = 'от 500 шт',
+  sampleTime = '7–10 дней',
+  leadTime = '30–45 дней',
+  certs = 'CE, CB, RoHS, LFGB, EAC',
+  faq = [],
+} = Astro.props;
+
+const origin = Astro.url.origin;
+const pageUrl = new URL(Astro.url.pathname, origin).toString();
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name,
+  description,
+  image: [`${origin}${image}`],
+  category,
+  brand: { '@type': 'Brand', name: 'YOLEC' },
+  manufacturer: { '@type': 'Organization', name: 'Zhongshan Yangle Electric Appliance Co., Ltd.' },
+  additionalProperty: [
+    { '@type': 'PropertyValue', name: 'MOQ', value: moq },
+    { '@type': 'PropertyValue', name: 'Срок изготовления образца', value: sampleTime },
+    { '@type': 'PropertyValue', name: 'Срок производства партии', value: leadTime },
+    { '@type': 'PropertyValue', name: 'Сертификация', value: certs },
+    { '@type': 'PropertyValue', name: 'Страна производства', value: 'Китай' },
+    { '@type': 'PropertyValue', name: 'Тип производства', value: 'OEM / ODM' },
+  ],
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'USD',
+    lowPrice,
+    ...(highPrice ? { highPrice } : {}),
+    ...(offerCount ? { offerCount } : {}),
+    availability: 'https://schema.org/InStock',
+    url: pageUrl,
+    seller: { '@type': 'Organization', name: 'YOLEC Electric' },
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.title,
+    acceptedAnswer: { '@type': 'Answer', text: item.description },
+  })),
+};
+
+const toJson = (data: unknown) => JSON.stringify(data).replace(/</g, '\\u003c');
+---
+
+<script type="application/ld+json" set:html={toJson(productSchema)} is:inline />
+{faq.length > 0 && <script type="application/ld+json" set:html={toJson(faqSchema)} is:inline />}

@@ -1,5 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import ProductSchema from '~/components/common/ProductSchema.astro';
+import ProcurementBar from '~/components/ui/ProcurementBar.astro';
 import ProductsGrid from '~/components/widgets/ProductsGrid.astro';
 import RelatedPosts from '~/components/widgets/RelatedPosts.astro';
 
@@ -9,6 +11,43 @@ const metadata = {
     'OEM/ODM производство электрических чайников в Китае: стекло, нержавейка, gooseneck, контроль качества и поставки напрямую с фабрики Чжуншана.',
   ignoreTitleTemplate: true,
 };
+
+const faqItems = [
+  {
+    title: 'Является ли YOLEC Electric производителем электрических чайников в Китае?',
+    description:
+      'Да. YOLEC Electric производит малую бытовую технику в Китае и предлагает OEM и ODM производство электрических чайников для международных B2B покупателей.',
+  },
+  {
+    title: 'Вы производите электрические чайники по OEM?',
+    description:
+      'Да. Мы можем работать с OEM проектами с различным уровнем персонализации, включая логотип, цвет, упаковку и определённые характеристики выбранной модели.',
+  },
+  {
+    title: 'Можно ли заказать электрический чайник под private label?',
+    description:
+      'Да. Private label проекты могут включать нанесение логотипа, фирменное оформление и индивидуальную упаковку в зависимости от выбранной модели.',
+  },
+  {
+    title: 'Какие объёмы электрических чайников доступны?',
+    description: 'В зависимости от модели доступны разные объёмы, включая примерно 1 л, 1,2 л, 1,5 л, 1,7 л и 2 л.',
+  },
+  {
+    title: 'Можно ли заказать образец?',
+    description:
+      'Да. Мы можем изучить выбранную модель и требования проекта, после чего подтвердить возможность предоставления образца.',
+  },
+  {
+    title: 'Какой MOQ для электрических чайников?',
+    description:
+      'MOQ зависит от модели и уровня персонализации. Сообщите предполагаемый объём заказа, и мы предложим подходящие условия.',
+  },
+  {
+    title: 'Какие сертификаты доступны?',
+    description:
+      'В зависимости от модели и рынка назначения могут применяться требования CE, CB, RoHS и LFGB, а также соответствующая документация по качеству и аудиту фабрики.',
+  },
+];
 
 const products = [
   {
@@ -134,6 +173,8 @@ const products = [
               alt="Electric kettle manufacturer in China - производство электрических чайников"
               class="h-auto w-full object-cover"
               loading="eager"
+              width="1400"
+              height="1050"
             />
           </div>
 
@@ -148,6 +189,8 @@ const products = [
       </div>
     </div>
   </section>
+
+  <ProcurementBar price="$2,80–$6,50" />
 
   <!-- =========================================================
        TRUST / STATS
@@ -202,6 +245,8 @@ const products = [
           alt="Электрические чайники для импортёров и дистрибьюторов"
           class="h-auto w-full object-cover"
           loading="lazy"
+          width="1400"
+          height="934"
         />
       </div>
 
@@ -427,6 +472,8 @@ const products = [
             alt="OEM ODM производство электрических чайников на заказ"
             class="h-auto w-full object-cover"
             loading="lazy"
+            width="1400"
+            height="933"
           />
         </div>
 
@@ -502,6 +549,8 @@ const products = [
           alt="Фабрика электрических чайников OEM в Китае"
           class="h-auto w-full object-cover"
           loading="lazy"
+          width="1400"
+          height="933"
         />
       </div>
 
@@ -560,6 +609,8 @@ const products = [
             alt="Производство электрических чайников в Китае"
             class="h-auto w-full object-cover"
             loading="lazy"
+            width="1400"
+            height="933"
           />
         </div>
       </div>
@@ -619,6 +670,8 @@ const products = [
               alt="Контроль качества электрических чайников"
               class="h-auto w-full object-cover"
               loading="lazy"
+              width="1400"
+              height="933"
             />
           </div>
 
@@ -968,6 +1021,8 @@ const products = [
             alt="Поставщик электрических чайников оптом — цех литья пластика на фабрике YOLEC в Китае"
             class="h-full w-full object-cover"
             loading="lazy"
+            width="1400"
+            height="788"
           />
         </div>
       </div>
@@ -1003,6 +1058,17 @@ const products = [
         href: '/blog/oem-elektrochayniki-iz-kitaya-srok-proizvodstva-i-postavki/',
       },
     ]}
+  />
+
+  <ProductSchema
+    name="Электрические чайники OEM/ODM — производство на фабрике YOLEC в Китае"
+    description={metadata.description}
+    image="/images/blog/47.jpg"
+    category="Электрические чайники"
+    lowPrice="2.80"
+    highPrice="6.50"
+    offerCount={6}
+    faq={faqItems}
   />
 
   <!-- =========================================================
@@ -1047,6 +1113,8 @@ const products = [
             alt="Электрический чайник для OEM и ODM проектов"
             class="h-auto w-full object-cover"
             loading="lazy"
+            width="1400"
+            height="933"
           />
         </div>
       </div>
@@ -1066,6 +1134,8 @@ const products = [
             alt="Упаковка и подготовка электрических чайников к международной поставке"
             class="h-auto w-full object-cover"
             loading="lazy"
+            width="1400"
+            height="933"
           />
         </div>
 
@@ -1097,6 +1167,8 @@ const products = [
       alt="WhatsApp YOLEC Electric для запросов по производству электрических чайников"
       class="h-auto w-[180px] rounded-lg shadow-md md:w-[220px]"
       loading="lazy"
+      width="752"
+      height="944"
     />
   </section>
 </Layout>

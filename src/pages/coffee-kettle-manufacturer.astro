@@ -1,5 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import ProductSchema from '~/components/common/ProductSchema.astro';
+import ProcurementBar from '~/components/ui/ProcurementBar.astro';
 import ProductsGrid from '~/components/widgets/ProductsGrid.astro';
 import RelatedPosts from '~/components/widgets/RelatedPosts.astro';
 
@@ -9,6 +11,34 @@ const metadata = {
     'OEM/ODM производство кофейных чайников gooseneck: контроль температуры, точный поток воды. Прямые поставки с фабрики в Чжуншане для private label.',
   ignoreTitleTemplate: true,
 };
+
+const faqItems = [
+  {
+    title: 'Чем кофейный чайник gooseneck отличается от обычного электрического чайника?',
+    description:
+      'Кофейный чайник gooseneck имеет узкий изогнутый носик для точного контроля потока воды — это критически важно для pour-over заваривания. Также модели gooseneck часто оснащены регулировкой температуры и функцией поддержания нагрева, которых нет в стандартных чайниках.',
+  },
+  {
+    title: 'Можно ли заказать кофейный чайник под private label?',
+    description:
+      'Да. Мы предлагаем OEM и ODM производство с нанесением логотипа, индивидуальным цветом корпуса, упаковкой и другими параметрами под требования вашего бренда.',
+  },
+  {
+    title: 'Какие сертификаты доступны для кофейных чайников?',
+    description:
+      'В зависимости от модели и рынка: CE, CB, RoHS, LFGB. Также предоставляем протоколы испытаний из собственной лаборатории и отчёт SGS.',
+  },
+  {
+    title: 'Какой MOQ для кофейных чайников gooseneck?',
+    description:
+      'MOQ зависит от модели и уровня кастомизации. Сообщите предполагаемый объём заказа, и мы предложим подходящие условия.',
+  },
+  {
+    title: 'Можно ли заказать образец?',
+    description:
+      'Да. Мы можем предоставить образец выбранной модели с вашим логотипом для теста рынка и сертификации. Срок изготовления образца — 7–10 дней.',
+  },
+];
 
 const products = [
   {
@@ -102,6 +132,8 @@ const products = [
               alt="Gooseneck coffee kettle manufacturer in China — производство кофейных чайников"
               class="h-auto w-full object-cover"
               loading="eager"
+              width="600"
+              height="600"
             />
           </div>
 
@@ -116,6 +148,8 @@ const products = [
       </div>
     </div>
   </section>
+
+  <ProcurementBar price="от $5,20" />
 
   <!-- =========================================================
        TRUST / STATS
@@ -226,6 +260,8 @@ const products = [
             alt="OEM/ODM производство кофейных чайников gooseneck на заказ"
             class="h-auto w-full object-cover"
             loading="lazy"
+            width="600"
+            height="600"
           />
         </div>
 
@@ -334,6 +370,8 @@ const products = [
             alt="Производство кофейных чайников на фабрике YOLEC в Чжуншане"
             class="h-full w-full object-cover"
             loading="lazy"
+            width="1400"
+            height="788"
           />
         </div>
       </div>
@@ -445,6 +483,16 @@ const products = [
     ]}
   />
 
+  <ProductSchema
+    name="Кофейные чайники gooseneck OEM/ODM — производство на фабрике YOLEC в Китае"
+    description={metadata.description}
+    image="/images/products/kettle/HS-10DK22-1.jpg"
+    category="Кофейные чайники gooseneck"
+    lowPrice="5.20"
+    offerCount={6}
+    faq={faqItems}
+  />
+
   <!-- =========================================================
        FINAL CTA
   ========================================================== -->
@@ -487,6 +535,8 @@ const products = [
             alt="Кофейный чайник gooseneck для OEM и ODM проектов"
             class="h-auto w-full object-cover"
             loading="lazy"
+            width="600"
+            height="600"
           />
         </div>
       </div>
@@ -505,6 +555,8 @@ const products = [
       alt="WhatsApp YOLEC Electric для запросов по производству кофейных чайников"
       class="h-auto w-[180px] rounded-lg shadow-md md:w-[220px]"
       loading="lazy"
+      width="752"
+      height="944"
     />
   </section>
 </Layout>
